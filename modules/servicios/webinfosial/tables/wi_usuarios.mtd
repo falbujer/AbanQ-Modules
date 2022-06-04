@@ -1,0 +1,217 @@
+<!DOCTYPE TMD>
+<TMD>
+	<name>wi_usuarios</name>
+	<alias>QT_TRANSLATE_NOOP(&quot;MetaData&quot;,&quot;Usuarios&quot;)</alias>
+	
+	<field>
+		<name>nick</name>
+		<alias>QT_TRANSLATE_NOOP(&quot;MetaData&quot;,&quot;Nick&quot;)</alias>
+		<null>false</null>
+		<pk>true</pk>
+		<type>string</type>
+		<length>50</length>
+		<relation>
+			<table>wi_consultas</table>
+			<field>nick</field>
+			<card>1M</card>
+		</relation>
+		
+		<relation>
+			<table>wi_comunicaciones</table>
+			<field>nickusuario</field>
+			<card>1M</card>
+		</relation>
+	</field>
+	
+	<field>
+		<name>nombre</name>
+		<alias>QT_TRANSLATE_NOOP(&quot;MetaData&quot;,&quot;Nombre&quot;)</alias>
+		<null>true</null>
+		<pk>false</pk>
+		<type>string</type>
+		<length>250</length>
+	</field>
+	
+	<field>
+		<name>email</name>
+		<alias>QT_TRANSLATE_NOOP(&quot;MetaData&quot;,&quot;Email&quot;)</alias>
+		<null>false</null>
+		<pk>false</pk>
+		<type>string</type>
+		<length>250</length>
+		<unique>true</unique>
+	</field>
+	
+	<field>
+		<name>password</name>
+		<alias>QT_TRANSLATE_NOOP(&quot;MetaData&quot;,&quot;Password&quot;)</alias>
+		<null>false</null>
+		<pk>false</pk>
+		<type>string</type>
+		<length>500</length>
+	</field>
+	
+	<field>
+		<name>ultimoacceso</name>
+		<alias>QT_TRANSLATE_NOOP(&quot;MetaData&quot;,&quot;Ultimo acceso&quot;)</alias>
+		<null>true</null>
+		<pk>false</pk>
+		<type>date</type>
+	</field>
+	
+	<field>
+		<name>sessionid</name>
+		<alias>QT_TRANSLATE_NOOP(&quot;MetaData&quot;,&quot;ID de sesión&quot;)</alias>
+		<null>true</null>
+		<pk>false</pk>
+		<type>string</type>
+		<length>500</length>
+		<visiblegrid>false</visiblegrid>
+	</field>
+	
+	<field>
+		<name>tickdescarga</name>
+		<alias>QT_TRANSLATE_NOOP(&quot;MetaData&quot;,&quot;Tickets de descarga&quot;)</alias>
+		<null>true</null>
+		<pk>false</pk>
+		<type>uint</type>
+		<default>0</default>
+	</field>
+	
+	<field>
+		<name>tickforo</name>
+		<alias>QT_TRANSLATE_NOOP(&quot;MetaData&quot;,&quot;Tickets de foro&quot;)</alias>
+		<null>true</null>
+		<pk>false</pk>
+		<type>uint</type>
+		<default>0</default>
+	</field>
+	
+	<field>
+		<name>creditostick</name>
+		<alias>QT_TRANSLATE_NOOP(&quot;MetaData&quot;,&quot;Créditos de tickets&quot;)</alias>
+		<null>true</null>
+		<pk>false</pk>
+		<type>uint</type>
+		<default>0</default>
+	</field>
+	
+	<field>
+		<name>suscriptor</name>
+		<alias>QT_TRANSLATE_NOOP(&quot;MetaData&quot;,&quot;Suscriptor&quot;)</alias>
+		<null>true</null>
+		<pk>false</pk>
+		<type>bool</type>
+		<default>false</default>
+	</field>
+	
+	<field>
+		<name>usuarioserver</name>
+		<alias>QT_TRANSLATE_NOOP(&quot;MetaData&quot;,&quot;Usuario de servidor&quot;)</alias>
+		<null>true</null>
+		<pk>false</pk>
+		<type>string</type>
+		<length>50</length>
+		<default>demonx</default>
+	</field>
+	
+	<field>
+		<name>passwordserver</name>
+		<alias>QT_TRANSLATE_NOOP(&quot;MetaData&quot;,&quot;Password de servidor&quot;)</alias>
+		<null>true</null>
+		<pk>false</pk>
+		<type>stringlist</type>
+	</field>
+	
+	<field>
+		<name>demoprivada</name>
+		<alias>QT_TRANSLATE_NOOP(&quot;MetaData&quot;,&quot;Acceso a demo privada&quot;)</alias>
+		<null>true</null>
+		<pk>false</pk>
+		<type>bool</type>
+		<default>false</default>
+	</field>
+	
+	<field>
+		<name>demotvirtual</name>
+		<alias>QT_TRANSLATE_NOOP(&quot;MetaData&quot;,&quot;Acceso a demo de tienda virtual&quot;)</alias>
+		<null>true</null>
+		<pk>false</pk>
+		<type>bool</type>
+		<default>false</default>
+	</field>
+	
+	<field>
+		<name>demoprivadahasta</name>
+		<alias>QT_TRANSLATE_NOOP(&quot;MetaData&quot;,&quot;Acceso hasta&quot;)</alias>
+		<null>true</null>
+		<pk>false</pk>
+		<type>date</type>
+	</field>
+	
+	<field>
+		<name>modificado</name>
+		<alias>QT_TRANSLATE_NOOP(&quot;MetaData&quot;,&quot;Modificado&quot;)</alias>
+		<null>false</null>
+		<pk>false</pk>
+		<type>bool</type>
+		<default>true</default>
+	</field>
+	
+	<field>
+		<name>publico</name>
+		<alias>QT_TRANSLATE_NOOP(&quot;MetaData&quot;,&quot;Activo&quot;)</alias>
+		<null>true</null>
+		<pk>false</pk>
+		<type>bool</type>
+		<default>true</default>
+	</field>
+	
+	<field>
+		<name>ctaactualizaciones</name>
+		<alias>QT_TRANSLATE_NOOP(&quot;MetaData&quot;,&quot;Cuenta de actualizaciones&quot;)</alias>
+		<null>true</null>
+		<pk>false</pk>
+		<type>bool</type>
+		<default>false</default>
+	</field>
+	
+	<field>
+		<name>codcliente</name>
+		<alias>QT_TRANSLATE_NOOP(&quot;MetaData&quot;,&quot;Cliente&quot;)</alias>
+		<null>true</null>
+		<pk>false</pk>
+		<type>string</type>
+		<length>6</length>
+		<relation>
+			<table>clientes</table>
+			<field>codcliente</field>
+			<card>M1</card>
+		</relation>
+	</field>
+
+	<field>
+		<name>codfuncional</name>
+		<alias>QT_TRANSLATE_NOOP("MetaData","Rama")</alias>
+		<null>true</null>
+		<pk>false</pk>
+		<type>string</type>
+		<length>15</length>
+		
+		<relation>
+			<table>mv_funcional</table>
+			<field>codfuncional</field>
+			<card>M1</card>
+		</relation>
+	</field>
+	
+	<field>
+        <name>admitemarketing</name>
+		<!--Indica si el cliente admite correos de márketing-->
+		<alias>QT_TRANSLATE_NOOP("MetaData","Admite marketing")</alias>
+        <null>true</null>
+        <pk>false</pk>
+        <type>bool</type>
+        <default>true</default>
+    </field>
+</TMD>

@@ -1,0 +1,195 @@
+<!DOCTYPE TMD>
+<TMD>
+	<name>mv_actualizacionesfun</name>
+	<alias>QT_TRANSLATE_NOOP("MetaData","Actualizaciones por funcionalidad")</alias>
+
+	<field>
+		<name>idactualizacion</name>
+		<!-- Identificador interno -->
+		<alias>QT_TRANSLATE_NOOP("MetaData","Identificador")</alias>
+		<null>false</null>
+		<pk>true</pk>
+		<type>serial</type>
+		<visiblegrid>false</visiblegrid>
+		
+		<relation>
+			<table>mv_cambiosactualizacion</table>
+			<field>idactualizacion</field>
+			<card>1M</card>
+		</relation>
+	</field>
+	
+	<field>
+		<name>versiondesde</name>
+		<!-- Versión de la extensión-->
+		<alias>QT_TRANSLATE_NOOP("MetaData","Ver.Desde")</alias>
+		<null>false</null>
+		<pk>false</pk>
+		<type>string</type>
+		<length>5</length>
+		
+		<relation>
+			<table>mv_versmodexten</table>
+			<field>version</field>
+			<card>M1</card>
+		</relation>
+	</field>
+	
+	<field>
+		<name>versionhasta</name>
+		<!-- Versión de la extensión-->
+		<alias>QT_TRANSLATE_NOOP("MetaData","Ver.Hasta")</alias>
+		<null>false</null>
+		<pk>false</pk>
+		<type>string</type>
+		<length>5</length>
+		
+		<relation>
+			<table>mv_versmodexten</table>
+			<field>version</field>
+			<card>M1</card>
+		</relation>
+	</field>
+	
+	<field>
+		<name>fecha</name>
+		<alias>QT_TRANSLATE_NOOP("MetaData","Fecha")</alias>
+		<null>false</null>
+		<pk>false</pk>
+		<type>date</type>
+	</field>
+		
+	<field>
+		<name>precio</name>
+		<alias>QT_TRANSLATE_NOOP("MetaData","Precio")</alias>
+		<null>false</null>
+		<pk>false</pk>
+		<type>double</type>
+		<partI>8</partI>
+		<partD>2</partD>
+		<default>0</default>
+		<editable>false</editable>
+	</field>
+
+	<field>
+		<name>idusuario</name>
+		<!-- Coigo de usuario encargado-->
+		<alias>QT_TRANSLATE_NOOP("MetaData","Responsable")</alias>
+		<null>false</null>
+		<pk>false</pk>
+		<type>string</type>
+		<length>30</length>
+		
+		<relation>
+			<table>usuarios</table>
+			<field>idusuario</field>
+			<card>M1</card>
+		</relation>
+	</field>
+	
+	<field>
+		<name>codfuncional</name>
+		<!-- Código de la versión padre-->
+		<alias>QT_TRANSLATE_NOOP("MetaData","Funcionalidad")</alias>
+		<null>true</null>
+		<pk>false</pk>
+		<type>string</type>
+		<length>15</length>
+		<visiblegrid>false</visiblegrid>
+
+		<relation>
+			<table>mv_funcional</table>
+			<field>codfuncional</field>
+			<card>M1</card>
+			<delC>true</delC>
+		</relation>
+	</field>
+	
+	<field>
+		<name>esrevision</name>
+		<alias>QT_TRANSLATE_NOOP("MetaData","Revisión")</alias>
+		<null>false</null>
+		<pk>false</pk>
+		<type>bool</type>
+		<default>false</default>
+	</field>
+	
+	<field>
+		<name>libre</name>
+		<alias>QT_TRANSLATE_NOOP("MetaData","Libre")</alias>
+		<null>false</null>
+		<pk>false</pk>
+		<type>bool</type>
+		<default>false</default>
+	</field>
+	
+	<field>
+		<name>disponible</name>
+		<alias>QT_TRANSLATE_NOOP("MetaData","Disponible")</alias>
+		<null>false</null>
+		<pk>false</pk>
+		<type>bool</type>
+		<default>false</default>
+	</field>
+	
+	<field>
+		<name>desrevision</name>
+		<alias>QT_TRANSLATE_NOOP("MetaData","Descripción R.")</alias>
+		<null>true</null>
+		<pk>false</pk>
+		<type>string</type>
+		<length>300</length>
+	</field>
+	
+	<field>
+		<name>fechaupdate</name>
+		<alias>QT_TRANSLATE_NOOP("MetaData","Fecha Actualización")</alias>
+		<null>true</null>
+		<pk>false</pk>
+		<type>date</type>
+		<editable>false</editable>
+	</field>
+
+	<field>
+		<name>horaupdate</name>
+		<alias>QT_TRANSLATE_NOOP("MetaData","Hora Actualización")</alias>
+		<null>true</null>
+		<pk>false</pk>
+		<type>time</type>
+		<editable>false</editable>
+	</field>
+
+	<field>
+		<name>nombreupdate</name>
+		<alias>QT_TRANSLATE_NOOP("MetaData","Nombre del Paquete")</alias>
+		<null>true</null>
+		<pk>false</pk>
+		<type>string</type>
+		<length>255</length>
+		<regexp>\w+\.(abanq)</regexp>
+		<editable>false</editable>
+	</field>
+
+	<field>
+		<name>modulesdef</name>
+		<alias>QT_TRANSLATE_NOOP("MetaData","Modules Def.")</alias>
+		<null>true</null>
+		<pk>false</pk>
+		<type>stringlist</type>
+		<visiblegrid>false</visiblegrid>
+		<visible>false</visible>
+		<editable>false</editable>
+	</field>
+
+	<field>
+		<name>filesdef</name>
+		<alias>QT_TRANSLATE_NOOP("MetaData","Files Def.")</alias>
+		<null>true</null>
+		<pk>false</pk>
+		<type>stringlist</type>
+		<visiblegrid>false</visiblegrid>
+		<visible>false</visible>
+		<editable>false</editable>
+	</field>
+</TMD>
+

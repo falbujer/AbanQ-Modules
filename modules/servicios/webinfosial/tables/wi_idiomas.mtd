@@ -1,0 +1,81 @@
+<!DOCTYPE TMD>
+<TMD>
+	<name>wi_idiomas</name>
+	<alias>QT_TRANSLATE_NOOP(&quot;MetaData&quot;,&quot;Idiomas&quot;)</alias>
+	
+	<field>
+		<name>codigo</name>
+		<alias>QT_TRANSLATE_NOOP(&quot;MetaData&quot;,&quot;Codigo&quot;)</alias>
+		<null>false</null>
+		<pk>true</pk>
+		<type>string</type>
+		<length>5</length>
+		<relation>
+			<table>wi_traducciones</table>
+			<field>codidioma</field>
+			<card>1M</card>
+		</relation>
+	</field>
+	
+	<field>
+		<name>nombre</name>
+		<alias>QT_TRANSLATE_NOOP(&quot;MetaData&quot;,&quot;Nombre&quot;)</alias>
+		<null>false</null>
+		<pk>false</pk>
+		<type>string</type>
+		<length>100</length>
+	</field>
+	
+	<field>
+		<name>responsable</name>
+		<alias>QT_TRANSLATE_NOOP(&quot;MetaData&quot;,&quot;Responsable&quot;)</alias>
+		<null>false</null>
+		<pk>false</pk>
+		<type>string</type>
+		<length>250</length>
+	</field>
+	
+	<field>
+		<name>contacto</name>
+		<alias>QT_TRANSLATE_NOOP(&quot;MetaData&quot;,&quot;Contacto&quot;)</alias>
+		<null>false</null>
+		<pk>false</pk>
+		<type>string</type>
+		<length>250</length>
+	</field>
+	
+	<field>
+		<name>web</name>
+		<alias>QT_TRANSLATE_NOOP(&quot;MetaData&quot;,&quot;Web&quot;)</alias>
+		<null>true</null>
+		<pk>false</pk>
+		<type>string</type>
+		<length>250</length>
+	</field>
+	
+	<field>
+		<name>versionminima</name>
+		<alias>QT_TRANSLATE_NOOP(&quot;MetaData&quot;,&quot;Versión mínima&quot;)</alias>
+		<null>true</null>
+		<pk>false</pk>
+		<type>string</type>
+		<length>10</length>
+	</field>
+	
+	<field>
+		<name>publico</name>
+		<alias>QT_TRANSLATE_NOOP(&quot;MetaData&quot;,&quot;Activo&quot;)</alias>
+		<null>true</null>
+		<pk>false</pk>
+		<type>bool</type>
+		<default>true</default>
+	</field>
+	
+	<field>
+		<name>orden</name>
+		<alias>QT_TRANSLATE_NOOP(&quot;MetaData&quot;,&quot;Orden&quot;)</alias>
+		<null>true</null>
+		<pk>false</pk>
+		<type>uint</type>
+	</field>
+</TMD>

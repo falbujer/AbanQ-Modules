@@ -1,0 +1,259 @@
+<ACTIONS>
+	<action>
+		<name>wi_capturas</name>
+		<description>QT_TRANSLATE_NOOP("MetaData","Textos de capturas de pantallas")</description>
+		<alias>QT_TRANSLATE_NOOP("MetaData","Textos de capturas de pantallas")</alias>
+		<table>wi_capturas</table>
+		<form>master_copy</form>
+		<formrecord>wi_capturas</formrecord>
+		<scriptformrecord>wi_capturas</scriptformrecord>
+	</action>
+	<action>
+		<name>wi_videos</name>
+		<description>QT_TRANSLATE_NOOP("MetaData","Textos de videos")</description>
+		<alias>QT_TRANSLATE_NOOP("MetaData","Textos de videos")</alias>
+		<table>wi_videos</table>
+		<form>master_copy</form>
+		<formrecord>wi_videos</formrecord>
+		<scriptformrecord>wi_videos</scriptformrecord>
+	</action>
+	<action>
+		<name>wi_secciones</name>
+		<description>QT_TRANSLATE_NOOP("MetaData","Secciones principales de la web")</description>
+		<alias>QT_TRANSLATE_NOOP("MetaData","Textos de secciones de pantallas")</alias>
+		<table>wi_secciones</table>
+		<form>master_copy</form>
+		<formrecord>wi_secciones</formrecord>
+	</action>
+	<action>
+		<name>wi_apartados</name>
+		<description>QT_TRANSLATE_NOOP("MetaData","Apartados principales de la web")</description>
+		<alias>QT_TRANSLATE_NOOP("MetaData","Textos de apartados de pantallas")</alias>
+		<table>wi_apartados</table>
+		<form>master_copy</form>
+		<formrecord>wi_apartados</formrecord>
+	</action>
+	<action>
+		<name>wi_menuitems</name>
+		<description>QT_TRANSLATE_NOOP("MetaData","menu_items principales de la web")</description>
+		<alias>QT_TRANSLATE_NOOP("MetaData","Textos de menu_items de pantallas")</alias>
+		<table>wi_menuitems</table>
+		<form>master_copy</form>
+		<formrecord>wi_menuitems</formrecord>
+	</action>
+	<action>
+		<name>wi_opciones</name>
+		<description>QT_TRANSLATE_NOOP("MetaData","Opciones")</description>
+		<alias>QT_TRANSLATE_NOOP("MetaData","Opciones")</alias>
+		<table>wi_opciones</table>
+		<scriptform>wi_opciones</scriptform>
+		<form>wi_opciones</form>
+		<formrecord>wi_opciones</formrecord>
+	</action>
+
+	<action>
+		<name>wi_articulos</name>
+		<description>QT_TRANSLATE_NOOP("MetaData","Los artículos soportan información completa de precios de venta y compra por proveedor, precios por cliente y por tarifa y control de stocks")</description>
+		<alias>QT_TRANSLATE_NOOP("MetaData","Artículos")</alias>
+		<scriptformrecord>articulos</scriptformrecord>
+		<table>articulos</table>
+		<form>master_copy</form>
+		<formrecord>articulos</formrecord>
+	</action>
+	
+	<action>
+		<name>wi_familias</name>
+		<description>QT_TRANSLATE_NOOP("MetaData","familias")</description>
+		<alias>QT_TRANSLATE_NOOP("MetaData","familias")</alias>
+		<scriptformrecord>familias</scriptformrecord>
+		<table>familias</table>
+		<form>master_copy</form>
+		<formrecord>familias</formrecord>
+	</action>
+	
+	<action>
+		<name>wi_modulosweb</name>
+		<description>QT_TRANSLATE_NOOP(&quot;MetaData&quot;,&quot;Módulos web&quot;)</description>
+		<alias>QT_TRANSLATE_NOOP(&quot;MetaData&quot;,&quot;&quot;)</alias>
+		<table>wi_modulosweb</table>
+		<form>master_copy</form>
+		<formrecord>wi_modulosweb</formrecord>
+		<scriptformrecord>wi_modulosweb</scriptformrecord>
+	</action>
+	
+	<action>
+		<name>wi_modulosart</name>
+		<description>QT_TRANSLATE_NOOP(&quot;MetaData&quot;,&quot;Módulos web por artículos&quot;)</description>
+		<alias>QT_TRANSLATE_NOOP(&quot;MetaData&quot;,&quot;&quot;)</alias>
+		<table>wi_modulosart</table>
+		<form>master_copy</form>
+		<formrecord>wi_modulosart</formrecord>
+	</action>
+	
+	<action>
+		<name>wi_modulosfam</name>
+		<description>QT_TRANSLATE_NOOP(&quot;MetaData&quot;,&quot;Módulos web por artículos&quot;)</description>
+		<alias>QT_TRANSLATE_NOOP(&quot;MetaData&quot;,&quot;&quot;)</alias>
+		<table>wi_modulosfam</table>
+		<form>master_copy</form>
+		<formrecord>wi_modulosfam</formrecord>
+	</action>
+	
+	<action>
+		<name>wi_usuarios</name>
+		<description>QT_TRANSLATE_NOOP(&quot;MetaData&quot;,&quot;Usuarios&quot;)</description>
+		<alias>QT_TRANSLATE_NOOP(&quot;MetaData&quot;,&quot;Usuarios&quot;)</alias>
+		<table>wi_usuarios</table>
+		<form>master_copy</form>
+		<formrecord>wi_usuarios</formrecord>
+		<scriptformrecord>wi_usuarios</scriptformrecord>
+	</action>
+	
+	<action>
+		<name>wi_consultas</name>
+		<description>QT_TRANSLATE_NOOP(&quot;MetaData&quot;,&quot;Consultas&quot;)</description>
+		<alias>QT_TRANSLATE_NOOP(&quot;MetaData&quot;,&quot;Consultas&quot;)</alias>
+		<table>wi_consultas</table>
+		<form>master_copy</form>
+		<formrecord>wi_consultas</formrecord>
+	</action>
+	
+	<action>
+		<name>wi_formaspago</name>
+		<alias>QT_TRANSLATE_NOOP("MetaData","Formas de pago")</alias>
+		<description>QT_TRANSLATE_NOOP("MetaData","Las formas de pago contemplan los plazos de pago (en pagos fraccionados), la cuenta bancaria asociada y el modo de generación de los recibos")</description>
+		<scriptform>masterformaspago</scriptform>
+		<scriptformrecord>formaspago</scriptformrecord>
+		<table>formaspago</table>
+		<form>master_print</form>
+		<formrecord>formaspago</formrecord>
+	</action>
+	
+	<action>
+		<name>wi_categoriasenlaces</name>
+		<description>QT_TRANSLATE_NOOP(&quot;MetaData&quot;,&quot;categoriasenlaces&quot;)</description>
+		<alias>QT_TRANSLATE_NOOP(&quot;MetaData&quot;,&quot;categoriasenlaces&quot;)</alias>
+		<table>wi_categoriasenlaces</table>
+		<form>master_copy</form>
+		<formrecord>wi_categoriasenlaces</formrecord>
+	</action>
+	
+	<action>
+		<name>wi_traducciones</name>
+		<description>QT_TRANSLATE_NOOP(&quot;MetaData&quot;,&quot;traducciones&quot;)</description>
+		<alias>QT_TRANSLATE_NOOP(&quot;MetaData&quot;,&quot;traducciones&quot;)</alias>
+		<table>wi_traducciones</table>
+		<form>master_copy</form>
+		<formrecord>wi_traducciones</formrecord>
+	</action>
+	
+	<action>
+		<name>wi_idiomas</name>
+		<description>QT_TRANSLATE_NOOP(&quot;MetaData&quot;,&quot;idiomas&quot;)</description>
+		<alias>QT_TRANSLATE_NOOP(&quot;MetaData&quot;,&quot;idiomas&quot;)</alias>
+		<table>wi_idiomas</table>
+		<form>master_copy</form>
+		<formrecord>wi_idiomas</formrecord>
+	</action>
+	
+	<action>
+		<name>wi_pedidoscli</name>
+		<description>QT_TRANSLATE_NOOP(&quot;MetaData&quot;,&quot;Pedidos&quot;)</description>
+		<alias>QT_TRANSLATE_NOOP(&quot;MetaData&quot;,&quot;Pedidos&quot;)</alias>
+		<table>pedidoscli</table>
+		<form>masterpedidoscli</form>
+		<formrecord>pedidoscli</formrecord>
+		<scriptform>masterpedidoscli</scriptform>
+		<scriptformrecord>pedidoscli</scriptformrecord>
+	</action>
+	
+	<action>
+		<name>wi_noticias</name>
+		<description>QT_TRANSLATE_NOOP(&quot;MetaData&quot;,&quot;wi_noticias&quot;)</description>
+		<alias>QT_TRANSLATE_NOOP(&quot;MetaData&quot;,&quot;wi_noticias&quot;)</alias>
+		<table>wi_noticias</table>
+		<form>master_copy</form>
+		<formrecord>wi_noticias</formrecord>
+		<scriptformrecord>wi_noticias</scriptformrecord>
+	</action>
+
+	<action>
+		<name>wi_ambitosext</name>
+		<description>QT_TRANSLATE_NOOP("MetaData","Ambitos de extensiones")</description>
+		<alias>QT_TRANSLATE_NOOP("MetaData","Ambitos de extensiones")</alias>
+		<table>wi_ambitosext</table>
+		<form>master_copy</form>
+		<formrecord>wi_ambitosext</formrecord>
+	</action>
+	
+	<action>
+		<name>wi_datos</name>
+		<alias>QT_TRANSLATE_NOOP(&quot;MetaData&quot;,&quot;Intercambio de datos&quot;)</alias>
+		<scriptform>wi_datos</scriptform>
+		<table>wi_datos</table>
+		<form>wi_datos</form>
+		<formrecord>wi_datos</formrecord>
+	</action>
+	
+	<action>
+		<name>wi_proyectos</name>
+		<alias>Funcionalidades</alias>
+		<table>mv_funcional</table>
+		<form>mv_masterfuncional</form>
+		<formrecord>mv_funcional</formrecord>
+		<scriptform>mv_masterfuncional</scriptform>
+		<scriptformrecord>mv_funcional</scriptformrecord>
+	</action>
+	<action>
+		<name>wi_historicosped</name>
+		<alias>Historicos de Pedidos</alias>
+		<table>wi_historicosped</table>
+		<form>master</form>
+		<formrecord>wi_historicosped</formrecord>
+	</action>
+	<action>
+		<name>wi_comunicaciones</name>
+		<alias>QT_TRANSLATE_NOOP(&quot;MetaData&quot;,&quot;Comunicaciones&quot;)</alias>
+		<table>wi_comunicaciones</table>
+		<form>master</form>
+		<formrecord>wi_comunicaciones</formrecord>
+		<scriptform>wi_mastercomunicaciones</scriptform>
+		<scriptformrecord>wi_comunicaciones</scriptformrecord>
+	</action>
+	<action>
+		<name>wi_ramasusuarios</name>
+		<alias>QT_TRANSLATE_NOOP(&quot;MetaData&quot;,&quot;ramasusuarios&quot;)</alias>
+		<table>wi_ramasusuarios</table>
+		<form>master</form>
+		<formrecord>wi_ramasusuarios</formrecord>
+	</action>
+	<action>
+		<name>wi_docprivadausuarios</name>
+		<alias>QT_TRANSLATE_NOOP(&quot;MetaData&quot;,&quot;docprivadausuarios&quot;)</alias>
+		<table>wi_docprivadausuarios</table>
+		<form>master</form>
+		<formrecord>wi_docprivadausuarios</formrecord>
+	</action>
+	<action>
+		<name>wi_mailing</name>
+		<alias>QT_TRANSLATE_NOOP(&quot;MetaData&quot;,&quot;Mailing&quot;)</alias>
+		<table>wi_mailing</table>
+		<form>master</form>
+		<formrecord>wi_mailing</formrecord>
+		<scriptformrecord>wi_mailing</scriptformrecord>
+	</action>
+	<action>
+		<name>wi_enviosmailing</name>
+		<alias>QT_TRANSLATE_NOOP(&quot;MetaData&quot;,&quot;enviosmailing&quot;)</alias>
+		<table>wi_enviosmailing</table>
+		<form>master</form>
+		<formrecord>wi_enviosmailing</formrecord>
+	</action>
+	<action>
+		<name>wi_faqs</name>
+		<alias>QT_TRANSLATE_NOOP(&quot;MetaData&quot;,&quot;F.A.Q.&quot;)</alias>
+		<table>wi_faqs</table>
+		<form>master</form>
+		<formrecord>wi_faqs</formrecord>
+	</action>
+</ACTIONS>

@@ -1,0 +1,82 @@
+<!DOCTYPE UI><UI version="3.3" stdsetdef="1">
+<class>formRecordmv_ambitos</class>
+<widget class="QWidget">
+    <property name="name">
+        <cstring>formRecordmv_ambitos</cstring>
+    </property>
+    <property name="geometry">
+        <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>422</width>
+            <height>84</height>
+        </rect>
+    </property>
+    <property name="caption">
+        <string>Ámbitos</string>
+    </property>
+    <vbox>
+        <property name="name">
+            <cstring>unnamed</cstring>
+        </property>
+        <widget class="QLayoutWidget">
+            <property name="name">
+                <cstring>layout2</cstring>
+            </property>
+            <hbox>
+                <property name="name">
+                    <cstring>unnamed</cstring>
+                </property>
+                <widget class="FLFieldDB">
+                    <property name="name">
+                        <cstring>fdbCodigo</cstring>
+                    </property>
+                    <property name="fieldName">
+                        <string>codigo</string>
+                    </property>
+                </widget>
+                <spacer>
+                    <property name="name">
+                        <cstring>spacer1</cstring>
+                    </property>
+                    <property name="orientation">
+                        <enum>Horizontal</enum>
+                    </property>
+                    <property name="sizeType">
+                        <enum>Fixed</enum>
+                    </property>
+                    <property name="sizeHint">
+                        <size>
+                            <width>21</width>
+                            <height>20</height>
+                        </size>
+                    </property>
+                </spacer>
+                <widget class="FLFieldDB">
+                    <property name="name">
+                        <cstring>fdbOrden</cstring>
+                    </property>
+                    <property name="fieldName">
+                        <string>orden</string>
+                    </property>
+                </widget>
+            </hbox>
+        </widget>
+        <widget class="FLFieldDB">
+            <property name="name">
+                <cstring>fdbAmbito</cstring>
+            </property>
+            <property name="minimumSize">
+                <size>
+                    <width>400</width>
+                    <height>0</height>
+                </size>
+            </property>
+            <property name="fieldName">
+                <string>ambito</string>
+            </property>
+        </widget>
+    </vbox>
+</widget>
+<layoutdefaults spacing="6" margin="11"/>
+</UI>

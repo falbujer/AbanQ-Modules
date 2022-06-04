@@ -1,0 +1,92 @@
+<!DOCTYPE TMD>
+<TMD>
+	<name>wi_modulosweb</name>
+	<alias>QT_TRANSLATE_NOOP(&quot;MetaData&quot;,&quot;Módulos de la web&quot;)</alias>
+	
+	<field>
+		<name>nomseccion</name>
+		<alias>QT_TRANSLATE_NOOP("MetaData","Seccion")</alias>
+		<null>true</null>
+		<pk>false</pk>
+		<type>string</type>
+		<length>100</length>
+		<relation>
+			<table>wi_secciones</table>
+			<field>nombre</field>
+			<card>M1</card>
+		</relation>
+	</field>
+	
+	<field>
+		<name>titulo</name>
+		<alias>QT_TRANSLATE_NOOP(&quot;MetaData&quot;,&quot;Título&quot;)</alias>
+		<null>true</null>
+		<pk>false</pk>
+		<type>string</type>
+		<length>250</length>
+	</field>
+	
+	<field>
+		<name>codigo</name>
+		<alias>QT_TRANSLATE_NOOP(&quot;MetaData&quot;,&quot;Código&quot;)</alias>
+		<null>false</null>
+		<pk>true</pk>
+		<type>string</type>
+		<length>250</length>
+	</field>
+	
+	<field>
+		<name>publico</name>
+		<alias>QT_TRANSLATE_NOOP(&quot;MetaData&quot;,&quot;Activo&quot;)</alias>
+		<null>true</null>
+		<pk>false</pk>
+		<type>bool</type>
+		<default>false</default>
+	</field>
+	
+	<field>
+		<name>orden</name>
+		<alias>QT_TRANSLATE_NOOP(&quot;MetaData&quot;,&quot;Orden&quot;)</alias>
+		<null>true</null>
+		<pk>false</pk>
+		<type>uint</type>
+	</field>
+	
+	<field>
+		<name>tipo</name>
+		<alias>QT_TRANSLATE_NOOP(&quot;MetaData&quot;,&quot;Tipo (0 código html, 1 función php)&quot;)</alias>
+		<null>true</null>
+		<pk>false</pk>
+		<type>string</type>
+		<optionslist>0,1</optionslist>
+		<default>0</default>
+	</field>
+	
+	<field>
+		<name>mostrartitulo</name>
+		<alias>QT_TRANSLATE_NOOP(&quot;MetaData&quot;,&quot;Mostrar título&quot;)</alias>
+		<null>true</null>
+		<pk>false</pk>
+		<type>bool</type>
+		<default>true</default>
+	</field>
+	
+	<field>
+		<name>html</name>
+		<alias>QT_TRANSLATE_NOOP(&quot;MetaData&quot;,&quot;Código HTML&quot;)</alias>
+		<null>true</null>
+		<pk>false</pk>
+		<type>stringlist</type>
+	</field>
+
+	<field>
+		<name>posicion</name>
+		<alias>QT_TRANSLATE_NOOP(&quot;MetaData&quot;,&quot;Posición (sólo en index)&quot;)</alias>
+		<null>true</null>
+		<pk>false</pk>
+		<type>string</type>
+		<optionslist>left,right</optionslist>
+		<default>right</default>
+	</field>
+	
+</TMD>

@@ -1,0 +1,104 @@
+<!DOCTYPE UI><UI version="3.3" stdsetdef="1">
+<class>formOpcionesTV</class>
+<widget class="QWidget">
+    <property name="name">
+        <cstring>formOpcionesTV</cstring>
+    </property>
+    <property name="geometry">
+        <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>628</width>
+            <height>75</height>
+        </rect>
+    </property>
+    <property name="sizePolicy">
+        <sizepolicy>
+            <hsizetype>1</hsizetype>
+            <vsizetype>5</vsizetype>
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+        </sizepolicy>
+    </property>
+    <property name="caption">
+        <string>Opciones</string>
+    </property>
+    <vbox>
+        <property name="name">
+            <cstring>unnamed</cstring>
+        </property>
+        <property name="margin">
+            <number>6</number>
+        </property>
+        <property name="spacing">
+            <number>6</number>
+        </property>
+        <widget class="QButtonGroup">
+            <property name="name">
+                <cstring>buttonGroup2</cstring>
+            </property>
+            <property name="title">
+                <string>Rutas</string>
+            </property>
+            <hbox>
+                <property name="name">
+                    <cstring>unnamed</cstring>
+                </property>
+                <widget class="FLFieldDB">
+                    <property name="name">
+                        <cstring>fdbRutaweb</cstring>
+                    </property>
+                    <property name="sizePolicy">
+                        <sizepolicy>
+                            <hsizetype>7</hsizetype>
+                            <vsizetype>0</vsizetype>
+                            <horstretch>0</horstretch>
+                            <verstretch>0</verstretch>
+                        </sizepolicy>
+                    </property>
+                    <property name="minimumSize">
+                        <size>
+                            <width>350</width>
+                            <height>25</height>
+                        </size>
+                    </property>
+                    <property name="fieldName">
+                        <string>rutaweb</string>
+                    </property>
+                </widget>
+                <widget class="QPushButton">
+                    <property name="name">
+                        <cstring>pbnCambiarDirCapturas</cstring>
+                    </property>
+                    <property name="font">
+                        <font>
+                        </font>
+                    </property>
+                    <property name="text">
+                        <string>Cambiar</string>
+                    </property>
+                    <property name="iconSet">
+                        <iconset>image0</iconset>
+                    </property>
+                    <property name="toolTip" stdset="0">
+                        <string>Cambiar el directorio de los modulos a documentar</string>
+                    </property>
+                    <property name="whatsThis" stdset="0">
+                        <string>Cambia o establece el directorio en el que se encuentran los modulos. Bajo este directorio deben encontrarse directamente los directorios de area, y dentro de estos los de modulos: en el caso de '/home/usuario/facturalux/modulos/facturacion/principal' deberiamos indicar '/home/usuario/facturalux/modulos'</string>
+                    </property>
+                </widget>
+            </hbox>
+        </widget>
+    </vbox>
+</widget>
+<images>
+    <image name="image0">
+        <data format="PNG" length="589">89504e470d0a1a0a0000000d49484452000000100000001008060000001ff3ff610000021449444154789c8d91b16b13511cc73f9134e6d90a77524b0e52c82b1942e9d26eb9a1e06d76127572d43fa1a37307858c8e712975115ca475905c0bca1dd4361d2a8d60e14e127b85065f282577c6c273482d2549c1eff27b3f7eeffb79bfdfefc185f491d6bbdbbb5a1f69adb7b5be2e679476d7f47fabe6d6bcabde3480cf01c1db59fc2694a7c16f7a94a7edcbfcd10360ac6f700a4e66a883e58ad6bad77fa1dbbd88a7fdf8eb54eba72fbaba7b51a8b9b59dabde1b97a731a009220d7c0701d4f7c14cfa652144bf83bcc310a00c04cd180ca81fc63009dea1626112dc6f0a00751201e086ee30c0c7431a8257ef61a120f042b073267108f37913f031ef5a00c8acec8e18c1a6de8aa98750dd8ab0f3b01e2a923cb8a102ca445184da533f6616671647ee60a120c0802c16d51db00b266e0becbc09806559acacae6c0e7ec0e50ebc30266b807712513f81ca6785346023542cdf173c7be9c2799c1a09f0f1b08b02711b96e62d8409f34593375fc1983079bd0f8e7488936434006cbc162c9560afad304ab0d78eb937077e5b114b700317d2d9eb00604b68b4e161c9c4eac0933941a3034b7326e61938b24ca3d1680f02d2ff76b0fe25ea058175a68e0f324e7136f56e27482579a9d73e057f8e13d98b3afed4e6d6666564078f9753d94e6865542bbe23cfe544f5833b2e13792bfa188f3b2267e43aeed4c66afd39f073103034d3406d0cc800378133e0f7e0a5bf997529c57f520c7e0000000049454e44ae426082</data>
+    </image>
+</images>
+<slots>
+    <slot>eliminarGruposImpuestos()</slot>
+    <slot>traspasarGruposImpuestos()</slot>
+</slots>
+<layoutdefaults spacing="6" margin="11"/>
+</UI>

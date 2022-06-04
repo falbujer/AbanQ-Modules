@@ -1,0 +1,70 @@
+<!DOCTYPE TMD>
+<TMD>
+	<name>wi_apartados</name>
+	<alias>QT_TRANSLATE_NOOP("MetaData","Apartados")</alias>
+	
+	<field>
+		<name>id</name>
+		<alias>QT_TRANSLATE_NOOP("MetaData","Id")</alias>
+		<null>false</null>
+		<pk>true</pk>
+		<type>serial</type>
+		<relation>
+			<table>wi_menuitems</table>
+			<field>idapdo</field>
+			<card>1M</card>
+		</relation>
+		<visiblegrid>false</visiblegrid>
+	</field>
+	
+	<field>
+		<name>orden</name>
+		<alias>QT_TRANSLATE_NOOP("MetaData","Orden")</alias>
+		<null>true</null>
+		<pk>false</pk>
+		<type>uint</type>
+	</field>
+	
+	<field>
+		<name>nomseccion</name>
+		<alias>QT_TRANSLATE_NOOP("MetaData","Sección")</alias>
+		<null>true</null>
+		<pk>false</pk>
+		<type>string</type>
+		<length>100</length>
+		<visiblegrid>false</visiblegrid>
+		<relation>
+			<table>wi_secciones</table>
+			<field>nombre</field>
+			<card>M1</card>
+		</relation>
+	</field>
+	
+	<field>
+		<name>descripcion</name>
+		<alias>QT_TRANSLATE_NOOP("MetaData","Descripción")</alias>
+		<null>true</null>
+		<pk>false</pk>
+		<type>string</type>
+		<length>100</length>
+	</field>
+
+	<field>
+		<name>publico</name>
+		<alias>QT_TRANSLATE_NOOP("MetaData","Activo")</alias>
+		<null>true</null>
+		<pk>false</pk>
+		<type>bool</type>
+		<default>true</default>
+	</field>
+
+	<field>
+		<name>modificado</name>
+		<alias>QT_TRANSLATE_NOOP(&quot;MetaData&quot;,&quot;Modificado&quot;)</alias>
+		<null>true</null>
+		<pk>false</pk>
+		<type>bool</type>
+		<default>true</default>
+		<visiblegrid>false</visiblegrid>
+	</field>
+</TMD>
