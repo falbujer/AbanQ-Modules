@@ -1,0 +1,17 @@
+<!DOCTYPE QRY>
+<QRY>
+	<name>ventas</name>
+	
+	<tables>facturascli,lineasfacturascli,articulos,clientes</tables>
+	
+	<select>
+		lineasfacturascli.idlinea, facturascli.idfactura, facturascli.nombrecliente, facturascli.codcliente, facturascli.codigo, facturascli.fecha, lineasfacturascli.referencia, lineasfacturascli.descripcion, lineasfacturascli.pvpunitario, lineasfacturascli.cantidad, lineasfacturascli.pvpsindto, lineasfacturascli.pvptotal 
+	</select>
+	
+	<from>
+		lineasfacturascli INNER JOIN facturascli ON lineasfacturascli.idfactura = facturascli.idfactura
+	</from>
+	
+	<where>
+	</where>
+</QRY>

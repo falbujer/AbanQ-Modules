@@ -1,0 +1,644 @@
+<!DOCTYPE UI><UI version="3.3" stdsetdef="1">
+<class>tpv_cantidadpago</class>
+<widget class="QWidget">
+    <property name="name">
+        <cstring>tpv_cantidadpago</cstring>
+    </property>
+    <property name="geometry">
+        <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>553</width>
+            <height>504</height>
+        </rect>
+    </property>
+    <property name="sizePolicy">
+        <sizepolicy>
+            <hsizetype>1</hsizetype>
+            <vsizetype>1</vsizetype>
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+        </sizepolicy>
+    </property>
+    <property name="caption">
+        <string>tpv_cantidadpago</string>
+    </property>
+    <property name="icon">
+        <pixmap>image22755</pixmap>
+    </property>
+    <hbox>
+        <property name="name">
+            <cstring>unnamed</cstring>
+        </property>
+        <widget class="QGroupBox">
+            <property name="name">
+                <cstring>gbxPago</cstring>
+            </property>
+            <property name="sizePolicy">
+                <sizepolicy>
+                    <hsizetype>3</hsizetype>
+                    <vsizetype>5</vsizetype>
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                </sizepolicy>
+            </property>
+            <property name="title">
+                <string></string>
+            </property>
+            <vbox>
+                <property name="name">
+                    <cstring>unnamed</cstring>
+                </property>
+                <widget class="QLayoutWidget">
+                    <property name="name">
+                        <cstring>layout25</cstring>
+                    </property>
+                    <vbox>
+                        <property name="name">
+                            <cstring>unnamed</cstring>
+                        </property>
+                        <widget class="QLabel">
+                            <property name="name">
+                                <cstring>lblImporteEntregado_2_2</cstring>
+                            </property>
+                            <property name="font">
+                                <font>
+                                    <pointsize>20</pointsize>
+                                </font>
+                            </property>
+                            <property name="text">
+                                <string>A Pagar:</string>
+                            </property>
+                        </widget>
+                        <widget class="FLFieldDB">
+                            <property name="name">
+                                <cstring>fdbImporte</cstring>
+                            </property>
+                            <property name="font">
+                                <font>
+                                    <pointsize>30</pointsize>
+                                </font>
+                            </property>
+                            <property name="fieldName">
+                                <string>importe</string>
+                            </property>
+                            <property name="showAlias">
+                                <bool>false</bool>
+                            </property>
+                        </widget>
+                    </vbox>
+                </widget>
+                <widget class="QLayoutWidget">
+                    <property name="name">
+                        <cstring>layout25_2</cstring>
+                    </property>
+                    <vbox>
+                        <property name="name">
+                            <cstring>unnamed</cstring>
+                        </property>
+                        <widget class="QLabel">
+                            <property name="name">
+                                <cstring>lblPendiente</cstring>
+                            </property>
+                            <property name="font">
+                                <font>
+                                    <pointsize>20</pointsize>
+                                </font>
+                            </property>
+                            <property name="text">
+                                <string>Pendiente:</string>
+                            </property>
+                        </widget>
+                        <widget class="FLFieldDB">
+                            <property name="name">
+                                <cstring>fdbPendiente</cstring>
+                            </property>
+                            <property name="font">
+                                <font>
+                                    <pointsize>30</pointsize>
+                                </font>
+                            </property>
+                            <property name="fieldName">
+                                <string>pendiente</string>
+                            </property>
+                            <property name="showAlias">
+                                <bool>false</bool>
+                            </property>
+                        </widget>
+                    </vbox>
+                </widget>
+                <widget class="FLFieldDB">
+                    <property name="name">
+                        <cstring>fdbCambioEfectivo</cstring>
+                    </property>
+                    <property name="font">
+                        <font>
+                            <pointsize>17</pointsize>
+                        </font>
+                    </property>
+                    <property name="fieldName">
+                        <string>cambioefectivo</string>
+                    </property>
+                </widget>
+                <widget class="Line">
+                    <property name="name">
+                        <cstring>line1</cstring>
+                    </property>
+                    <property name="palette">
+                        <palette>
+                            <active>
+                                <color>
+                                    <red>0</red>
+                                    <green>0</green>
+                                    <blue>0</blue>
+                                </color>
+                                <color>
+                                    <red>0</red>
+                                    <green>0</green>
+                                    <blue>0</blue>
+                                </color>
+                                <color>
+                                    <red>0</red>
+                                    <green>0</green>
+                                    <blue>0</blue>
+                                </color>
+                                <color>
+                                    <red>0</red>
+                                    <green>0</green>
+                                    <blue>0</blue>
+                                </color>
+                                <color>
+                                    <red>0</red>
+                                    <green>0</green>
+                                    <blue>0</blue>
+                                </color>
+                                <color>
+                                    <red>0</red>
+                                    <green>0</green>
+                                    <blue>0</blue>
+                                </color>
+                                <color>
+                                    <red>0</red>
+                                    <green>0</green>
+                                    <blue>0</blue>
+                                </color>
+                                <color>
+                                    <red>255</red>
+                                    <green>255</green>
+                                    <blue>255</blue>
+                                </color>
+                                <color>
+                                    <red>0</red>
+                                    <green>0</green>
+                                    <blue>0</blue>
+                                </color>
+                                <color>
+                                    <red>255</red>
+                                    <green>255</green>
+                                    <blue>255</blue>
+                                </color>
+                                <color>
+                                    <red>192</red>
+                                    <green>192</green>
+                                    <blue>192</blue>
+                                </color>
+                                <color>
+                                    <red>0</red>
+                                    <green>0</green>
+                                    <blue>0</blue>
+                                </color>
+                                <color>
+                                    <red>0</red>
+                                    <green>0</green>
+                                    <blue>128</blue>
+                                </color>
+                                <color>
+                                    <red>255</red>
+                                    <green>255</green>
+                                    <blue>255</blue>
+                                </color>
+                                <color>
+                                    <red>0</red>
+                                    <green>0</green>
+                                    <blue>0</blue>
+                                </color>
+                                <color>
+                                    <red>0</red>
+                                    <green>0</green>
+                                    <blue>0</blue>
+                                </color>
+                            </active>
+                            <disabled>
+                                <color>
+                                    <red>128</red>
+                                    <green>128</green>
+                                    <blue>128</blue>
+                                </color>
+                                <color>
+                                    <red>0</red>
+                                    <green>0</green>
+                                    <blue>0</blue>
+                                </color>
+                                <color>
+                                    <red>0</red>
+                                    <green>0</green>
+                                    <blue>0</blue>
+                                </color>
+                                <color>
+                                    <red>0</red>
+                                    <green>0</green>
+                                    <blue>0</blue>
+                                </color>
+                                <color>
+                                    <red>0</red>
+                                    <green>0</green>
+                                    <blue>0</blue>
+                                </color>
+                                <color>
+                                    <red>0</red>
+                                    <green>0</green>
+                                    <blue>0</blue>
+                                </color>
+                                <color>
+                                    <red>128</red>
+                                    <green>128</green>
+                                    <blue>128</blue>
+                                </color>
+                                <color>
+                                    <red>255</red>
+                                    <green>255</green>
+                                    <blue>255</blue>
+                                </color>
+                                <color>
+                                    <red>128</red>
+                                    <green>128</green>
+                                    <blue>128</blue>
+                                </color>
+                                <color>
+                                    <red>255</red>
+                                    <green>255</green>
+                                    <blue>255</blue>
+                                </color>
+                                <color>
+                                    <red>192</red>
+                                    <green>192</green>
+                                    <blue>192</blue>
+                                </color>
+                                <color>
+                                    <red>0</red>
+                                    <green>0</green>
+                                    <blue>0</blue>
+                                </color>
+                                <color>
+                                    <red>0</red>
+                                    <green>0</green>
+                                    <blue>128</blue>
+                                </color>
+                                <color>
+                                    <red>255</red>
+                                    <green>255</green>
+                                    <blue>255</blue>
+                                </color>
+                                <color>
+                                    <red>0</red>
+                                    <green>0</green>
+                                    <blue>255</blue>
+                                </color>
+                                <color>
+                                    <red>255</red>
+                                    <green>0</green>
+                                    <blue>255</blue>
+                                </color>
+                            </disabled>
+                            <inactive>
+                                <color>
+                                    <red>0</red>
+                                    <green>0</green>
+                                    <blue>0</blue>
+                                </color>
+                                <color>
+                                    <red>0</red>
+                                    <green>0</green>
+                                    <blue>0</blue>
+                                </color>
+                                <color>
+                                    <red>0</red>
+                                    <green>0</green>
+                                    <blue>0</blue>
+                                </color>
+                                <color>
+                                    <red>0</red>
+                                    <green>0</green>
+                                    <blue>0</blue>
+                                </color>
+                                <color>
+                                    <red>0</red>
+                                    <green>0</green>
+                                    <blue>0</blue>
+                                </color>
+                                <color>
+                                    <red>0</red>
+                                    <green>0</green>
+                                    <blue>0</blue>
+                                </color>
+                                <color>
+                                    <red>0</red>
+                                    <green>0</green>
+                                    <blue>0</blue>
+                                </color>
+                                <color>
+                                    <red>255</red>
+                                    <green>255</green>
+                                    <blue>255</blue>
+                                </color>
+                                <color>
+                                    <red>0</red>
+                                    <green>0</green>
+                                    <blue>0</blue>
+                                </color>
+                                <color>
+                                    <red>255</red>
+                                    <green>255</green>
+                                    <blue>255</blue>
+                                </color>
+                                <color>
+                                    <red>192</red>
+                                    <green>192</green>
+                                    <blue>192</blue>
+                                </color>
+                                <color>
+                                    <red>0</red>
+                                    <green>0</green>
+                                    <blue>0</blue>
+                                </color>
+                                <color>
+                                    <red>0</red>
+                                    <green>0</green>
+                                    <blue>128</blue>
+                                </color>
+                                <color>
+                                    <red>255</red>
+                                    <green>255</green>
+                                    <blue>255</blue>
+                                </color>
+                                <color>
+                                    <red>0</red>
+                                    <green>0</green>
+                                    <blue>255</blue>
+                                </color>
+                                <color>
+                                    <red>255</red>
+                                    <green>0</green>
+                                    <blue>255</blue>
+                                </color>
+                            </inactive>
+                        </palette>
+                    </property>
+                    <property name="frameShape">
+                        <enum>HLine</enum>
+                    </property>
+                    <property name="frameShadow">
+                        <enum>Sunken</enum>
+                    </property>
+                    <property name="orientation">
+                        <enum>Horizontal</enum>
+                    </property>
+                </widget>
+                <widget class="QLayoutWidget">
+                    <property name="name">
+                        <cstring>layout22</cstring>
+                    </property>
+                    <vbox>
+                        <property name="name">
+                            <cstring>unnamed</cstring>
+                        </property>
+                        <widget class="QLabel">
+                            <property name="name">
+                                <cstring>lblImporteEntregado</cstring>
+                            </property>
+                            <property name="font">
+                                <font>
+                                    <pointsize>20</pointsize>
+                                </font>
+                            </property>
+                            <property name="text">
+                                <string>Importe efectivo:</string>
+                            </property>
+                        </widget>
+                        <widget class="FLFieldDB">
+                            <property name="name">
+                                <cstring>fdbImporteEfectivo</cstring>
+                            </property>
+                            <property name="font">
+                                <font>
+                                    <pointsize>30</pointsize>
+                                </font>
+                            </property>
+                            <property name="fieldName">
+                                <string>importeefectivo</string>
+                            </property>
+                            <property name="fieldAlias">
+                                <string>importeefectivo</string>
+                            </property>
+                            <property name="showAlias">
+                                <bool>false</bool>
+                            </property>
+                        </widget>
+                    </vbox>
+                </widget>
+                <widget class="QLayoutWidget">
+                    <property name="name">
+                        <cstring>layout13</cstring>
+                    </property>
+                    <hbox>
+                        <property name="name">
+                            <cstring>unnamed</cstring>
+                        </property>
+                        <widget class="QLabel">
+                            <property name="name">
+                                <cstring>lblImporteEntregado_2</cstring>
+                            </property>
+                            <property name="font">
+                                <font>
+                                    <pointsize>20</pointsize>
+                                </font>
+                            </property>
+                            <property name="text">
+                                <string>Importe tarjeta:</string>
+                            </property>
+                        </widget>
+                        <spacer>
+                            <property name="name">
+                                <cstring>spacer13</cstring>
+                            </property>
+                            <property name="orientation">
+                                <enum>Horizontal</enum>
+                            </property>
+                            <property name="sizeType">
+                                <enum>Expanding</enum>
+                            </property>
+                            <property name="sizeHint">
+                                <size>
+                                    <width>40</width>
+                                    <height>20</height>
+                                </size>
+                            </property>
+                        </spacer>
+                        <widget class="QGroupBox">
+                            <property name="name">
+                                <cstring>gbxTarjetas</cstring>
+                            </property>
+                            <property name="title">
+                                <string></string>
+                            </property>
+                        </widget>
+                    </hbox>
+                </widget>
+                <widget class="FLFieldDB">
+                    <property name="name">
+                        <cstring>fdbImporteTarjeta</cstring>
+                    </property>
+                    <property name="font">
+                        <font>
+                            <pointsize>30</pointsize>
+                        </font>
+                    </property>
+                    <property name="fieldName">
+                        <string>importetarjeta</string>
+                    </property>
+                    <property name="showAlias">
+                        <bool>false</bool>
+                    </property>
+                </widget>
+            </vbox>
+        </widget>
+        <widget class="QPushButton">
+            <property name="name">
+                <cstring>tbnMas</cstring>
+            </property>
+            <property name="sizePolicy">
+                <sizepolicy>
+                    <hsizetype>1</hsizetype>
+                    <vsizetype>7</vsizetype>
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                </sizepolicy>
+            </property>
+            <property name="minimumSize">
+                <size>
+                    <width>32</width>
+                    <height>0</height>
+                </size>
+            </property>
+            <property name="maximumSize">
+                <size>
+                    <width>32</width>
+                    <height>32767</height>
+                </size>
+            </property>
+            <property name="text">
+                <string></string>
+            </property>
+            <property name="pixmap">
+                <pixmap>image22755</pixmap>
+            </property>
+            <property name="accel">
+                <string>F12</string>
+            </property>
+            <property name="toggleButton">
+                <bool>true</bool>
+            </property>
+            <property name="toolTip" stdset="0">
+                <string>Abrir/Cerrar Vales (F12)</string>
+            </property>
+        </widget>
+        <widget class="QGroupBox">
+            <property name="name">
+                <cstring>gbxMasPag</cstring>
+            </property>
+            <property name="sizePolicy">
+                <sizepolicy>
+                    <hsizetype>1</hsizetype>
+                    <vsizetype>5</vsizetype>
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                </sizepolicy>
+            </property>
+            <property name="title">
+                <string></string>
+            </property>
+            <vbox>
+                <property name="name">
+                    <cstring>unnamed</cstring>
+                </property>
+                <widget class="QLabel">
+                    <property name="name">
+                        <cstring>lblImporteVales</cstring>
+                    </property>
+                    <property name="font">
+                        <font>
+                            <pointsize>20</pointsize>
+                        </font>
+                    </property>
+                    <property name="text">
+                        <string>Importe vales:</string>
+                    </property>
+                </widget>
+                <widget class="FLFieldDB">
+                    <property name="name">
+                        <cstring>fdbImporteVales</cstring>
+                    </property>
+                    <property name="font">
+                        <font>
+                            <pointsize>30</pointsize>
+                        </font>
+                    </property>
+                    <property name="fieldName">
+                        <string>importevales</string>
+                    </property>
+                    <property name="fieldAlias">
+                        <string>importevales</string>
+                    </property>
+                    <property name="showAlias">
+                        <bool>false</bool>
+                    </property>
+                </widget>
+                <widget class="FLTable">
+                    <property name="name">
+                        <cstring>tblVales</cstring>
+                    </property>
+                    <property name="numRows">
+                        <number>0</number>
+                    </property>
+                    <property name="numCols">
+                        <number>0</number>
+                    </property>
+                </widget>
+            </vbox>
+        </widget>
+    </hbox>
+</widget>
+<images>
+    <image name="image22755">
+        <data format="PNG" length="1477">89504e470d0a1a0a0000000d4948445200000020000000200806000000737a7af40000058c49444154789ced967f8c1d5515c73fe7de99f776f7bdddad94502c18296d134d4013ff60f52f6904f10f53889196361634c454ff0125b589d61f3121d194a8311642244ab16a40480a69485a5c91140228b4b4b462e9b66b6c6bdb6d7797edeebe377367e6dee31f33bbdd526dbb0de52f4e72326f92b9e7fbb9e77cefbc810f621631996473f60e8e7cf13b0fbe7ce57b55d35ce883aa2abf787ce7b6a228b6ecd8776c60d1b28d5f5dbc6ce3fb0700e8e6bfbc7943ada7c13d77f535af99577fd4e7c91faffdd2c3bdef0b808870f2e409da1e7a2e6bb2eede5b587ae3c21514ee8d05b76df8cc250700f0e938ad24a5dd4e69a51937dff409d6ae5eb2606e77b47dc16d1bd62dfcf223f6d202b809da6d479a38d2d491b41d975fd1cbda6fde1cf55d77e5fdea8bfe45cb365e7d6901128773192ecd485d469a6664deb3f40b9f64d5d2eb6eecaa9b5d8befd874ebac0154555455ce0990b5682719cee53897935557e772da89e3eaabe6b0faf6ebe75e3bbff9f4e2e5bf7b70f11d9b3acf07209538bf7c6cdbabdb5fdfdff7d2ce8388b180a27942c8134291a0794a2852d6ffea67a82a3a4d5eae3f9d0103ecd93fca0b3b8feff59e15034facda7b5e808fdfb2467fb86625632d0762ca445011942ab55a32d527052d095055422801420804ef69b50bfefcf7a16478ccad41e4a181c757fd6f0080cb3ef5355d7bef0ac6939c288e89a2086b238cb5186331c620621039734a33771ec2947820048ff71e4260cfc149de1c1c7f4690bb079eb87364e6fad32654cf442b254d739c2b70ce93659e3c0f552a4511c80ba5f065e6c55486e9e7b2cc93e5455523a79d3aae9967f8ecf5ddb7363accee45cb1f5b3213203add8ac0642ba10806c5a05a5d518c558c2a46051145444a0fcc687d9901ef03be2877ef8b022b4abb9530363c0aa786ae2a8adefe85b7ffe6a7c08f0e3e7977f12e80143131480412505110c54e790090ca02e5ec212868001fcafb220fb4db1913132dc6c727393634426bb2854b53d234c1a5c74ddcbce27bb5391fe9036e3a03e0adb70fd36874d3d3db4bb3bb496727d4ea421c0bd62a6204a9cc1882e27da0f09e3cf7b82ca7d54a71ce91658edc399c4b0901c49872ad116c6489ac120a77e608203076aa45e2c01596b6133abba0dea1d46a9ec85aacb518234cf56066db0baf1863b15184f51e6f0b8cb58831d306eeeaea226fccf52ec43f119ffff82c00441031185b168ae21a711c11c7317154028848e981e9d97b447c7522c08680adc4a7846d6469743718194b0fe5be5875a4fffbdbcf32218472ae2846046b23a228228e226a71f93bb216a93a500204bcafee81a0a1ea92c55447b6a3ab4ef2ce242786c69e54ccea63dbd7bf73d629d83ddcb6dfbaef7ec6b5495767378d0ff5d0ece9a6d16cd251af53afd788aa0e84b44043e97eefc3f47b2168c0fbaadd4630d650ebb41cf8e7c0e4f878eb1e11f3e8d02b1b787744002e373a7fdee57ffbc7732ff425698648f57a0839f80cf5391a329a73baf9c6771fc66705aa8a98aaf521608da9760db5ce1ac3a387787bf79ed77da12b8777fc76e02ce59900377cb823fc49f5d37f78e0befff71c001d3d4b34aa4558157c0895b8e283478a72e75a0fec7ae9afe1c4e1a30f20f607a3bb7e9f9fabe6b40796c939ff08cbb011512d862018ef61c6184c3de2f8d07e5edbf6ec7f9cf3779e7a6bf3f3e72f7886092f206c4c14c754a62fc50db8baf2e2d6a718dcb173b348fcf589035b47ce5de86201aa732e3650f840880c83270ff1fca647daade1d16f4bd4f1eb89035b67557256006aca33ad224cc681e7fa9f62cfb35bded0a02b9323afec9b95f26c0154958f7eee2b8c9a9c7f1f1f60dbc687c2c8e0bf7e2ec6ac4b8fbc9a5d8c38ccf81e385f1c6da92c5fb7fe5428f2ee1d4f6f39aa3edce58ebdd67fb1c25371c11fa5f31ba2c70e1ffdfcd0de7d2b45ecc7de0bf10f02e0bfbf46345dd1da628b0000000049454e44ae426082</data>
+    </image>
+</images>
+<connections>
+    <connection>
+        <sender>tbnMas</sender>
+        <signal>toggled(bool)</signal>
+        <receiver>gbxMasPag</receiver>
+        <slot>setShown(bool)</slot>
+    </connection>
+</connections>
+<layoutdefaults spacing="6" margin="11"/>
+<includehints>
+    <includehint>flfielddb.h</includehint>
+    <includehint>flfielddb.h</includehint>
+    <includehint>flfielddb.h</includehint>
+    <includehint>flfielddb.h</includehint>
+    <includehint>flfielddb.h</includehint>
+    <includehint>flfielddb.h</includehint>
+    <includehint>fltable.h</includehint>
+</includehints>
+</UI>

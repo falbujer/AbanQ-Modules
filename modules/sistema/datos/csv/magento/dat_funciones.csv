@@ -1,0 +1,168 @@
+descripcionÏÏidÏÏcodigo
+ALBARAN VENTA: Obtener solicita facturaÏÏ0008ÏÏstrArgs = arguments.toString();
+arrArgs = strArgs.split("ğ");
+
+conFac = arrArgs[4].toString();
+if (!conFac || conFac.isEmpty())
+  return 'false';
+return 'true';ÏÏÖ
+ALBARAN VENTA: Obtener fechaÏÏ0001ÏÏstrArgs = arguments.toString();
+arrArgs = strArgs.split("ğ");
+
+fecha = arrArgs[2].toString();
+if (!fecha)
+return "";
+
+fecha = fecha.left(10);
+dd = fecha.left(2);
+mm = fecha.mid(3,2,2);
+yyyy = fecha.right(4);
+
+return yyyy + "-" + mm + "-" + dd;ÏÏÖ
+GENERAL: Ejercicio actualÏÏ0002ÏÏreturn flfactppal.iface.pub_ejercicioActual();ÏÏÖ
+ALBARAN VENTA: Obtener codigoÏÏ0003ÏÏstrArgs = arguments.toString();
+arrArgs = strArgs.split("ğ");
+
+cod = "WEB" + arrArgs[1].toString();
+return cod;ÏÏÖ
+ALBARAN VENTA: Obtener nombre clienteÏÏ0004ÏÏstrArgs = arguments.toString();
+arrArgs = strArgs.split("ğ");
+
+nom = arrArgs[8].toString() + " " + arrArgs[9].toString();
+return nom;ÏÏÖ
+ALBARAN VENTA: Obtener direccion facturacionÏÏ0010ÏÏstrArgs = arguments.toString();
+arrArgs = strArgs.split("ğ");
+
+return arrArgs[10].toString();ÏÏÖ
+ALBARAN VENTA: Obtener horaÏÏ0005ÏÏstrArgs = arguments.toString();
+arrArgs = strArgs.split("ğ");
+
+fecha = arrArgs[2].toString();
+if (!fecha)
+return "1";
+
+return fecha.mid(11);ÏÏÖ
+ALBARAN VENTA: Obtener ciudad facturacionÏÏ0011ÏÏstrArgs = arguments.toString();
+arrArgs = strArgs.split("ğ");
+
+return arrArgs[12].toString();ÏÏÖ
+ALBARAN VENTA: Obtener provincia facturacionÏÏ0012ÏÏstrArgs = arguments.toString();
+arrArgs = strArgs.split("ğ");
+
+return arrArgs[13].toString();ÏÏÖ
+ALBARAN VENTA: Obtener cod postal facturacionÏÏ0013ÏÏstrArgs = arguments.toString();
+arrArgs = strArgs.split("ğ");
+
+return arrArgs[11].toString();ÏÏÖ
+ALBARAN VENTA: Obtener pais facturacionÏÏ0014ÏÏstrArgs = arguments.toString();
+arrArgs = strArgs.split("ğ");
+
+return arrArgs[14].toString();ÏÏÖ
+ALBARAN VENTA: Obtener forma pagoÏÏ0009ÏÏstrArgs = arguments.toString();
+arrArgs = strArgs.split("ğ");
+
+metPago = arrArgs[5].toString();
+codPago = AQUtil.quickSqlSelect("mg_formaspago","codpago","mg_metodopago='" + metPago + "'");
+if (!codPago)
+ codPago = metPago;
+return codPago;ÏÏÖ
+LINEAS ALBARAN VENTA: Obtener totalÏÏ0015ÏÏstrArgs = arguments.toString();
+arrArgs = strArgs.split("ğ");
+
+tot = parseFloat(arrArgs[9]);
+if (isNaN(tot))
+ return 0;
+dto = parseFloat(arrArgs[8]);
+if (isNaN(dto))
+ dto = 0;
+
+return tot - dto;ÏÏÖ
+ALBARAN VENTA: Obtener codpaisÏÏ0022ÏÏstrArgs = arguments.toString();
+arrArgs = strArgs.split("ğ");
+
+nomPais = arrArgs[14].toString();
+if (!nomPais || nomPais.isEmpty())
+  return '';
+codPais =  AQUtil.quickSqlSelect("paises","codpais","upper(nombre)='" + nomPais.upper() + "'");
+if (!codPais || codPais.isEmpty())
+  return '';
+return codPais;ÏÏÖ
+ALBARAN VENTA: Obtener de abonoÏÏ0006ÏÏstrArgs = arguments.toString();
+arrArgs = strArgs.split("ğ");
+
+tipo = arrArgs[3].toString();
+if (tipo == "D")
+  return 'true';
+return 'false';ÏÏÖ
+LINEAS ALBARAN VENTA: Obtener idalbaranÏÏ0007ÏÏstrArgs = arguments.toString();
+arrArgs = strArgs.split("ğ");
+
+num = arrArgs[1].toString();
+idAlbaran = AQUtil.quickSqlSelect("albaranescli","idalbaran","numero='" + num + "'");
+return idAlbaran;ÏÏÖ
+LINEAS ALBARAN VENTA: Obtener descripcionÏÏ0018ÏÏstrArgs = arguments.toString();
+arrArgs = strArgs.split("ğ");
+
+sku = arrArgs[2].toString();
+ref = sku.split('-')[0];
+return AQUtil.quickSqlSelect("articulos","descripcion","referencia='" + ref + "'");ÏÏÖ
+LINEAS ALBARAN VENTA: Obtener num lineaÏÏ0016ÏÏstrArgs = arguments.toString();
+arrArgs = strArgs.split("ğ");
+
+num = arrArgs[1].toString();
+idAlbaran = AQUtil.quickSqlSelect("albaranescli","idalbaran","numero='" + num + "'");
+numL = parseInt(AQUtil.quickSqlSelect("lineasalbaranescli","count(*)","idalbaran=" + idAlbaran));
+if (isNaN(numL))
+ numL = 0;
+return numL + 1;ÏÏÖ
+LINEAS ALBARAN VENTA: Obtener referenciaÏÏ0017ÏÏstrArgs = arguments.toString();
+arrArgs = strArgs.split("ğ");
+
+sku = arrArgs[2].toString();
+
+return sku.split('-')[0];ÏÏÖ
+LINEAS ALBARAN VENTA: Obtener barcodeÏÏ0020ÏÏstrArgs = arguments.toString();
+arrArgs = strArgs.split("ğ");
+
+sku = arrArgs[2].toString();
+arrSku = sku.split('-');
+if (arrSku.length == 1) {
+  ref = arrSku[0];
+  return AQUtil.quickSqlSelect("atributosarticulos","barcode","referencia='" + ref + "'");
+} else if (arrSku.length == 2) {
+  ref = arrSku[0];
+  talla= arrSku[1];
+  return AQUtil.quickSqlSelect("atributosarticulos","barcode","referencia='" + ref + "' and talla='" + talla + "'");
+}
+
+return "ERRORNOTALLA";
+ÏÏÖ
+LINEAS ALBARAN VENTA: Obtener colorÏÏ0021ÏÏstrArgs = arguments.toString();
+arrArgs = strArgs.split("ğ");
+
+sku = arrArgs[2].toString();
+arrSku = sku.split('-');
+if (arrSku.length == 1) {
+  ref = arrSku[0];
+  return AQUtil.quickSqlSelect("atributosarticulos","color","referencia='" + ref + "'");
+} else if (arrSku.length == 2) {
+  ref = arrSku[0];
+  talla= arrSku[1];
+  return AQUtil.quickSqlSelect("atributosarticulos","color","referencia='" + ref + "' and talla='" + talla + "'");
+}
+
+return "U";
+ÏÏÖ
+LINEAS ALBARAN VENTA: Obtener tallaÏÏ0019ÏÏstrArgs = arguments.toString();
+arrArgs = strArgs.split("ğ");
+
+sku = arrArgs[2].toString();
+arrSku = sku.split('-');
+if (arrSku.length == 1) {
+  ref = arrSku[0];
+  return AQUtil.quickSqlSelect("atributosarticulos","talla","referencia='" + ref + "'");
+} else if (arrSku.length == 2) {
+  return arrSku[1];
+}
+
+return "TU";ÏÏÖ

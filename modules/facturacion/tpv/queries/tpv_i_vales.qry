@@ -1,0 +1,23 @@
+<!DOCTYPE QRY>
+<QRY>
+	<name>tpv_i_vales</name>
+
+	<tables>empresa,tpv_comandas</tables>
+
+	<select>
+		empresa.nombre, empresa.logo,
+		empresa.cifnif, empresa.direccion, empresa.ciudad,
+		tpv_comandas.saldopendiente, tpv_comandas.codigo
+	</select>
+
+	<from>
+		empresa, tpv_comandas
+	</from>
+
+	<where>
+	
+	</where>
+	
+	<order>
+	</order>
+</QRY>

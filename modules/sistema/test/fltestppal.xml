@@ -1,0 +1,256 @@
+<ACTIONS>
+
+	<action>
+		<name>tt_action</name>
+		<alias>Acciones</alias>
+		<description>Los objetos y las acciones son los elementos básicos a la hora de crear pruebas. Cada objeto tiene asociada una o más acciones que nos permiten actuar directamente sobre los formularios. Para consultar las acciones asociadas a cada objeto, consulta la acción 'Objetos'</description>
+		<table>tt_action</table>
+		<form>master</form>
+		<formrecord>tt_action</formrecord>
+		<scriptformrecord>tt_action</scriptformrecord>
+	</action>
+	
+	<action>
+		<name>tt_query</name>
+		<alias>Consulta SQL</alias>
+		<description>Esta acción ofrece un formulario adecuado para la inserción de los datos asociados a una consulta, para los objetos Query. Los datos de la consulta son sus cláusulas Select, From y Where, así como la variable donde se quiere guardar el resultado.</description>
+		<table>tt_query</table>
+		<form>tt_query</form>
+		<formrecord>tt_query</formrecord>
+		<scriptform>tt_query</scriptform>
+	</action>
+	
+	<action>
+		<name>tt_compare</name>
+		<alias>Comparación</alias>
+		<description>Esta acción ofrece un formulario adecuado para la inserción de los datos asociados a una comparación de dos valores. Cada uno de estos dos valores puede ser un valor constante, una variable, o el resultado de una consulta</description>
+		<table>tt_compare</table>
+		<form>tt_compare</form>
+		<formrecord>tt_compare</formrecord>
+		<scriptform>tt_compare</scriptform>
+	</action>
+	
+	<action>
+		<name>tt_scriptdialog</name>
+		<alias>Rellenar un cuadro de diálogo</alias>
+		<description>Esta acción ofrece un formulario adecuado para la inserción de los datos asociados a la actividad de completar un cuadro de diálogo. El formulario nos permite establecer los valores correspondientes a cada uno de los controles incluidos en el diálogo</description>
+		<table>tt_scriptdialog</table>
+		<form>tt_scriptdialog</form>
+		<formrecord>tt_scriptdialog</formrecord>
+		<scriptform>tt_scriptdialog</scriptform>
+	</action>
+	
+	<action>
+		<name>tt_assignation</name>
+		<alias>Asignación</alias>
+		<description>Esta acción ofrece un formulario adecuado para la asignación de valores a una o más  variables</description>
+		<table>tt_xml</table>
+		<form>tt_xml</form>
+		<scriptform>tt_assignation</scriptform>
+	</action>
+
+	<action>
+		<name>tt_session</name>
+		<alias>Sesiones</alias>
+		<description>Las sesiones son conjuntos de pruebas que se han realizado en algún momento. Para que una prueba pueda realizarse, ésta debe estar incluida en al menos una sesión</description>
+		<table>tt_session</table>
+		<form>master</form>
+		<formrecord>tt_session</formrecord>
+		<scriptform>tt_mastersession</scriptform>
+	</action>
+
+	<action>
+		<name>tt_sessioncat</name>
+		<alias>Catálogo de sesiones</alias>
+		<description>El catálogo de sesiones contiene las posibles sesiones a ejecutar. Cada ejecución de una sesión del catálogo genera un registro de sesión, con su fecha y estado correspondiente</description>
+		<table>tt_sessioncat</table>
+		<form>tt_mastersessioncat</form>
+		<formrecord>tt_sessioncat</formrecord>
+		<scriptform>tt_mastersessioncat</scriptform>
+		<scriptformrecord>tt_sessioncat</scriptformrecord>
+	</action>
+
+	<action>
+		<name>tt_step</name>
+		<alias>Pasos</alias>
+		<description>Los pasos son acciones sencillas que componen las pruebas. Cada paso realizado tiene un estado que indica si se realizó correctamente o no</description>
+		<table>tt_step</table>
+		<form>master</form>
+		<formrecord>tt_step</formrecord>
+		<scriptform>tt_masterstep</scriptform>
+	</action>
+
+	<action>
+		<name>tt_stepcat</name>
+		<alias>Catálogo de pasos</alias>
+		<description>El catálogo de pasos contiene la definición de todos los pasos asociados a las pruebas del catálogo de pruebas. Por lo general, un paso define una acción que se realiza sobre un objeto perteneciente a un cierto contenedor.<br/>Por ejemplo, pulsar el botón Insertar en el formulario maestro de clientes, es un paso en el que el contenedor es dicho formulario, el objeto es el botón Insertar, la acción es pulsar. <br/>Algunos objetos no necesitan tener un contenedor asociado.</description>
+		<table>tt_stepcat</table>
+		<form>tt_masterstepcat</form>
+		<formrecord>tt_stepcat</formrecord>
+		<scriptformrecord>tt_stepcat</scriptformrecord>
+	</action>
+
+	<action>
+		<name>tt_tcatscat</name>
+		<alias>Catálogo de pruebas por sesión</alias>
+		<description>El catálogo de pruebas por sesión determina qué pruebas están asociadas a qué sesiones. Este catálogo permite que la misma prueba pueda ser ejecutada en más de una sesión. Además, el catálogo permite establecer el orden de ejecución y las repeticiones asociadas a cada prueba</description>
+		<table>tt_tcatscat</table>
+		<form>master</form>
+		<formrecord>tt_tcatscat</formrecord>
+		<scriptformrecord>tt_tcatscat</scriptformrecord>
+	</action>
+
+	<action>
+		<name>tt_test</name>
+		<alias>Pruebas</alias>
+		<description>Las pruebas son registros que informan de la ejecución de una prueba del catálogo. Cada prueba tiene una fecha y un estado que informan de cuando se ejecutaron y de cuál fue el resultado</description>
+		<table>tt_test</table>
+		<form>master</form>
+		<formrecord>tt_test</formrecord>
+		<scriptform>tt_mastertest</scriptform>
+		<scriptformrecord>tt_test</scriptformrecord>
+	</action>
+
+	<action>
+		<name>tt_testcat</name>
+		<alias>Catálogo de pruebas</alias>
+		<description>Las pruebas son conjuntos de pasos que realizan un proceso completo.<br/>Ejemplo: La prueba 'Crear un cliente' estará compuesta de los pasos 'Pulsar el botón Insertar del formulario de clientes', 'Establecer el nombre del cliente', etc.</description>
+		<table>tt_testcat</table>
+		<form>tt_mastertestcat</form>
+		<formrecord>tt_testcat</formrecord>
+		<scriptform>tt_mastertestcat</scriptform>
+		<scriptformrecord>tt_testcat</scriptformrecord>
+	</action>
+	
+	<action>
+		<name>tt_testparam</name>
+		<alias>Parámetros de prueba</alias>
+		<description>Esta acción ofrece un formulario adecuado para la inserción de los parámetros necesarios para realizar una prueba. Los parámetros son los valores que la prueba necesita para ejecutarse, y su uso nos permite realizar la misma prueba bajo diferentes condiciones.</description>
+		<table>tt_xml</table>
+		<form>tt_xml</form>
+		<scriptform>tt_testparam</scriptform>
+	</action>
+
+	<action>
+		<name>tt_objecttype</name>
+		<alias>Objeto</alias>
+		<description>Los objetos describen los distintos elementos que pueden ser usados en el catálogo de pasos. Cada objeto tiene asociada al menos una acción, que determina qué es lo que hay que hacer con él. Los objetos disponibles son:<ul>
+		<li><b>Asignation</b> - Sirve para la asignación de valores a variables, su acción asociada es <b>assignateValues</b> Ej: var: TOTAL, valor: 82.65</li>
+		 <li><b>Button</b> - Su acción asociada es <b>animateClick</b> y sirve para pulsar los botones de los formularios</li>
+		 <li><b>Compare</b> - Su acción asociada es <b>compareItems</b>. Esta acción compara dos valores, consultas de SQL o campos. Podemos esperar que en el resultado de la comparación los dos elementos sean iguales o distintos y si el resultado esperado no es correcto podemos configurarlo para que muestre un error o se salte el resto de la prueba.</li>
+		 <li><b>FLFiedDB</b> - Permite actuar sobre un campo del formulario. Tiene tres acciones: <b>saveValue</b> permite guardar el valor del campo, <b>searchValue</b> permite buscar el valor y <b>setValue</b> permite establecer el valor.</li>
+		 <li><b>FLFormDB</b> - Permite actuar sobre un formulario. Al igual que el objeto anterior este también tiene tres acciones asociadas: <b>open</b> permite abrir el formulario, <b>close</b> permite cerrar el formulario y <b>fill</b> permite rellenar el formulario.</li>
+		 <li><b>FLTableDB</b> - Permite actuar sobre una tabla del formulario. Su acción es <b>selectRow</b> y permite seleccionar un registro de la tabla estableciendo un criterio de búsqueda similar al de una cláusila <i>where</i> de SQL.</li>
+		 <li><b>MessageBox</b> - Actua sobre los botones de los cuadros de mensaje. Tiene diferentes acciones dependiendo de los posibles botones, cada acción presiona el botón correspondiente. Las acciones son: <b>pushAbort</b> - pulsar abortar, <b>pushCancel</b> - pulsar Cancelar, <b>pushIgnore</b> - pulsar Ignorar, <b>pushNo</b> - pulsar No, <b>pushNoToAll</b> - pulsar No a Todo, <b>pushOK</b> - pulsar Aceptar, <b>pushRetry</b> - pulsar Reintentar, <b>pushYes</b> - pulsar Si y <b>pushYesToAll</b> - pulsar Si a Todo.</li>
+		 <li><b>Query</b> - Tiene una única acción asociada, <b>execQuery</b>, que ejecuta la consulta establecida, permitiéndonos guardar el resultado en una variable.</li>
+		<li><b>Script</b> - Este objeto nos permite ejecutar una determinada función mediante la acción <b>execFunction</b></li>
+		<li><b>ScriptDialog</b> - Este objeto nos permite actuar sobre cuadros de diálogo. Mediante la acción <b>fillDialog</b> podemos establecer valores para los distintos elementos del diálogo.</li>
+		<li><b>ScriptInput</b> - La acción <b>setInputValue</b> de este objeto nos permite rellenar diálogos de entrada de datos del tipo <i>Input Dialog</i>.</li>
+		<li><b>Table</b> - Con este objeto podemos borrar los registros de una tabla mediante la acción <b>deleteRecords</b></li>
+		<li><b>Test</b> - Este objeto nos permite ejecutar otras pruebas dentro de una misma prueba. Su acción asociada es <b>execTest</b></li>
+		</ul></description>
+		<table>tt_objecttype</table>
+		<form>master</form>
+		<formrecord>tt_objecttype</formrecord>
+	</action>
+
+	<action>
+		<name>tt_step_record</name>
+		<alias>Apertura de formularios de edición</alias>
+		<description>Esta acción permite generar con comodidad y rapidez los subconjuntos de pasos correspondientes a la apertura de formularios de edición ya sea en modo inserción o en modo edición.</description>
+		<table>tt_step_record</table>
+		<form>tt_step_record</form>
+		<formrecord>tt_step_record</formrecord>
+		<scriptform>tt_step_record</scriptform>
+	</action>
+	
+	<action>
+		<name>tt_step_closerecord</name>
+		<alias>Cierre de formularios de edición</alias>
+		<description>Esta acción permite generar con comodidad y rapidez los subconjuntos de pasos correspondientes a la aceptación y cierre de formularios de edición.</description>
+		<table>tt_step_record</table>
+		<form>tt_step_record</form>
+		<formrecord>tt_step_record</formrecord>
+		<scriptform>tt_step_record</scriptform>
+	</action>
+
+	<action>
+		<name>tt_exportar</name>
+		<alias>QT_TRANSLATE_NOOP("MetaData","Exportar")</alias>
+		<description>Esta acción permite exportar a ficheros un conjunto de pruebas (sesiones, pruebas y pasos). Estableciendo la ruta de destino y nombre de la funcionalidad podemos guardar las pruebas asociadas en disco.</description>
+		<table>tt_exportar</table>
+		<form>tt_exportar</form>
+		<formrecord>tt_exportar</formrecord>
+		<scriptform>tt_exportar</scriptform>
+	</action>
+	
+	<action>
+		<name>tt_importar</name>
+		<alias>QT_TRANSLATE_NOOP("MetaData","Importar")</alias>
+		<description>Esta acción permite importar desde ficheros un conjunto de pruebas (sesiones, pruebas y pasos). Estableciendo la ruta de origen y el nombre de la funcionalidad podemos cargar las pruebas asociadas. también permite cargar previemante las pruebas asociadas a las funcionalidades de las que depende la funcionalidad de trabajo.</description>
+		<table>tt_importar</table>
+		<form>tt_importar</form>
+		<formrecord>tt_importar</formrecord>
+		<scriptform>tt_importar</scriptform>
+	</action>
+	
+	<action>
+		<name>tt_borrar</name>
+		<alias>QT_TRANSLATE_NOOP("MetaData","Borrar")</alias>
+		<description>Esta acción permite borrar las pruebas (sesiones, pruebas y pasos) asociadas a una determinada funcionalidad. Esta operación no es reversible, por lo que siempre hay que asegurarse de haber guardado antes las pruebas si hemos hecho modificaciones.</description>
+		<table>tt_borrar</table>
+		<form>tt_borrar</form>
+		<formrecord>tt_borrar</formrecord>
+		<scriptform>tt_borrar</scriptform>
+	</action>
+	
+	<action>
+		<name>tt_config</name>
+		<alias>Configuración</alias>
+		<description>Los datos de la configuración del módulo de pruebas son dos:
+			<ul>
+				<li><b>Directorio de trabajo</b>: Es el directorio local en el que cada usuario trabaja en el desarrollo de las funcionalidades. </li>
+				<li><b>Funcionalidad en desarrollo</b>: Identificador de la funcionalidad cuyas pruebas se están evaluando. </li>
+			</ul>
+		</description>
+		<table>tt_config</table>
+		<form>tt_config</form>
+		<formrecord>tt_config</formrecord>
+		<scriptform>tt_config</scriptform>
+		<scriptformrecord>tt_config</scriptformrecord>
+	</action>
+	
+	<action>
+		<name>tt_cargarmodulos</name>
+		<alias>Cargar módulos</alias>
+		<description>Esta opción permite cargar automáticamente los módulos de un determinado proyecto o funcionalidad. En una sola acción podemos elegir qué módulos, de entre todos los que componen el proyecto, queremos cargar.
+		</description>
+		<table>tt_cargarmodulos</table>
+		<form>tt_cargarmodulos</form>
+		<formrecord>tt_cargarmodulos</formrecord>
+		<scriptform>tt_cargarmodulos</scriptform>
+		<scriptformrecord>tt_cargarmodulos</scriptformrecord>
+	</action>
+	
+	<action>
+		<name>tt_condition</name>
+		<alias>Condicion</alias>
+		<description>Esta acción ofrece un formulario adecuado para la inserción de una condicion, para los objetos Button, MessageBox</description>
+		<table>tt_condition</table>
+		<form>tt_condition</form>
+		<formrecord>tt_condition</formrecord>
+		<scriptform>tt_condition</scriptform>
+	</action>
+	
+	<action>
+		<name>tt_var</name>
+		<alias>Variables</alias>
+		<description>Esta acción permite visualizar y modificar las variables de sesión usadas en las pruebas</description>
+		<table>flvar</table>
+		<form>master</form>
+		<formrecord>tt_var</formrecord>
+		<scriptform>tt_mastervar</scriptform>
+		<scriptformrecord>tt_var</scriptformrecord>
+	</action>
+
+</ACTIONS>

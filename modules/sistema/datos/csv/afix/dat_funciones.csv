@@ -1,0 +1,949 @@
+descripcionÏÏidÏÏcodigo
+LINEAS PRESUPUESTOS: Obtener precio nominalÏÏ0046ÏÏargs = arguments[0].split("ğ");
+coma = String.fromCharCode(39);
+util = new FLUtil;
+ref = args[4];
+cnt = parseFloat(args[5]);
+if (isNaN(cnt)) cnt = 0.0;
+udsx = 1.0;
+if ( !ref.isEmpty() )
+udsx = parseFloat(util.quickSqlSelect("articulos", "udsxenv", "referencia = " + coma + ref + coma));
+if (isNaN(udsx)) udsx = 1.0;
+return udsx * cnt * util.roundFieldValue(parseFloat( args[8] ),"lineaspresupuestoscli","pvpunitario");
+
+ÏÏÖ
+LINEAS PEDIDOS CLIENTES: Obtener precio nominalÏÏ0021ÏÏargs = arguments[0].split("ğ");
+coma = String.fromCharCode(39);
+util = new FLUtil;
+ref = args[4];
+cnt = parseFloat(args[10]);
+if (isNaN(cnt)) cnt = 0.0;
+if (cnt==0)
+cnt = parseFloat(args[9]);
+if (isNaN(cnt) || cnt == 0) return 0.0;
+udsx = 1.0;
+if ( !ref.isEmpty() )
+udsx = parseFloat(util.quickSqlSelect("articulos", "udsxenv", "referencia = " + coma + ref + coma));
+if (isNaN(udsx)) udsx = 1.0;
+return udsx * cnt *  util.roundFieldValue(parseFloat( args[6] ),"lineaspedidoscli","pvpunitario");
+
+ÏÏÖ
+LINEAS PRESUPUESTOS: Obtener ivaÏÏ0096ÏÏargs = arguments[0].split("ğ");
+coma = String.fromCharCode(39);
+util = new FLUtil;
+codEjercicio = args[0];
+codSerie = args[1];
+numero = args[2];
+codCliente = util.quickSqlSelect("presupuestoscli", "codcliente", "numero = " + coma + numero + coma + " and codejercicio = " + coma + codEjercicio + coma + " and codserie = " + coma + codSerie + coma);
+regiva = util.quickSqlSelect("clientes", "regimeniva", "codcliente = " + coma +codCliente + coma);
+if (regiva=="Exento")
+ return 0.0;
+return parseFloat(args[16]);ÏÏÖ
+LINEAS FACTURAS CLIENTES: Obtener ivaÏÏ0098ÏÏargs = arguments[0].split("ğ");
+coma = String.fromCharCode(39);
+util = new FLUtil;
+numero = args[2];
+codEjercicio = args[0];
+codSerie = args[1];
+codCliente = util.quickSqlSelect("facturascli", "codcliente",  "numero = " + coma + numero + coma + " and codejercicio = " + coma + codEjercicio + coma + " and codserie=" + coma + codSerie + coma);
+regiva = util.quickSqlSelect("clientes", "regimeniva", "codcliente = " + coma +codCliente + coma);
+if (regiva=="Exento")
+ return 0.0;
+return parseFloat(args[14]);ÏÏÖ
+LINEAS PEDIDOS CLIENTES: Obtener cantidadÏÏ0099ÏÏargs = arguments[0].split("ğ");
+coma = String.fromCharCode(39);
+util = new FLUtil;
+ref = args[4];
+cnt = parseFloat(args[10]);
+if (isNaN(cnt)) cnt = 0.0;
+if (cnt==0)
+cnt = parseFloat(args[9]);
+if (isNaN(cnt) || cnt == 0) return 0.0;
+if ( ref.isEmpty() ) return cnt;
+udsx = parseFloat(util.quickSqlSelect("articulos", "udsxenv", "referencia = " + coma + ref + coma));
+if (isNaN(udsx)) udsx = 1.0;
+return udsx*cnt;ÏÏÖ
+LINEAS PEDIDOS CLIENTES: Obtener ivaÏÏ0097ÏÏargs = arguments[0].split("ğ");
+coma = String.fromCharCode(39);
+util = new FLUtil;
+numero = args[2];
+codEjercicio = args[0];
+codSerie = args[1];
+codCliente = util.quickSqlSelect("pedidoscli", "codcliente", "numero = " + coma + numero + coma + " and codejercicio = " + coma + codEjercicio + coma + " and codserie=" + coma + codSerie + coma);
+regiva = util.quickSqlSelect("clientes", "regimeniva", "codcliente = " + coma +codCliente + coma);
+if (regiva=="Exento")
+ return 0.0;
+return parseFloat(args[18]);ÏÏÖ
+LINEAS FACTURAS CLIENTES: Obtener descuentoÏÏ0093ÏÏargs = arguments[0].split("ğ");
+dt1 = parseFloat(args[7]);
+if (isNaN(dt1)) dt1 = 0.0;
+dt2 = parseFloat(args[8]);
+if (isNaN(dt2)) dt2 = 0.0;
+return ( 1.0 - ( (1.0-(dt1/100.0))*(1-(dt2/100.0)) ) ) * 100.0;ÏÏÖ
+LINEAS PRESUPUESTOS: Obtener precio totalÏÏ0047ÏÏargs = arguments[0].split("ğ");
+
+dt1 = parseFloat(args[9]);
+if (isNaN(dt1)) dt1 = 0.0;
+dt2 = parseFloat(args[10]);
+if (isNaN(dt2)) dt2 = 0.0;
+porDto = ( 1.0 - ( (1.0-(dt1/100.0))*(1.0-(dt2/100.0)) ) ) * 100.0;
+
+coma = String.fromCharCode(39);
+util = new FLUtil;
+ref = args[4];
+cnt = parseFloat(args[5]);
+if (isNaN(cnt)) cnt = 0.0;
+udsx = 1.0;
+if ( !ref.isEmpty() )
+udsx = parseFloat(util.quickSqlSelect("articulos", "udsxenv", "referencia = " + coma + ref + coma));
+if (isNaN(udsx)) udsx = 1.0;
+precioNominal = udsx * cnt * util.roundFieldValue(parseFloat( args[8] ),"lineaspresupuestoscli","pvpunitario");
+
+if ( porDto == 0 )
+ return  util.roundFieldValue(precioNominal,"lineaspresupuestoscli","pvptotal");
+dto = precioNominal * porDto / 100.0;
+dto = util.roundFieldValue(dto, "lineaspresupuestoscli", "pvpsindto");
+total = precioNominal - dto;
+
+return util.roundFieldValue(total,"lineaspresupuestoscli","pvptotal");
+ÏÏÖ
+LINEAS PEDIDOS CLIENTES: Obtener precio totalÏÏ0022ÏÏargs = arguments[0].split("ğ");
+dt1 = parseFloat(args[7]);
+if (isNaN(dt1)) dt1 = 0.0;
+dt2 = parseFloat(args[8]);
+if (isNaN(dt2)) dt2 = 0.0;
+porDto = ( 1.0 - ( (1.0-(dt1/100.0))*(1.0-(dt2/100.0)) ) ) * 100.0;
+coma = String.fromCharCode(39);
+util = new FLUtil;
+ref = args[4];
+
+cnt = parseFloat(args[10]);
+if (isNaN(cnt)) cnt = 0.0;
+if (cnt==0)
+cnt = parseFloat(args[9]);
+if (isNaN(cnt) || cnt == 0) return 0.0;
+udsx = 1.0;
+if ( !ref.isEmpty() )
+udsx = parseFloat(util.quickSqlSelect("articulos", "udsxenv", "referencia = " + coma + ref + coma));
+if (isNaN(udsx)) udsx = 1.0;
+precioNominal = udsx * cnt *  util.roundFieldValue(parseFloat( args[6] ),"lineaspedidoscli","pvpunitario");
+
+if ( porDto == 0 )
+ return  util.roundFieldValue(precioNominal,"lineaspedidoscli","pvptotal");
+dto = precioNominal * porDto / 100.0;
+dto = util.roundFieldValue(dto, "lineaspedidoscli", "pvpsindto");
+total = precioNominal - dto;
+
+return util.roundFieldValue(total,"lineaspedidoscli","pvptotal");
+ÏÏÖ
+EXCEL: Obtener observaciones desde fer_tarjetasÏÏ0089ÏÏargs = arguments[0].split("ğ");
+chrRet = String.fromCharCode(10);
+outObv = "";
+acti = args[1];
+info = args[13];
+nece = args[14];
+if (acti.length > 1 && !acti.isEmpty())
+ outObv = "Actividad : " + acti + chrRet;
+if (info.length > 1 && !info.isEmpty())
+ outObv += "Información : " + info + chrRet;
+if (nece.length > 1 && !nece.isEmpty())
+ outObv += "Necesita : " + nece;
+return outObv;ÏÏÖ
+CLIENTES: Obtener descuentos lineasÏÏ0104ÏÏargs = arguments[0].split("ğ");
+return args[22] + "|" + args[23];ÏÏÖ
+CLIENTES: Obtener observacionesÏÏ0003ÏÏargs = arguments[0].split("ğ");
+chrRet = String.fromCharCode(10);
+outObv = "";
+if ( args[66] != ""  && args[66] != undefined)
+ outObv += args[66] + chrRet;
+//if ( args[11] != ""  && args[11] != undefined) {
+// outObv = "Contacto: ";
+// outObv += args[11] + chrRet;
+//}
+if ( args[41] != "" && args[41] != undefined)
+ outObv += args[41] + chrRet;
+if ( args[42] != "" && args[42] != undefined)
+outObv += args[42] ;
+return outObv;ÏÏÖ
+CLIENTES: Obtener codcontactoÏÏ0106ÏÏargs = arguments[0].split("ğ");
+outObv = "";
+if ( args[11] != ""  && args[11] != undefined) {
+ outObv = fldatosppal.iface.pub_cerosIzquierda(args[0],6).right(6);
+}
+return outObv;ÏÏÖ
+CLIENTES: Obtener contactoÏÏ0105ÏÏargs = arguments[0].split("ğ");
+outObv = "";
+if ( args[11] != ""  && args[11] != undefined) {
+ outObv += args[11] + " : " + fldatosppal.iface.pub_cerosIzquierda(args[0],6).right(6);
+}
+return outObv;ÏÏÖ
+ARTICULOS: Obtener colorÏÏ0028ÏÏargs = arguments[0].split("ğ");
+codigo = args[0];
+if ( codigo.length != 12 ) return "";
+codigo = codigo.mid( 8, 2 );
+coma = String.fromCharCode(39);
+util = new FLUtil;
+if (!util.quickSqlSelect("mace_colores","codcolor","codcolor="+coma+codigo+coma))
+util.sqlInsert("mace_colores","codcolor,descripcion",codigo+","+codigo);
+return codigo;
+ÏÏÖ
+EXCEL: Obtener siguiente codigo tarjetasÏÏ0107ÏÏreturn flcrm_ppal.iface.pub_siguienteSecuencia("crm_tarjetas", "codtarjeta", 6);
+ÏÏÖ
+LINEAS PRESUPUESTOS: Obtener recargoÏÏ0048ÏÏargs = arguments[0].split("ğ");
+coma = String.fromCharCode(39);
+util = new FLUtil;
+codEjercicio = args[0];
+codSerie = args[1];
+numero = args[2];
+codCliente = util.quickSqlSelect("presupuestoscli", "codcliente", "numero = " + coma + numero + coma + " and codejercicio = " + coma + codEjercicio + coma + " and codserie = " + coma + codSerie + coma);
+aplicarRecEq = util.quickSqlSelect("clientes", "recargo", "codcliente = " + coma +codCliente + coma);
+if (aplicarRecEq != false)
+ return 4.0;
+return "";ÏÏÖ
+CLIENTES: Obtener codigoÏÏ0035ÏÏargs = arguments[0].split("ğ");
+return fldatosppal.iface.pub_cerosIzquierda(args[0],6).right(6);
+ÏÏÖ
+EXCEL CLIENTES COMUNICACIONES: Obtener asunto,origen,destinoÏÏ0080ÏÏargs = arguments[0].split("ğ");
+coma = String.fromCharCode(39);
+util = new FLUtil;
+codcli = fldatosppal.iface.pub_cerosIzquierda(args[0],6).right(6);
+asunto = "IMPORTADO EXCEL";
+nomcli = util.quickSqlSelect("clientes", "nombre", "codcliente=" + coma + codcli + coma);
+if (nomcli)
+asunto = asunto + ": " + nomcli;
+return asunto;
+ÏÏÖ
+LINEAS PRESUPUESTOS: Obtener idpresupuestoÏÏ0044ÏÏargs = arguments[0].split("ğ");
+coma = String.fromCharCode(39);
+util = new FLUtil;
+codEjercicio = args[0];
+codSerie = args[1];
+numero = args[2];
+res = util.quickSqlSelect("presupuestoscli", "idpresupuesto", "numero = " + coma + numero + coma + " and codejercicio = " + coma + codEjercicio + coma + " and codserie = " + coma + codSerie + coma);
+if (!res)
+return "";
+return res;ÏÏÖ
+FACTURAS CLIENTES: Formatear fechaÏÏ0013ÏÏargs = arguments[0].split("ğ");
+argFecha = args[3];
+if ( argFecha.isEmpty() ) return new Date;
+arrFecha = argFecha.split("/");
+dia = arrFecha[1];
+mes = arrFecha[0];
+agno = arrFecha[2];
+return new Date(agno, mes, dia);
+ÏÏÖ
+FACTURAS CLIENTES: Obtener codpostalÏÏ0073ÏÏargs = arguments[0].split("ğ");
+dif = args[10];
+if (dif == "0")
+ return "";
+coma = String.fromCharCode(39);
+util = new FLUtil;
+codcli = fldatosppal.iface.pub_cerosIzquierda(args[4],6).right(6);
+codpostal = util.quickSqlSelect("dirclientes", "codpostal", "codcliente=" + coma + codcli + coma + " and dir=" + coma + dif + coma);
+if (!codpostal)
+return "";
+return codpostal;
+
+ÏÏÖ
+FACTURAS CLIENTES: Obtener porcomisionÏÏ0074ÏÏargs = arguments[0].split("ğ");
+coma = String.fromCharCode(39);
+util = new FLUtil;
+codage = args[5];
+porcom = util.quickSqlSelect("agentes", "porcomision", "codagente=" + coma + codage + coma);
+if (!porcom)
+return "";
+return porcom;
+
+ÏÏÖ
+FACTURAS CLIENTES: Obtener observacionesÏÏ0054ÏÏargs = arguments[0].split("ğ");
+chrRet = String.fromCharCode(10);
+outObv = "";
+if ( args[29] != "" )
+ outObv += args[29] + chrRet;
+if ( args[30] != "" )
+ outObv += args[30] + chrRet;
+if ( args[31] != "" )
+ outObv += args[31] ;
+return outObv;ÏÏÖ
+LINEAS FACTURAS CLIENTES: Obtener descripcionÏÏ0015ÏÏargs = arguments[0].split("ğ");
+coma = String.fromCharCode(39);
+util = new FLUtil;
+ref = args[4];
+if ( ref.isEmpty() ) return "??";
+res = util.quickSqlSelect("articulos", "descripcion", "referencia = " + coma + ref + coma);
+if ( res ) return res
+else return "??";ÏÏÖ
+CLIENTES: Obtener nombreÏÏ0090ÏÏargs = arguments[0].split("ğ");
+codcli=fldatosppal.iface.pub_cerosIzquierda(args[0],6).right(6);
+coma = String.fromCharCode(39);
+util = new FLUtil;
+nombre = util.quickSqlSelect("clientes","nombre","codcliente=" + coma + codcli + coma);
+if (!nombre)
+return "";
+return nombre;ÏÏÖ
+PRESUPUESTOS: Obtener iva portesÏÏ0100ÏÏargs = arguments[0].split("ğ");
+regiva = args[15];
+if (regiva=="6")
+return 0;
+return args[37];
+ÏÏÖ
+CLIENTES: Obtener regimen IVAÏÏ0001ÏÏargs = arguments[0].split("ğ");
+inIva = args[13];
+if ( !inIva || inIva == "A" )
+ return "General";
+if ( inIva == "6" )
+ return "Exento";
+if ( inIva == "4" )
+ return "Exportaciones";
+ return "General";ÏÏÖ
+LINEAS PEDIDOS CLIENTES: Obtener descripcionÏÏ0018ÏÏargs = arguments[0].split("ğ");
+coma = String.fromCharCode(39);
+util = new FLUtil;
+ref = args[4];
+if ( ref.isEmpty() ) return "??";
+res = util.quickSqlSelect("articulos", "descripcion", "referencia = " + coma + ref + coma);
+if ( res ) return res
+else return "??";ÏÏÖ
+FACTURAS CLIENTES: Obtener iva portesÏÏ0102ÏÏargs = arguments[0].split("ğ");
+regiva = args[13];
+if (regiva=="6")
+return 0.0;
+return args[47];
+ÏÏÖ
+LINEAS FACTURAS CLIENTES: Obtener recargoÏÏ0023ÏÏargs = arguments[0].split("ğ");
+coma = String.fromCharCode(39);
+util = new FLUtil;
+numero = args[2];
+codEjercicio = args[0];
+codSerie = args[1];
+codCliente = util.quickSqlSelect("facturascli", "codcliente",  "numero = " + coma + numero + coma + " and codejercicio = " + coma + codEjercicio + coma + " and codserie=" + coma + codSerie + coma);
+aplicarRecEq = util.quickSqlSelect("clientes", "recargo", "codcliente = " + coma +codCliente + coma);
+if (aplicarRecEq != false)
+ return 4.0;
+return "";ÏÏÖ
+LINEAS PRESUPUESTOS: Obtener descuentoÏÏ0091ÏÏargs = arguments[0].split("ğ");
+dt1 = parseFloat(args[9]);
+if (isNaN(dt1)) dt1 = 0.0;
+dt2 = parseFloat(args[10]);
+if (isNaN(dt2)) dt2 = 0.0;
+return ( 1.0 - ( (1.0-(dt1/100.0))*(1.0-(dt2/100.0)) ) ) * 100.0;ÏÏÖ
+PRESUPUESTOS / PEDIDOS CLIENTES: Obtener direccionÏÏ0075ÏÏargs = arguments[0].split("ğ");
+dif = args[12];
+if (dif == "0")
+ return "-";
+coma = String.fromCharCode(39);
+util = new FLUtil;
+codcli = fldatosppal.iface.pub_cerosIzquierda(args[8],6).right(6);
+direc = util.quickSqlSelect("dirclientes", "direccion", "codcliente=" + coma + codcli + coma + " and dir=" + coma + dif + coma);
+if (!direc)
+return "-";
+return direc;
+
+ÏÏÖ
+EXCEL: Obtener codtarjetaÏÏ0078ÏÏargs = arguments[0].split("ğ");
+ras = args[0];
+if (ras.isEmpty())
+return "ignorar";
+coma = String.fromCharCode(39);
+util = new FLUtil;
+ras = formRecorddat_procesos_lotes.iface.pub_escapeQuote(ras);
+cod = util.quickSqlSelect("crm_tarjetas","codtarjeta","nombre=" + coma + ras + coma);
+if (cod)
+return "ignorar";
+return util.nextCounter("codtarjeta", new FLSqlCursor("crm_tarjetas"));ÏÏÖ
+EXCEL: Obtener idioma + pais desde fer_tarjetasÏÏ0088ÏÏargs = arguments[0].split("ğ");
+pais = args[4];
+idioma = args[7];
+if (pais.isEmpty())
+return idioma;
+if (idioma.isEmpty())
+return pais;
+return idioma +  " : " + pais;ÏÏÖ
+EXCEL: Obtener idioma + pais desde ext_tarjetasÏÏ0087ÏÏargs = arguments[0].split("ğ");
+pais = args[3];
+idioma = args[4];
+if (pais.isEmpty())
+return idioma;
+if (idioma.isEmpty())
+return pais;
+return idioma +  " : " + pais;ÏÏÖ
+PRESUPUESTOS / PEDIDOS CLIENTES: Obtener provinciaÏÏ0066ÏÏargs = arguments[0].split("ğ");
+coma = String.fromCharCode(39);
+util = new FLUtil;
+codcli = fldatosppal.iface.pub_cerosIzquierda(args[8],6).right(6);
+codprov = util.quickSqlSelect("clientes", "codprov", "codcliente=" + coma + codcli + coma);
+if (!codprov)
+return "";
+prov = util.quickSqlSelect("provincias", "provincia", "codigo=" + coma + codprov + coma);
+if (!prov)
+return "";
+return prov;
+
+ÏÏÖ
+EXCEL TARJETAS COMUNICACIONES: Obtener asunto,origen,destinoÏÏ0083ÏÏargs = arguments[0].split("ğ");
+asunto = "IMPORTADO EXCEL";
+nomcli = args[0];
+if (!nomcli.isEmpty())
+asunto = asunto + ": " + nomcli;
+return asunto;
+ÏÏÖ
+EXCEL: Obtener siguiente codigo comunicacionesÏÏ0077ÏÏutil = new FLUtil;
+return util.nextCounter("codcomunicacion", new FLSqlCursor("crm_comunicaciones"));ÏÏÖ
+LINEAS PEDIDOS CLIENTES: Obtener recargoÏÏ0024ÏÏargs = arguments[0].split("ğ");
+coma = String.fromCharCode(39);
+util = new FLUtil;
+numero = args[2];
+codEjercicio = args[0];
+codSerie = args[1];
+codCliente = util.quickSqlSelect("pedidoscli", "codcliente", "numero = " + coma + numero + coma + " and codejercicio = " + coma + codEjercicio + coma + " and codserie=" + coma + codSerie + coma);
+aplicarRecEq = util.quickSqlSelect("clientes", "recargo", "codcliente = " + coma +codCliente + coma);
+if (aplicarRecEq != false)
+ return 4.0;
+return "";ÏÏÖ
+LINEAS: Obtener cantidadÏÏ0095ÏÏargs = arguments[0].split("ğ");
+coma = String.fromCharCode(39);
+util = new FLUtil;
+ref = args[4];
+cnt = parseFloat(args[5]);
+if (isNaN(cnt)) return 0.0;
+if ( ref.isEmpty() ) return cnt;
+udsx = parseFloat(util.quickSqlSelect("articulos", "udsxenv", "referencia = " + coma + ref + coma));
+if (isNaN(udsx)) udsx = 1.0;
+return udsx*cnt;ÏÏÖ
+LINEAS PEDIDOS CLIENTES: Obtener descuentoÏÏ0092ÏÏargs = arguments[0].split("ğ");
+dt1 = parseFloat(args[7]);
+if (isNaN(dt1)) dt1 = 0.0;
+dt2 = parseFloat(args[8]);
+if (isNaN(dt2)) dt2 = 0.0;
+return ( 1.0 - ( (1.0-(dt1/100.0))*(1.0-(dt2/100.0)) ) ) * 100.0;ÏÏÖ
+PRESUPUESTOS / PEDIDOS CLIENTES: Obtener porcomisionÏÏ0068ÏÏargs = arguments[0].split("ğ");
+coma = String.fromCharCode(39);
+util = new FLUtil;
+codage = args[5];
+porcom = util.quickSqlSelect("agentes", "porcomision", "codagente=" + coma + codage + coma);
+if (!porcom)
+return "";
+return porcom;
+
+ÏÏÖ
+EXCEL CAMPO 6: Formatear fecha, separador puntoÏÏ0076ÏÏargs = arguments[0].split("ğ");
+argFecha = args[6].left(8);
+if ( argFecha.isEmpty() ) return new Date;
+arrFecha = argFecha.split('.');
+dia = arrFecha[0];
+mes = arrFecha[1];
+agno = "20" + arrFecha[2];
+return new Date(agno, mes, dia);
+ÏÏÖ
+AGENTES: Obtener ciudadÏÏ0032ÏÏargs = arguments[0].split("ğ");
+coma = String.fromCharCode(39);
+util = new FLUtil;
+pob = args[3];
+ext = args[4];
+if ( pob.isEmpty() || ext.isEmpty() ) return "??";
+res = util.quickSqlSelect("mace_poblaciones", "descripcion", "codpoblacion=" + coma + pob + coma + " and orden=" + ext );
+if ( res ) return res
+else return pob + "-" + ext;
+ÏÏÖ
+PRESUPUESTOS: Formatear fechaÏÏ0039ÏÏargs = arguments[0].split("ğ");
+argFecha = args[3];
+if ( argFecha.isEmpty() ) return new Date;
+arrFecha = argFecha.split("/");
+dia = arrFecha[1];
+mes = arrFecha[0];
+agno = arrFecha[2];
+return new Date(agno, mes, dia);
+ÏÏÖ
+PRESUPUESTOS: Formatear fecha salidaÏÏ0043ÏÏargs = arguments[0].split("ğ");
+argFecha = args[4];
+if ( argFecha.isEmpty() ) return new Date;
+arrFecha = argFecha.split("/");
+dia = arrFecha[1];
+mes = arrFecha[0];
+agno = arrFecha[2];
+return new Date(agno, mes, dia);
+ÏÏÖ
+PRESUPUESTOS: Obtener codigoÏÏ0040ÏÏargs = arguments[0].split("ğ");
+outCod = args[0];
+outCod += fldatosppal.iface.pub_cerosIzquierda(args[1],2);
+outCod += fldatosppal.iface.pub_cerosIzquierda(args[2],6);
+return outCod;ÏÏÖ
+PRESUPUESTOS: Obtener codigo clienteÏÏ0041ÏÏargs = arguments[0].split("ğ");
+return fldatosppal.iface.pub_cerosIzquierda(args[8],6).right(6);
+ÏÏÖ
+PRESUPUESTOS: Obtener netoÏÏ0042ÏÏargs = arguments[0].split("ğ");
+outTotal = 0.0;
+outTotal = parseFloat(args[28]) - parseFloat(args[29]);
+return outTotal;ÏÏÖ
+PEDIDOS CLIENTES: Obtener iva portesÏÏ0101ÏÏargs = arguments[0].split("ğ");
+regiva = args[15];
+if (regiva=="6")
+return 0;
+return args[39];
+ÏÏÖ
+FACTURAS CLIENTES: Obtener direccionÏÏ0056ÏÏargs = arguments[0].split("ğ");
+dif = args[10];
+if (dif == "0")
+ return "-";
+coma = String.fromCharCode(39);
+util = new FLUtil;
+codcli = fldatosppal.iface.pub_cerosIzquierda(args[4],6).right(6);
+direc = util.quickSqlSelect("dirclientes", "direccion", "codcliente=" + coma + codcli + coma + " and dir=" + coma + dif + coma);
+if (!direc)
+return "-";
+return direc;
+
+ÏÏÖ
+PROVEEDORES: Obtener codigoÏÏ0036ÏÏargs = arguments[0].split("ğ");
+return fldatosppal.iface.pub_cerosIzquierda(args[0],6).right(6);
+ÏÏÖ
+PROVEEDORES: Obtener observacionesÏÏ0004ÏÏargs = arguments[0].split("ğ");
+chrRet = String.fromCharCode(10);
+outObv = "";
+if ( args[8] != "" ) {
+ outObv = "Contacto: ";
+ outObv += args[8] + chrRet;
+}
+if ( args[22] != "" )
+ outObv += args[22] + chrRet;
+outObv += args[23] ;
+return outObv;ÏÏÖ
+PRESUPUESTOS: Obtener observacionesÏÏ0052ÏÏargs = arguments[0].split("ğ");
+chrRet = String.fromCharCode(10);
+outObv = "";
+if ( args[9] != "" )
+ outObv += args[9] + chrRet;
+if ( args[33] != "" )
+ outObv += args[33] + chrRet;
+if ( args[34] != "" )
+ outObv += args[34] ;
+return outObv;ÏÏÖ
+PEDIDOS CLIENTES: Obtener observacionesÏÏ0053ÏÏargs = arguments[0].split("ğ");
+chrRet = String.fromCharCode(10);
+outObv = "";
+if ( args[9] != "" )
+ outObv += args[9] + chrRet;
+if ( args[32] != "" )
+ outObv += args[32] + chrRet;
+if ( args[33] != "" )
+ outObv += args[33] ;
+return outObv;ÏÏÖ
+LINEAS PRESUPUESTOS: Obtener referenciaÏÏ0049ÏÏargs = arguments[0].split("ğ");
+coma = String.fromCharCode(39);
+util = new FLUtil;
+ref = args[4];
+if ( ref.isEmpty() ) return "";
+res = util.quickSqlSelect("articulos", "referencia", "referencia = " + coma + ref + coma);
+if ( res ) return res
+else return "";ÏÏÖ
+PRESUPUESTOS / PEDIDOS CLIENTES: Obtener paisÏÏ0060ÏÏargs = arguments[0].split("ğ");
+coma = String.fromCharCode(39);
+util = new FLUtil;
+codcli = fldatosppal.iface.pub_cerosIzquierda(args[8],6).right(6);
+codpais = util.quickSqlSelect("clientes", "codpais", "codcliente=" + coma + codcli + coma);
+if (!codpais)
+return "";
+return codpais;
+
+ÏÏÖ
+ARTICULOS: Obtener modeloÏÏ0026ÏÏargs = arguments[0].split("ğ");
+codigo = args[0];
+if ( codigo.length != 12 ) return "";
+codigo = codigo.left( 3 );
+coma = String.fromCharCode(39);
+util = new FLUtil;
+if (!util.quickSqlSelect("mace_modelos","codmodelo","codmodelo="+coma+codigo+coma))
+util.sqlInsert("mace_modelos","codmodelo,descripcion",codigo+","+codigo);
+return codigo;
+ÏÏÖ
+AGENTES: Obtener comisionÏÏ0033ÏÏargs = arguments[0].split("ğ");
+tipo = args[9];
+ret = "";
+switch (tipo) {
+case "1":
+ ret = "7.20";
+ break;
+case "2":
+ ret = "10.00";
+ break;
+case "3":
+ ret = "8.00";
+ break;
+case "4":
+ ret = "7.00";
+}
+return ret;
+ÏÏÖ
+AGENTES: Obtener nombreÏÏ0031ÏÏargs = arguments[0].split("ğ");
+return args[1];
+ÏÏÖ
+ARTICULOS: Ignorar codigos viejo formatoÏÏ0025ÏÏargs = arguments[0].split("ğ");
+codigo = args[0];
+if ( codigo.length != 12 ) return "ignorar";
+return codigo;
+ÏÏÖ
+ARTICULOS: Obtener medidasÏÏ0027ÏÏargs = arguments[0].split("ğ");
+codigo = args[0];
+if ( codigo.length != 12 ) return "";
+codigo = codigo.mid( 3, 5 );
+coma = String.fromCharCode(39);
+util = new FLUtil;
+if (!util.quickSqlSelect("mace_medidas","codmedidas","codmedidas="+coma+codigo+coma))
+util.sqlInsert("mace_medidas","codmedidas,descripcion",codigo+","+codigo);
+return codigo;
+ÏÏÖ
+EXCEL CAMPO 5: Formatear agenteÏÏ0081ÏÏargs = arguments[0].split("ğ");
+agente = args[5];
+if ( agente.length == 1 || agente.isEmpty() ) return "infosial";
+agente = agente.toLowerCase();
+switch (agente) {
+case "ramón":
+ agente = "ramon";
+ break;
+case "arantxa":
+ agente = "arancha";
+ break;
+}
+return agente;
+ÏÏÖ
+ARTICULOS: Obtener presentacionÏÏ0029ÏÏargs = arguments[0].split("ğ");
+codigo = args[0];
+if ( codigo.length != 12 ) return "";
+codigo = codigo.right( 2 );
+coma = String.fromCharCode(39);
+util = new FLUtil;
+if (!util.quickSqlSelect("mace_presentaciones","codpresentacion","codpresentacion="+coma+codigo+coma))
+util.sqlInsert("mace_presentaciones","codpresentacion,descripcion",codigo+","+codigo);
+return codigo;
+
+ÏÏÖ
+PRESUPUESTOS / PEDIDOS CLIENTES: Obtener codpostalÏÏ0057ÏÏargs = arguments[0].split("ğ");
+dif = args[12];
+if (dif == "0")
+ return "";
+coma = String.fromCharCode(39);
+util = new FLUtil;
+codcli = fldatosppal.iface.pub_cerosIzquierda(args[8],6).right(6);
+codpostal = util.quickSqlSelect("dirclientes", "codpostal", "codcliente=" + coma + codcli + coma + " and dir=" + coma + dif + coma);
+if (!codpostal)
+return "";
+return codpostal;
+
+ÏÏÖ
+DIRECCIONES CLIENTES: Obtener ciudadÏÏ0030ÏÏargs = arguments[0].split("ğ");
+coma = String.fromCharCode(39);
+util = new FLUtil;
+pob = args[4];
+ext = args[5];
+if ( pob.isEmpty() || ext.isEmpty() ) return "??";
+res = util.quickSqlSelect("mace_poblaciones", "descripcion", "codpoblacion=" + coma + pob + coma + " and orden=" + ext );
+if ( res ) return res
+else return pob + "-" + ext;
+ÏÏÖ
+CLIENTES: Obtener recargo de equiv.ÏÏ0002ÏÏargs = arguments[0].split("ğ");
+inReq = args[14];
+return ( inReq == "S" );
+ÏÏÖ
+PEDIDOS CLIENTES: Formatear fechaÏÏ0011ÏÏargs = arguments[0].split("ğ");
+argFecha = args[3];
+if ( argFecha.isEmpty() ) return new Date;
+arrFecha = argFecha.split("/");
+dia = arrFecha[1];
+mes = arrFecha[0];
+agno = arrFecha[2];
+return new Date(agno, mes, dia);
+ÏÏÖ
+PRESUPUESTOS / PEDIDOS CLIENTES: Obtener idprovinciaÏÏ0059ÏÏargs = arguments[0].split("ğ");
+coma = String.fromCharCode(39);
+util = new FLUtil;
+codcli = fldatosppal.iface.pub_cerosIzquierda(args[8],6).right(6);
+codprov = util.quickSqlSelect("clientes", "codprov", "codcliente=" + coma + codcli + coma);
+if (!codprov)
+return "";
+idprov = util.quickSqlSelect("provincias", "idprovincia", "codigo=" + coma + codprov + coma);
+if (!idprov)
+return "";
+return idprov;
+ÏÏÖ
+PEDIDOS CLIENTES: Formatear fecha salidaÏÏ0012ÏÏargs = arguments[0].split("ğ");
+argFecha = args[4];
+if ( argFecha.isEmpty() ) return new Date;
+arrFecha = argFecha.split("/");
+dia = arrFecha[1];
+mes = arrFecha[0];
+agno = arrFecha[2];
+return new Date(agno, mes, dia);
+ÏÏÖ
+FACTURAS CLIENTES: Obtener codigoÏÏ0006ÏÏargs = arguments[0].split("ğ");
+outCod = args[0];
+outCod += fldatosppal.iface.pub_cerosIzquierda(args[1],2);
+outCod += fldatosppal.iface.pub_cerosIzquierda(args[2],6);
+return outCod;ÏÏÖ
+PEDIDOS CLIENTES: Obtener codigoÏÏ0008ÏÏargs = arguments[0].split("ğ");
+outCod = args[0];
+outCod += fldatosppal.iface.pub_cerosIzquierda(args[1],2);
+outCod += fldatosppal.iface.pub_cerosIzquierda(args[2],6);
+return outCod;ÏÏÖ
+FACTURAS CLIENTES: Obtener codigo clienteÏÏ0037ÏÏargs = arguments[0].split("ğ");
+return fldatosppal.iface.pub_cerosIzquierda(args[4],6).right(6);
+ÏÏÖ
+FACTURAS CLIENTES: Obtener netoÏÏ0007ÏÏargs = arguments[0].split("ğ");
+outTotal = 0.0;
+outTotal = parseFloat(args[24]) - parseFloat(args[25]);
+return outTotal;ÏÏÖ
+EXCEL: Obtener contenido, ignorar vacioÏÏ0084ÏÏargs = arguments[0].split("ğ");
+argCon = args[7];
+if (argCon.length == 1 || argCon.isEmpty()) return "ignorar";
+return argCon;ÏÏÖ
+FACTURAS CLIENTES: Obtener idprovinciaÏÏ0069ÏÏargs = arguments[0].split("ğ");
+coma = String.fromCharCode(39);
+util = new FLUtil;
+codcli = fldatosppal.iface.pub_cerosIzquierda(args[4],6).right(6);
+codprov = util.quickSqlSelect("clientes", "codprov", "codcliente=" + coma + codcli + coma);
+if (!codprov)
+return "";
+idprov = util.quickSqlSelect("provincias", "idprovincia", "codigo=" + coma + codprov + coma);
+if (!idprov)
+return "";
+return idprov;
+ÏÏÖ
+DIRECCIONES CLIENTES: Obtener domenvioÏÏ0055ÏÏargs = arguments[0].split("ğ");
+coma = String.fromCharCode(39);
+util = new FLUtil;
+dir = args[1];
+codcli = fldatosppal.iface.pub_cerosIzquierda(args[0],6).right(6);
+direnv = util.quickSqlSelect("clientes", "direnv", "codcliente=" + coma + codcli + coma );
+return (dir == direnv);ÏÏÖ
+FACTURAS CLIENTES: Obtener provinciaÏÏ0070ÏÏargs = arguments[0].split("ğ");
+coma = String.fromCharCode(39);
+util = new FLUtil;
+codcli = fldatosppal.iface.pub_cerosIzquierda(args[4],6).right(6);
+codprov = util.quickSqlSelect("clientes", "codprov", "codcliente=" + coma + codcli + coma);
+if (!codprov)
+return "";
+prov = util.quickSqlSelect("provincias", "provincia", "codigo=" + coma + codprov + coma);
+if (!prov)
+return "";
+return prov;
+
+ÏÏÖ
+FACTURAS CLIENTES: Obtener paisÏÏ0071ÏÏargs = arguments[0].split("ğ");
+coma = String.fromCharCode(39);
+util = new FLUtil;
+codcli = fldatosppal.iface.pub_cerosIzquierda(args[4],6).right(6);
+codpais = util.quickSqlSelect("clientes", "codpais", "codcliente=" + coma + codcli + coma);
+if (!codpais)
+return "";
+return codpais;
+
+ÏÏÖ
+FACTURAS CLIENTES: Obtener ciudadÏÏ0072ÏÏargs = arguments[0].split("ğ");
+dif = args[10];
+if (dif == "0")
+ return "";
+coma = String.fromCharCode(39);
+util = new FLUtil;
+codcli = fldatosppal.iface.pub_cerosIzquierda(args[4],6).right(6);
+ciudad = util.quickSqlSelect("dirclientes", "ciudad", "codcliente=" + coma + codcli + coma + " and dir=" + coma + dif + coma);
+if (!ciudad)
+return "";
+return ciudad;
+
+ÏÏÖ
+PEDIDOS CLIENTES: Obtener codigo clienteÏÏ0038ÏÏargs = arguments[0].split("ğ");
+return fldatosppal.iface.pub_cerosIzquierda(args[8],6).right(6);
+ÏÏÖ
+PEDIDOS CLIENTES: Obtener idfacturaÏÏ0009ÏÏargs = arguments[0].split("ğ");
+return args[2];ÏÏÖ
+PEDIDOS CLIENTES: Obtener netoÏÏ0010ÏÏargs = arguments[0].split("ğ");
+outTotal = 0.0;
+outTotal = parseFloat(args[27]) - parseFloat(args[28]);
+return outTotal;ÏÏÖ
+CONTACTOS: Obtener codigoÏÏ0034ÏÏargs = arguments[0].split("ğ");
+codigo = args[1] + args[2];
+return fldatosppal.iface.pub_cerosIzquierda(codigo,6).right(6);
+ÏÏÖ
+PRESUPUESTOS / PEDIDOS CLIENTES: Obtener ciudadÏÏ0058ÏÏargs = arguments[0].split("ğ");
+dif = args[12];
+if (dif == "0")
+ return "";
+coma = String.fromCharCode(39);
+util = new FLUtil;
+codcli = fldatosppal.iface.pub_cerosIzquierda(args[8],6).right(6);
+ciudad = util.quickSqlSelect("dirclientes", "ciudad", "codcliente=" + coma + codcli + coma + " and dir=" + coma + dif + coma);
+if (!ciudad)
+return "";
+return ciudad;
+
+ÏÏÖ
+LINEAS FACTURAS CLIENTES: Obtener referenciaÏÏ0014ÏÏargs = arguments[0].split("ğ");
+coma = String.fromCharCode(39);
+util = new FLUtil;
+ref = args[4];
+if ( ref.isEmpty() ) return "";
+res = util.quickSqlSelect("articulos", "referencia", "referencia = " + coma + ref + coma);
+if ( res ) return res
+else return "";ÏÏÖ
+LINEAS PEDIDOS CLIENTES: Obtener referenciaÏÏ0017ÏÏargs = arguments[0].split("ğ");
+coma = String.fromCharCode(39);
+util = new FLUtil;
+ref = args[4];
+if ( ref.isEmpty() ) return "";
+res = util.quickSqlSelect("articulos", "referencia", "referencia = " + coma + ref + coma);
+if ( res ) return res
+else return "";ÏÏÖ
+CLIENTES: Obtener bloqueadoÏÏ0050ÏÏargs = arguments[0].split("ğ");
+if (args[3] == "S")
+return true;
+return false;
+ÏÏÖ
+EXCEL COMUNICACIONES: Obtener codtarjetaÏÏ0079ÏÏargs = arguments[0].split("ğ");
+ras = args[0];
+if (ras.isEmpty())
+return "ignorar";
+coma = String.fromCharCode(39);
+util = new FLUtil;
+cod = util.quickSqlSelect("crm_tarjetas","codtarjeta","nombre=" + coma + ras + coma);
+if (cod)
+return cod;
+return "ignorar";ÏÏÖ
+LINEAS FACTURAS CLIENTES: Obtener precio totalÏÏ0020ÏÏargs = arguments[0].split("ğ");
+
+cnt = parseFloat(args[5]);
+if (isNaN(cnt)) return 0.0;
+
+dt1 = parseFloat(args[7]);
+if (isNaN(dt1)) dt1 = 0.0;
+dt2 = parseFloat(args[8]);
+if (isNaN(dt2)) dt2 = 0.0;
+porDto = ( 1.0 - ( (1.0-(dt1/100.0))*(1.0-(dt2/100.0)) ) ) * 100.0;
+
+util = new FLUtil;
+precioNominal = 0;
+unimin = parseFloat(args[33]);
+if (isNaN(unimin) || unimin == 0.0) {
+precioNominal = cnt * util.roundFieldValue(parseFloat( args[6] ),"lineasfacturascli","pvpunitario");
+} else {
+coma = String.fromCharCode(39);
+ref = args[4];
+udsx = 1.0;
+if ( !ref.isEmpty() )
+udsx = parseFloat(util.quickSqlSelect("articulos", "udsxenv", "referencia = " + coma + ref + coma));
+if (isNaN(udsx)) udsx = 1.0;
+precioNominal = udsx * cnt * util.roundFieldValue(parseFloat( args[6] ),"lineasfacturascli","pvpunitario");
+}
+
+if ( porDto == 0 )
+ return  util.roundFieldValue(precioNominal,"lineasfacturascli","pvptotal");
+dto = precioNominal * porDto / 100.0;
+dto = util.roundFieldValue(dto, "lineasfacturascli", "pvpsindto");
+total = precioNominal - dto;
+
+return util.roundFieldValue(total,"lineasfacturascli","pvptotal");
+ÏÏÖ
+LINEAS FACTURAS CLIENTES: Obtener precio nominalÏÏ0019ÏÏargs = arguments[0].split("ğ");
+cnt = parseFloat(args[5]);
+if (isNaN(cnt)) return 0.0;
+unimin = parseFloat(args[33]);
+if (isNaN(unimin) || unimin == 0.0)
+return cnt *  util.roundFieldValue(parseFloat( args[6] ),"lineasfacturascli","pvpunitario");
+coma = String.fromCharCode(39);
+util = new FLUtil;
+ref = args[4];
+udsx = 1.0;
+if ( !ref.isEmpty() )
+udsx = parseFloat(util.quickSqlSelect("articulos", "udsxenv", "referencia = " + coma + ref + coma));
+if (isNaN(udsx)) udsx = 1.0;
+return udsx * cnt *  util.roundFieldValue(parseFloat( args[6] ),"lineasfacturascli","pvpunitario");
+
+ÏÏÖ
+LINEAS PEDIDOS CLIENTES: Obtener idpedidoÏÏ0016ÏÏargs = arguments[0].split("ğ");
+coma = String.fromCharCode(39);
+util = new FLUtil;
+numero = args[2];
+codEjercicio = args[0];
+codSerie = args[1];
+res = util.quickSqlSelect("pedidoscli", "idpedido", "numero = " + coma + numero + coma + " and codejercicio = " + coma + codEjercicio + coma + " and codserie=" + coma + codSerie + coma);
+if (!res)
+return "";
+return res;ÏÏÖ
+LINEAS FACTURAS CLIENTES: Obtener idfacturaÏÏ0005ÏÏargs = arguments[0].split("ğ");
+coma = String.fromCharCode(39);
+util = new FLUtil;
+numero = args[2];
+codEjercicio = args[0];
+codSerie = args[1];
+res = util.quickSqlSelect("facturascli", "idfactura", "numero = " + coma + numero + coma + " and codejercicio = " + coma + codEjercicio + coma + " and codserie=" + coma + codSerie + coma);
+if (!res)
+return "";
+return res;ÏÏÖ
+LINEAS PRESUPUESTOS: Obtener descripcionÏÏ0045ÏÏargs = arguments[0].split("ğ");
+coma = String.fromCharCode(39);
+util = new FLUtil;
+ref = args[4];
+if ( ref.isEmpty() ) return "??";
+res = util.quickSqlSelect("articulos", "descripcion", "referencia = " + coma + ref + coma);
+if ( res ) return res
+else return "??";ÏÏÖ
+EXCEL CAMPO 6: Formatear fecha, separador barraÏÏ0085ÏÏargs = arguments[0].split("ğ");
+argFecha = args[6].left(8);
+if ( argFecha.isEmpty() ) return new Date;
+arrFecha = argFecha.split('/');
+dia = arrFecha[0];
+mes = arrFecha[1];
+agno = "20" + arrFecha[2];
+return new Date(agno, mes, dia);
+ÏÏÖ
+ARTICULOS: Obtener unidades por envaseÏÏ0094ÏÏargs = arguments[0].split("ğ");
+env = args[41];
+if (env.isEmpty())
+return 1.0;
+unimi = parseFloat(args[45]);
+if (isNaN(unimi)) unimi = 0;
+if (unimi==0)
+return 1.0;
+udsx = parseFloat(args[27]);
+if (isNaN(udsx)) udsx = 1;
+if (udsx<1)
+return 1.0;
+return (unimi != udsx ? unimi : udsx);ÏÏÖ
+CLIENTES: Obtener descuentos comercialesÏÏ0103ÏÏargs = arguments[0].split("ğ");
+return args[19] + "|" + args[20] + "|" + args[54];ÏÏÖ
+EXCEL: Obtener contenido + campo 8 (presupuesto), ignorar vacioÏÏ0086ÏÏargs = arguments[0].split("ğ");
+argCon = args[7];
+if (argCon.length == 1 || argCon.isEmpty()) return "ignorar";
+argPre = args[8];
+if (!argPre.isEmpty())
+return argPre + " : " + argCon;
+return argCon;ÏÏÖ
+EXCEL CAMPO 4: Formatear agenteÏÏ0082ÏÏargs = arguments[0].split("ğ");
+agente = args[4];
+if ( agente.length == 1 || agente.isEmpty() ) return "infosial";
+agente = agente.toLowerCase();
+switch (agente) {
+case "ramón":
+ agente = "ramon";
+ break;
+case "arantxa":
+ agente = "arancha";
+ break;
+}
+return agente;
+ÏÏÖ
+PEDIDOS CLIENTES: Obtener estadoÏÏ0051ÏÏargs = arguments[0].split("ğ");
+estado = args[29];
+return estado;ÏÏÖ
+LINEAS FACTURAS CLIENTES: Obtener cantidadÏÏ0108ÏÏargs = arguments[0].split("ğ");
+cnt = parseFloat(args[5]);
+if (isNaN(cnt)) return 0.0;
+unimin = parseFloat(args[33]);
+if (isNaN(unimin) || unimin == 0.0)
+return cnt;
+ref = args[4];
+if ( ref.isEmpty() ) return cnt;
+coma = String.fromCharCode(39);
+util = new FLUtil;
+udsx = parseFloat(util.quickSqlSelect("articulos", "udsxenv", "referencia = " + coma + ref + coma));
+if (isNaN(udsx)) udsx = 1.0;
+return udsx*cnt;
+ÏÏÖ

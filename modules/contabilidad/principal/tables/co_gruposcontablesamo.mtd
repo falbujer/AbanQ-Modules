@@ -1,0 +1,149 @@
+<!DOCTYPE TMD>
+<TMD>
+	<name>co_gruposcontablesamo</name>
+	<alias>QT_TRANSLATE_NOOP("MetaData","Grupos contables de amortización")</alias>
+
+	<field>
+		<name>codgrupo</name>
+		<alias>QT_TRANSLATE_NOOP("MetaData","Código")</alias>
+		<null>false</null>
+		<pk>true</pk>
+		<type>string</type>
+		<length>10</length>
+		
+		<relation>
+			<table>co_amortizaciones</table>
+			<field>codgrupocontableamo</field>
+			<card>1M</card>
+		</relation>
+	</field>
+	
+	<field>
+    <name>descripcion</name>
+		<alias>QT_TRANSLATE_NOOP("MetaData","Descripción")</alias>
+		<null>true</null>
+		<pk>false</pk>
+		<type>string</type>
+		<length>100</length>
+	</field>
+	
+	<field>
+		<name>codsubcuentaele</name>
+		<alias>QT_TRANSLATE_NOOP("MetaData","S.Elemento")</alias>
+		<null>false</null>
+		<pk>false</pk>
+		<type>string</type>
+		<length>15</length>
+	</field>
+	
+	<field>
+		<name>idsubcuentaele</name>
+		<alias>QT_TRANSLATE_NOOP("MetaData","ID")</alias>
+		<null>true</null>
+		<pk>false</pk>
+		<type>uint</type>
+		<visiblegrid>false</visiblegrid>
+		<relation>
+			<table>co_subcuentas</table>
+			<field>idsubcuenta</field>
+			<card>M1</card>
+			<checkIn>false</checkIn>
+		</relation>
+	</field>
+	
+	<field>
+		<name>codsubcuentaamo</name>
+		<alias>QT_TRANSLATE_NOOP("MetaData","S.Amortización")</alias>
+		<null>false</null>
+		<pk>false</pk>
+		<type>string</type>
+		<length>15</length>
+	</field>
+	
+	<field>
+		<name>idsubcuentaamo</name>
+		<alias>QT_TRANSLATE_NOOP("MetaData","ID")</alias>
+		<null>true</null>
+		<pk>false</pk>
+		<type>uint</type>
+		<visiblegrid>false</visiblegrid>
+		<relation>
+			<table>co_subcuentas</table>
+			<field>idsubcuenta</field>
+			<card>M1</card>
+			<checkIn>false</checkIn>
+		</relation>
+	</field>
+	
+	<field>
+		<name>codsubcuentagas</name>
+		<alias>QT_TRANSLATE_NOOP("MetaData","S.Gastos")</alias>
+		<null>false</null>
+		<pk>false</pk>
+		<type>string</type>
+		<length>15</length>
+	</field>
+	
+	<field>
+		<name>idsubcuentagas</name>
+		<alias>QT_TRANSLATE_NOOP("MetaData","ID")</alias>
+		<null>true</null>
+		<pk>false</pk>
+		<type>uint</type>
+		<visiblegrid>false</visiblegrid>
+		<relation>
+			<table>co_subcuentas</table>
+			<field>idsubcuenta</field>
+			<card>M1</card>
+			<checkIn>false</checkIn>
+		</relation>
+	</field>
+	
+	<field>
+		<name>codsubcuentaper</name>
+		<alias>QT_TRANSLATE_NOOP("MetaData","S.Pérdidas")</alias>
+		<null>false</null>
+		<pk>false</pk>
+		<type>string</type>
+		<length>15</length>
+	</field>
+	
+	<field>
+		<name>idsubcuentaper</name>
+		<alias>QT_TRANSLATE_NOOP("MetaData","ID")</alias>
+		<null>true</null>
+		<pk>false</pk>
+		<type>uint</type>
+		<visiblegrid>false</visiblegrid>
+		<relation>
+			<table>co_subcuentas</table>
+			<field>idsubcuenta</field>
+			<card>M1</card>
+			<checkIn>false</checkIn>
+		</relation>
+	</field>
+	
+	<field>
+		<name>codsubcuentagan</name>
+		<alias>QT_TRANSLATE_NOOP("MetaData","S.Ganancias")</alias>
+		<null>false</null>
+		<pk>false</pk>
+		<type>string</type>
+		<length>15</length>
+	</field>
+	
+	<field>
+		<name>idsubcuentagan</name>
+		<alias>QT_TRANSLATE_NOOP("MetaData","ID")</alias>
+		<null>true</null>
+		<pk>false</pk>
+		<type>uint</type>
+		<visiblegrid>false</visiblegrid>
+		<relation>
+			<table>co_subcuentas</table>
+			<field>idsubcuenta</field>
+			<card>M1</card>
+			<checkIn>false</checkIn>
+		</relation>
+	</field>
+</TMD>

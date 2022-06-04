@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="i_facturascli" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="xPath">
+		<![CDATA[/KugarData/Row]]>
+	</queryString>
+	<field name="empresa.nombre" class="java.lang.String">
+		<fieldDescription><![CDATA[@empresa.nombre]]></fieldDescription>
+	</field>
+	<field name="lineasfacturascli.referencia" class="java.lang.String">
+		<fieldDescription><![CDATA[@lineasfacturascli.referencia]]></fieldDescription>
+	</field>
+	<field name="lineasfacturascli.codimpuesto" class="java.lang.String">
+		<fieldDescription><![CDATA[@lineasfacturascli.codimpuesto]]></fieldDescription>
+	</field>
+	<field name="lineasfacturascli.cantidad" class="java.lang.String">
+		<fieldDescription><![CDATA[@lineasfacturascli.cantidad]]></fieldDescription>
+	</field>
+	<field name="lineasfacturascli.descripcion" class="java.lang.String">
+		<fieldDescription><![CDATA[@lineasfacturascli.descripcion]]></fieldDescription>
+	</field>
+	<field name="lineasfacturascli.idalbaran" class="java.lang.String">
+		<fieldDescription><![CDATA[@lineasfacturascli.idalbaran]]></fieldDescription>
+	</field>
+	<field name="lineasfacturascli.idfactura" class="java.lang.String">
+		<fieldDescription><![CDATA[@lineasfacturascli.idfactura]]></fieldDescription>
+	</field>
+	<field name="lineasfacturascli.iva" class="java.lang.String">
+		<fieldDescription><![CDATA[@lineasfacturascli.iva]]></fieldDescription>
+	</field>
+	<field name="lineasfacturascli.pvptotal" class="java.lang.Double">
+		<fieldDescription><![CDATA[@lineasfacturascli.pvptotal]]></fieldDescription>
+	</field>
+	<field name="lineasfacturascli.pvpunitario" class="java.lang.String">
+		<fieldDescription><![CDATA[@lineasfacturascli.pvpunitario]]></fieldDescription>
+	</field>
+	<field name="lineasfacturascli.recargo" class="java.lang.String">
+		<fieldDescription><![CDATA[@lineasfacturascli.recargo]]></fieldDescription>
+	</field>
+	<field name="facturascli.codigo" class="java.lang.String">
+		<fieldDescription><![CDATA[@facturascli.codigo]]></fieldDescription>
+	</field>
+	<field name="empresa.cifnif" class="java.lang.String">
+		<fieldDescription><![CDATA[@empresa.cifnif]]></fieldDescription>
+	</field>
+	<field name="empresa.ciudad" class="java.lang.String">
+		<fieldDescription><![CDATA[@empresa.ciudad]]></fieldDescription>
+	</field>
+	<field name="empresa.codpais" class="java.lang.String">
+		<fieldDescription><![CDATA[@empresa.codpais]]></fieldDescription>
+	</field>
+	<field name="empresa.codpostal" class="java.lang.String">
+		<fieldDescription><![CDATA[@empresa.codpostal]]></fieldDescription>
+	</field>
+	<field name="empresa.direccion" class="java.lang.String">
+		<fieldDescription><![CDATA[@empresa.direccion]]></fieldDescription>
+	</field>
+	<field name="empresa.provincia" class="java.lang.String">
+		<fieldDescription><![CDATA[@empresa.provincia]]></fieldDescription>
+	</field>
+	<field name="facturascli.nombrecliente" class="java.lang.String">
+		<fieldDescription><![CDATA[@facturascli.nombrecliente]]></fieldDescription>
+	</field>
+	<field name="facturascli.observaciones" class="java.lang.String">
+		<fieldDescription><![CDATA[@facturascli.observaciones]]></fieldDescription>
+	</field>
+	<field name="facturascli.total" class="java.lang.Double">
+		<fieldDescription><![CDATA[@facturascli.total]]></fieldDescription>
+	</field>
+	<field name="facturascli.totalirpf" class="java.lang.String">
+		<fieldDescription><![CDATA[@facturascli.totalirpf]]></fieldDescription>
+	</field>
+	<field name="facturascli.totaliva" class="java.lang.String">
+		<fieldDescription><![CDATA[@facturascli.totaliva]]></fieldDescription>
+	</field>
+	<field name="facturascli.totalrecargo" class="java.lang.String">
+		<fieldDescription><![CDATA[@facturascli.totalrecargo]]></fieldDescription>
+	</field>
+	<field name="facturascli.neto" class="java.lang.Double">
+		<fieldDescription><![CDATA[@facturascli.neto]]></fieldDescription>
+	</field>
+	<field name="empresa.logo" class="java.lang.String">
+		<fieldDescription><![CDATA[@empresa.logo]]></fieldDescription>
+	</field>
+	<group name="facturascli.codigo" isResetPageNumber="true">
+		<groupExpression><![CDATA[$F{facturascli.codigo}]]></groupExpression>
+		<groupHeader>
+			<band height="29">
+				<staticText>
+					<reportElement x="0" y="9" width="100" height="20"/>
+					<textElement/>
+					<text><![CDATA[Referencia]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="200" y="9" width="100" height="20"/>
+					<textElement/>
+					<text><![CDATA[Cantidad]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="100" y="9" width="100" height="20"/>
+					<textElement/>
+					<text><![CDATA[Descripcion]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="300" y="9" width="100" height="20"/>
+					<textElement/>
+					<text><![CDATA[Total]]></text>
+				</staticText>
+			</band>
+		</groupHeader>
+		<groupFooter>
+			<band height="46">
+				<textField>
+					<reportElement x="200" y="7" width="100" height="20"/>
+					<textElement/>
+					<textFieldExpression class="java.lang.Double"><![CDATA[$F{facturascli.totaliva}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="347" y="0" width="100" height="20"/>
+					<textElement/>
+					<textFieldExpression class="java.lang.Double"><![CDATA[$F{facturascli.total}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="62" y="7" width="100" height="20"/>
+					<textElement/>
+					<textFieldExpression class="java.lang.Double"><![CDATA[$F{facturascli.neto}]]></textFieldExpression>
+				</textField>
+			</band>
+		</groupFooter>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="122" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="56" width="217" height="20"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{empresa.nombre}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="217" y="56" width="130" height="20"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{empresa.cifnif}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="76" width="347" height="20"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{empresa.direccion}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="96" width="59" height="20"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{empresa.codpostal}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="59" y="96" width="169" height="20"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{empresa.ciudad}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="228" y="96" width="119" height="20"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{empresa.provincia}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="362" y="0" width="193" height="20"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{facturascli.codigo}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="262" y="0" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[Factura]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="362" y="36" width="193" height="20"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{facturascli.nombrecliente}]]></textFieldExpression>
+			</textField>
+			<image>
+				<reportElement x="0" y="0" width="246" height="50"/>
+				<imageExpression class="java.lang.String"><![CDATA[$F{empresa.logo}]]></imageExpression>
+			</image>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="21" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="1" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{lineasfacturascli.referencia}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="200" y="0" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.Double"><![CDATA[$F{lineasfacturascli.cantidad}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="100" y="1" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{lineasfacturascli.descripcion}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="300" y="0" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.Double"><![CDATA[$F{lineasfacturascli.pvptotal}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="46" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

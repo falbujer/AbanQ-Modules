@@ -1,0 +1,8 @@
+<!DOCTYPE TMD>
+<TMD>
+	<name>clientes</name>
+	<!--Listado de datos de clientes y su dirección-->
+	<alias>QT_TRANSLATE_NOOP("MetaData","Clientes")</alias>
+	<query>qryclientes</query>
+	<concurWarn>false</concurWarn>
+</TMD>

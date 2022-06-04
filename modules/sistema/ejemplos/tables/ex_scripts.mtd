@@ -1,0 +1,80 @@
+<!DOCTYPE TMD>
+<TMD>
+	<name>ex_scripts</name>
+	<alias>QT_TRANSLATE_NOOP("MetaData","Scripts")</alias>
+
+	<field>
+		<name>idscript</name>
+		<alias>QT_TRANSLATE_NOOP("MetaData","Nombre")</alias>
+		<null>false</null>
+		<pk>false</pk>
+		<type>string</type>
+		<length>30</length>
+	</field>
+
+  <field>
+    <name>idobject</name>
+    <alias>QT_TRANSLATE_NOOP("MetaData","Objeto")</alias>
+    <null>true</null>
+    <pk>false</pk>
+    <type>string</type>
+    <length>255</length>
+    <editable>false</editable>
+  </field>
+  
+	<field>
+		<name>description</name>
+		<alias>QT_TRANSLATE_NOOP("MetaData","Descripción")</alias>
+		<null>true</null>
+		<pk>false</pk>
+		<type>string</type>
+		<length>255</length>
+	</field>
+	
+	<field>
+		<name>idexample</name>
+		<alias>QT_TRANSLATE_NOOP("MetaData","Ejemplo")</alias>
+		<null>false</null>
+		<pk>false</pk>
+		<type>string</type>
+		<length>30</length>
+		<visiblegrid>false</visiblegrid>
+
+		<relation>
+			<table>ex_examples</table>
+			<field>idexample</field>
+			<card>M1</card>
+			<delC>true</delC>
+		</relation>
+	</field>
+	
+
+	<field>
+		<name>code</name>
+		<alias>QT_TRANSLATE_NOOP("MetaData","Código fuente")</alias>
+		<null>true</null>
+		<pk>false</pk>
+		<type>stringlist</type>
+		<visiblegrid>false</visiblegrid>
+	</field>
+	
+	<field>
+	  <name>idserial</name>
+	  <alias>QT_TRANSLATE_NOOP("MetaData","Identificador autonumérico")</alias>
+	  <null>false</null>
+    <pk>true</pk>
+    <type>serial</type>
+    <visiblegrid>false</visiblegrid>
+  </field>
+
+  <field>
+    <name>editoninit</name>
+    <alias>QT_TRANSLATE_NOOP("MetaData","Editar al inicio")</alias>
+    <null>false</null>
+    <pk>false</pk>
+    <type>bool</type>
+    <default>false</default>
+    <visiblegrid>false</visiblegrid>
+  </field>
+</TMD>
+

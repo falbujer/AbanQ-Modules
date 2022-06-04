@@ -1,0 +1,250 @@
+<!DOCTYPE UI><UI version="3.3" stdsetdef="1">
+<class>do_funcionesusuario</class>
+<widget class="QWidget">
+    <property name="name">
+        <cstring>do_funcionesusuario</cstring>
+    </property>
+    <property name="geometry">
+        <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>528</width>
+            <height>192</height>
+        </rect>
+    </property>
+    <property name="caption">
+        <string>Opciones generales</string>
+    </property>
+    <vbox>
+        <property name="name">
+            <cstring>unnamed</cstring>
+        </property>
+        <property name="margin">
+            <number>6</number>
+        </property>
+        <property name="spacing">
+            <number>6</number>
+        </property>
+        <widget class="QGroupBox">
+            <property name="name">
+                <cstring>gbxVersion_3</cstring>
+            </property>
+            <property name="title">
+                <string>Directorio de los módulos a documentar</string>
+            </property>
+            <vbox>
+                <property name="name">
+                    <cstring>unnamed</cstring>
+                </property>
+                <widget class="QLayoutWidget">
+                    <property name="name">
+                        <cstring>layout7_2_3</cstring>
+                    </property>
+                    <hbox>
+                        <property name="name">
+                            <cstring>unnamed</cstring>
+                        </property>
+                        <widget class="QLabel">
+                            <property name="name">
+                                <cstring>lblDirModulos</cstring>
+                            </property>
+                            <property name="minimumSize">
+                                <size>
+                                    <width>400</width>
+                                    <height>0</height>
+                                </size>
+                            </property>
+                            <property name="font">
+                                <font>
+                                    <italic>1</italic>
+                                </font>
+                            </property>
+                            <property name="text">
+                                <string>NO ESTABLECIDO</string>
+                            </property>
+                        </widget>
+                        <spacer>
+                            <property name="name">
+                                <cstring>spacer3_2_3</cstring>
+                            </property>
+                            <property name="orientation">
+                                <enum>Horizontal</enum>
+                            </property>
+                            <property name="sizeType">
+                                <enum>Expanding</enum>
+                            </property>
+                            <property name="sizeHint">
+                                <size>
+                                    <width>20</width>
+                                    <height>20</height>
+                                </size>
+                            </property>
+                        </spacer>
+                        <widget class="QPushButton">
+                            <property name="name">
+                                <cstring>pbnCambiarDirModulos</cstring>
+                            </property>
+                            <property name="text">
+                                <string>Cambiar</string>
+                            </property>
+                            <property name="toolTip" stdset="0">
+                                <string>Cambiar el directorio de los modulos a documentar</string>
+                            </property>
+                            <property name="whatsThis" stdset="0">
+                                <string>Cambia o establece el directorio en el que se encuentran los modulos. Bajo este directorio deben encontrarse directamente los directorios de area, y dentro de estos los de modulos: en el caso de '/home/usuario/facturalux/modulos/facturacion/principal' deberiamos indicar '/home/usuario/facturalux/modulos'</string>
+                            </property>
+                        </widget>
+                    </hbox>
+                </widget>
+            </vbox>
+        </widget>
+        <widget class="QGroupBox">
+            <property name="name">
+                <cstring>gbxDirLocal</cstring>
+            </property>
+            <property name="title">
+                <string>Directorio que contiene el directorio 'sistema'</string>
+            </property>
+            <vbox>
+                <property name="name">
+                    <cstring>unnamed</cstring>
+                </property>
+                <widget class="QLayoutWidget">
+                    <property name="name">
+                        <cstring>layout7</cstring>
+                    </property>
+                    <hbox>
+                        <property name="name">
+                            <cstring>unnamed</cstring>
+                        </property>
+                        <widget class="QLabel">
+                            <property name="name">
+                                <cstring>lblDirSistema</cstring>
+                            </property>
+                            <property name="minimumSize">
+                                <size>
+                                    <width>400</width>
+                                    <height>0</height>
+                                </size>
+                            </property>
+                            <property name="font">
+                                <font>
+                                    <italic>1</italic>
+                                </font>
+                            </property>
+                            <property name="text">
+                                <string>NO ESTABLECIDO</string>
+                            </property>
+                        </widget>
+                        <spacer>
+                            <property name="name">
+                                <cstring>spacer3</cstring>
+                            </property>
+                            <property name="orientation">
+                                <enum>Horizontal</enum>
+                            </property>
+                            <property name="sizeType">
+                                <enum>Expanding</enum>
+                            </property>
+                            <property name="sizeHint">
+                                <size>
+                                    <width>20</width>
+                                    <height>20</height>
+                                </size>
+                            </property>
+                        </spacer>
+                        <widget class="QPushButton">
+                            <property name="name">
+                                <cstring>pbnCambiarDirSistema</cstring>
+                            </property>
+                            <property name="text">
+                                <string>Cambiar</string>
+                            </property>
+                            <property name="toolTip" stdset="0">
+                                <string>Cambiar el directorio que contiene el area de sistema</string>
+                            </property>
+                            <property name="whatsThis" stdset="0">
+                                <string>Cambia o establece el directorio en el que se encuentra el area de sistema que contiene el modulo de documentacion. En el caso de '/home/usuario/facturalux/modulos/sistema/documentacion' deberiamos indicar '/home/usuario/facturalux/modulos'</string>
+                            </property>
+                        </widget>
+                    </hbox>
+                </widget>
+            </vbox>
+        </widget>
+        <widget class="QGroupBox">
+            <property name="name">
+                <cstring>gbxVersion</cstring>
+            </property>
+            <property name="title">
+                <string>Directorio de destino para la documentación generada</string>
+            </property>
+            <vbox>
+                <property name="name">
+                    <cstring>unnamed</cstring>
+                </property>
+                <widget class="QLayoutWidget">
+                    <property name="name">
+                        <cstring>layout7_2</cstring>
+                    </property>
+                    <hbox>
+                        <property name="name">
+                            <cstring>unnamed</cstring>
+                        </property>
+                        <widget class="QLabel">
+                            <property name="name">
+                                <cstring>lblDirDestino</cstring>
+                            </property>
+                            <property name="minimumSize">
+                                <size>
+                                    <width>400</width>
+                                    <height>0</height>
+                                </size>
+                            </property>
+                            <property name="font">
+                                <font>
+                                    <italic>1</italic>
+                                </font>
+                            </property>
+                            <property name="text">
+                                <string>NO ESTABLECIDO</string>
+                            </property>
+                        </widget>
+                        <spacer>
+                            <property name="name">
+                                <cstring>spacer3_2</cstring>
+                            </property>
+                            <property name="orientation">
+                                <enum>Horizontal</enum>
+                            </property>
+                            <property name="sizeType">
+                                <enum>Expanding</enum>
+                            </property>
+                            <property name="sizeHint">
+                                <size>
+                                    <width>20</width>
+                                    <height>20</height>
+                                </size>
+                            </property>
+                        </spacer>
+                        <widget class="QPushButton">
+                            <property name="name">
+                                <cstring>pbnCambiarDirDestino</cstring>
+                            </property>
+                            <property name="text">
+                                <string>Cambiar</string>
+                            </property>
+                            <property name="toolTip" stdset="0">
+                                <string>Cambia el directorio destino de los ficheros de documentacion generados</string>
+                            </property>
+                            <property name="whatsThis" stdset="0">
+                                <string>Cambia o establece el directorio de los ficheros de documentacion generados. Si indicamos como destino '/home/usuario/doc', se generara un directorio '/home/usuario/doc/guia_usuario' para la documentacion html de usuario, un directorio '/home/usuario/doc/guia_desarrollo' para la de desarrollo, y un directorio '/home/usuario/doc/pdf' para los archivos pdf. Dentro de los directorios de documentacion html hay un fichero 'index.html' por el que se visualiza la documentacion en el navegador.</string>
+                            </property>
+                        </widget>
+                    </hbox>
+                </widget>
+            </vbox>
+        </widget>
+    </vbox>
+</widget>
+<layoutdefaults spacing="6" margin="11"/>
+</UI>

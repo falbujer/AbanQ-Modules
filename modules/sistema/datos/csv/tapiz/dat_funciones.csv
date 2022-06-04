@@ -1,0 +1,31 @@
+descripcionÏÏidÏÏcodigo
+Formatear código clienteÏÏ0001ÏÏargumentos = arguments.toString();
+arrayArgumentos = argumentos.split("ğ");
+
+codcliente = arrayArgumentos[0].left(5);
+
+return codcliente;
+
+ÏÏÖ
+Obtener entidad bancariaÏÏ0002ÏÏargumentos = arguments.toString();
+arrayArgumentos = argumentos.split("ğ");
+
+entidad = arrayArgumentos[5].left(4);
+
+return entidad;ÏÏÖ
+Obtener agencia bancariaÏÏ0003ÏÏargumentos = arguments.toString();
+arrayArgumentos = argumentos.split("ğ");
+
+agencia = arrayArgumentos[5].mid(4,4);
+
+return agencia;ÏÏÖ
+Calcular codigo cuenta bancariaÏÏ0004ÏÏutil = new FLUtil();
+curCuentas = new FLSqlCursor("cuentasbcocli");
+return util.nextCounter("codcuenta", curCuentas);ÏÏÖ
+Crear codigo subcuenta clienteÏÏ0005ÏÏargumentos = arguments.toString();
+arrayArgumentos = argumentos.split("ğ");
+
+codcliente = arrayArgumentos[0].left(5);
+codsubcuenta = "430" + codcliente;
+
+return codsubcuenta;ÏÏÖ

@@ -1,0 +1,92 @@
+<!DOCTYPE TMD>
+<TMD>
+	<name>tt_test</name>
+	<alias>QT_TRANSLATE_NOOP("MetaData","Prueba")</alias>
+	<!--Pruebas realizadas durante las sesiones de pruebas-->
+
+	<field>
+		<name>idtest</name>
+		<alias>QT_TRANSLATE_NOOP("MetaData","Identificador")</alias>
+		<!--Identificador interno-->
+		<null>false</null>
+		<pk>true</pk>
+		<type>serial</type>
+
+		<relation>
+			<table>tt_step</table>
+			<field>idtest</field>
+			<card>1M</card>
+		</relation>
+	</field>
+
+	<field>
+		<name>idtestcat</name>
+		<alias>QT_TRANSLATE_NOOP("MetaData","Pertenece a")</alias>
+		<!--Identificador de la prueba relacionada en el catálogo de pruebas-->
+		<null>false</null>
+		<pk>false</pk>
+		<type>string</type>
+		<length>6</length>
+
+		<relation>
+			<table>tt_testcat</table>
+			<field>idtestcat</field>
+			<card>M1</card>
+			<delC>true</delC>
+		</relation>
+	</field>
+	
+	<field>
+		<name>idtcatscat</name>
+		<alias>QT_TRANSLATE_NOOP("MetaData","Prueba de sesión")</alias>
+		<!--Identificador de la prueba del catálogo dentro de la sesión a la que está asociada esta prueba-->
+		<null>true</null>
+		<pk>false</pk>
+		<type>int</type>
+
+		<relation>
+			<table>tt_tcatscat</table>
+			<field>idtcatscat</field>
+			<card>M1</card>
+			<delC>true</delC>
+		</relation>
+	</field>
+
+	<field>
+		<name>idsession</name>
+		<alias>QT_TRANSLATE_NOOP("MetaData","Sesión")</alias>
+		<!--Identificador de la sesión a la que pertenece la prueba-->
+		<null>false</null>
+		<pk>false</pk>
+		<type>uint</type>
+
+		<relation>
+			<table>tt_session</table>
+			<field>idsession</field>
+			<card>M1</card>
+			<delC>true</delC>
+		</relation>
+	</field>
+
+	<field>
+		<name>status</name>
+		<alias>QT_TRANSLATE_NOOP("MetaData","Estado")</alias>
+		<!--Estado en el que acabó la prueba-->
+		<null>false</null>
+		<pk>false</pk>
+		<type>string</type>
+		<length>15</length>
+	</field>
+
+	<field>
+		<name>errordescription</name>
+		<alias>QT_TRANSLATE_NOOP("MetaData","Descripción")</alias>
+		<!--Descripción del error en caso de que el estado de la prueba sea 'error'-->
+		<null>true</null>
+		<pk>false</pk>
+		<type>string</type>
+		<length>200</length>
+	</field>
+	
+</TMD>
+

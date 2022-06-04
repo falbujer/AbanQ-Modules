@@ -1,0 +1,24 @@
+<!DOCTYPE QRY>
+<QRY>
+	<name>i_acufacturascli</name>
+
+	<tables>facturascli,empresa</tables>
+
+	<select>
+		SUM(facturascli.neto*facturascli.tasaconv),
+		facturascli.codcliente, clientes.nombre,
+		empresa.nombre, empresa.cifnif,
+		empresa.direccion,
+		empresa.codpostal, empresa.ciudad,
+		empresa.provincia, empresa.apartado,
+		empresa.codpais, empresa.coddivisa
+	</select>
+
+	<from>
+		empresa,facturascli
+		LEFT OUTER JOIN clientes ON facturascli.codcliente = clientes.codcliente
+	</from>
+
+	<where>
+	</where>
+</QRY>

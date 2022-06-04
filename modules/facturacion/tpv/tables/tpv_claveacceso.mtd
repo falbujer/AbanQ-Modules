@@ -1,0 +1,59 @@
+<!DOCTYPE TMD>
+<TMD>
+	<name>tpv_claveacceso</name>
+	<alias>QT_TRANSLATE_NOOP("MetaData","Clave de acceso")</alias>
+
+	<field>
+		<name>id</name>
+		<!--Id-->
+		<alias>QT_TRANSLATE_NOOP("MetaData","Id")</alias>
+		<null>false</null>
+		<pk>false</pk>
+		<type>serial</type>
+	</field>
+
+	<field>
+		<name>usuario</name>
+		<!--Usuario-->
+		<alias>QT_TRANSLATE_NOOP("MetaData","Usuario")</alias>
+		<null>false</null>
+		<pk>false</pk>
+		<type>string</type>
+		<length>25</length>
+	</field>
+
+	<field>
+		<name>ok</name>
+		<!--OK-->
+		<alias>QT_TRANSLATE_NOOP("MetaData","OK")</alias>
+		<null>false</null>
+		<pk>false</pk>
+		<type>bool</type>
+		<default>false</default>
+	</field>
+	
+	<field>
+		<name>noautentificar</name>
+		<alias>QT_TRANSLATE_NOOP("MetaData","No autentificar")</alias>
+		<null>false</null>
+		<pk>false</pk>
+		<type>bool</type>
+		<default>false</default>
+	</field>
+	<field>
+		<name>codtpv_agente</name>
+		<!-- Persona que vende en el terminal -->
+		<alias>QT_TRANSLATE_NOOP("MetaData","Agente")</alias>
+		<null>true</null>
+		<pk>false</pk>
+		<type>string</type>
+		<length>6</length>
+		<relation>
+			<table>tpv_agentes</table>
+			<field>codtpv_agente</field>
+			<card>M1</card>
+		</relation>
+	</field>
+
+	
+</TMD>

@@ -1,0 +1,27 @@
+<!DOCTYPE TMD>
+<TMD>
+	<name>tpv_tiendas</name>
+	<!--Tiendas-->
+	<alias>QT_TRANSLATE_NOOP("MetaData","Tiendas")</alias>
+
+	<field>
+		<name>codtienda</name>
+		<!-- Código-->
+		<alias>QT_TRANSLATE_NOOP("MetaData","Código")</alias>
+		<null>false</null>
+		<pk>true</pk>
+		<type>string</type>
+		<length>20</length>
+	</field>
+
+	<field>
+		<name>descripcion</name>
+		<!-- Descripción-->
+		<alias>QT_TRANSLATE_NOOP("MetaData","Descripción")</alias>
+		<null>true</null>
+		<pk>false</pk>
+		<type>string</type>
+		<length>200</length>
+	</field>
+</TMD>
+

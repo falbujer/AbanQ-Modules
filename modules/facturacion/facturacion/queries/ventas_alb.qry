@@ -1,0 +1,17 @@
+<!DOCTYPE QRY>
+<QRY>
+	<name>ventas_alb</name>
+	
+	<tables>albaranescli,lineasalbaranescli,articulos,clientes</tables>
+	
+	<select>
+		lineasalbaranescli.idlinea, albaranescli.idalbaran, albaranescli.nombrecliente, albaranescli.codcliente, albaranescli.codigo, albaranescli.fecha, lineasalbaranescli.referencia, lineasalbaranescli.descripcion, lineasalbaranescli.pvpunitario, lineasalbaranescli.cantidad, lineasalbaranescli.pvpsindto, lineasalbaranescli.pvptotal 
+	</select>
+	
+	<from>
+		lineasalbaranescli INNER JOIN albaranescli ON lineasalbaranescli.idalbaran = albaranescli.idalbaran
+	</from>
+	
+	<where>
+	</where>
+</QRY>

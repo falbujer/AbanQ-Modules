@@ -1,0 +1,17 @@
+<ACTIONS>
+	<action>
+		<name>ex_examples</name>
+		<alias>QT_TRANSLATE_NOOP("MetaData","Ejemplos")</alias>
+		<table>ex_examples</table>
+		<form>master</form>
+		<formrecord>ex_examples</formrecord>
+	</action>
+	
+  <action>
+		<name>ex_scripts</name>
+		<alias>QT_TRANSLATE_NOOP("MetaData","Scripts")</alias>
+		<table>ex_scripts</table>
+		<form>master</form>
+		<formrecord>ex_scripts</formrecord>
+	</action> 
+</ACTIONS>

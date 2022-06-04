@@ -1,0 +1,95 @@
+<!DOCTYPE TMD>
+<TMD>
+	<name>tt_step_record</name>
+	<alias>QT_TRANSLATE_NOOP("MetaData","Paso")</alias>
+	<!--Tabla de soporte para el formulario de creación de conjuntos de pasos comunes-->
+
+	<field>
+		<name>id</name>
+		<!--Identificador interno de la tabla-->
+		<alias>QT_TRANSLATE_NOOP("MetaData","Identificador")</alias>
+		<null>false</null>
+		<pk>true</pk>
+		<type>serial</type>
+	</field>
+	
+	<field>
+		<name>container</name>
+		<alias>QT_TRANSLATE_NOOP("MetaData","Acción")</alias>
+		<!--Acción de FacturaLUX que debe estar activa para realizar el conjunto de pasos-->
+		<null>true</null>
+		<pk>false</pk>
+		<type>string</type>
+		<length>50</length>
+	</field>
+	
+	<field>
+		<name>idarea</name>
+		<alias>QT_TRANSLATE_NOOP("MetaData","Área")</alias>
+		<!--Área a la que pertenece la acción-->
+		<null>true</null>
+		<pk>false</pk>
+		<type>string</type>
+		<length>15</length>
+
+		<relation>
+			<table>flareas</table>
+			<field>idarea</field>
+			<card>M1</card>
+		</relation>
+	</field>
+	
+	<field>
+		<name>idmodule</name>
+		<alias>QT_TRANSLATE_NOOP("MetaData","Módulo")</alias>
+		<!--Módulo al que pertenece la acción-->
+		<null>true</null>
+		<pk>false</pk>
+		<type>string</type>
+		<length>15</length>
+
+		<associated>
+				<with>idarea</with>
+				<by>idarea</by>
+		</associated>
+		
+		<relation>
+			<table>flmodules</table>
+			<field>idmodulo</field>
+			<card>M1</card>
+		</relation>
+	</field>
+	
+	<field>
+		<name>mode</name>
+		<alias>QT_TRANSLATE_NOOP("MetaData","Modo")</alias>
+		<!--Modo de apertura del formulario, en el caso de que el conjunto de pasos sea de tipo apertura de formaulario-->
+		<null>true</null>
+		<pk>false</pk>
+		<type>string</type>
+		<length>15</length>
+		<optionslist>Insert,Edit,Browse,Del</optionslist>
+		<default>Insert</default>
+	</field>
+	
+	<field>
+		<name>parameters</name>
+		<alias>QT_TRANSLATE_NOOP("MetaData","Filtro")</alias>
+		<!--Filtro para seleccionar el registro a editar, en el caso de que el conjunto de pasos sea de tipo apertura en modo edición-->
+		<null>true</null>
+		<pk>false</pk>
+		<type>stringlist</type>
+	</field>
+	
+	<field>
+		<name>variable</name>
+		<alias>QT_TRANSLATE_NOOP("MetaData","Identificador del registro")</alias>
+		<!--Variable identificativa del registro a abrir-->
+		<null>true</null>
+		<pk>false</pk>
+		<type>string</type>
+		<length>20</length>
+	</field>
+
+</TMD>
+

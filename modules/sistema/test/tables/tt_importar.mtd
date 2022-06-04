@@ -1,0 +1,71 @@
+<!DOCTYPE TMD>
+<TMD>
+	<name>tt_importar</name>
+	<alias>QT_TRANSLATE_NOOP("MetaData","Importación de pruebas")</alias>
+	<!--Tabla de soporte para el formulario de importación de pruebas-->
+
+	<field>
+		<name>id</name>
+		<!--Identificador interno-->
+		<alias>QT_TRANSLATE_NOOP("MetaData","Identificador")</alias>
+		<null>false</null>
+		<pk>true</pk>
+		<type>serial</type>
+	</field>
+	
+	<field>
+		<name>idfuncional</name>
+		<!--Identificador de la funcionalidad a importar-->
+		<alias>QT_TRANSLATE_NOOP("MetaData","Funcionalidad")</alias>
+		<null>false</null>
+		<pk>false</pk>
+		<type>string</type>
+		<length>15</length>
+
+		<relation>
+			<table>mv_funcional</table>
+			<field>codfuncional</field>
+			<card>M1</card>
+		</relation>
+	</field>
+
+	<field>
+		<name>dircsvpb</name>
+		<alias>QT_TRANSLATE_NOOP("MetaData","Directorio")</alias>
+		<!--Directorio test que contiene las pruebas base de la funcionalidad-->
+		<null>false</null>
+		<pk>false</pk>
+		<type>string</type>
+		<length>255</length>
+	</field>
+	
+	<field>
+		<name>incpb</name>
+		<!--Indicador de si se incluye las pruebas base en la importación-->
+		<alias>QT_TRANSLATE_NOOP("MetaData","Importar")</alias>
+		<null>false</null>
+		<pk>false</pk>
+		<type>bool</type>
+		<default>true</default>
+	</field>
+
+	<field>
+		<name>dircsvfun</name>
+		<alias>QT_TRANSLATE_NOOP("MetaData","Directorio")</alias>
+		<!--Directorio test que contiene las pruebas de la funcionalidad-->
+		<null>false</null>
+		<pk>false</pk>
+		<type>string</type>
+		<length>255</length>
+	</field>
+	
+	<field>
+		<name>incfun</name>
+		<!--Indicador de si se incluye las pruebas de la funcionalidad en la importación-->
+		<alias>QT_TRANSLATE_NOOP("MetaData","Importar")</alias>
+		<null>false</null>
+		<pk>false</pk>
+		<type>bool</type>
+		<default>true</default>
+	</field>
+</TMD>

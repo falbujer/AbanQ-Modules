@@ -1,0 +1,50 @@
+<ACTIONS>
+
+	<action>
+		<name>au_general</name>
+		<alias>QT_TRANSLATE_NOOP("MetaData","Datos Generales")</alias>
+		<description>QT_TRANSLATE_NOOP("MetaData","Los datos generales son una serie de valores que se usan para personalizar el funcionamiento del módulo de autómata")</description>
+		<scriptform>au_general</scriptform>
+		<scriptformrecord>au_general</scriptformrecord>
+		<table>au_general</table>
+		<form>au_general</form>
+		<formrecord>au_general</formrecord>
+	</action>
+
+	<action>
+		<name>au_automata</name>
+		<alias>Automata</alias>
+		<description>El autómata tiene dos estados: Activado y Desactivado. Cuando está activado hay un proceso que verifica periódicamente la tabla e llamadas y ejecuta las que están pendientes</description>
+		<table>au_llamadas</table>
+		<form>au_masterautomata</form>
+		<scriptform>au_masterautomata</scriptform>
+	</action>
+
+	<action>
+		<name>au_llamadas</name>
+		<alias>Llamadas</alias>
+		<description>Las llamadas son solicitudes que otras aplicaciones hacen a FacturaLUX mediante la inclusión de registros en la tabla de llamadas. Esta tabla es comprobada periódicamente para procesar las llamadas pendientes</description>
+		<table>au_llamadas</table>
+		<form>au_masterllamadas</form>
+		<formrecord>au_llamadas</formrecord>
+		<scriptform>au_masterllamadas</scriptform>
+		<scriptformrecord>au_llamadas</scriptformrecord>
+	</action>
+
+	<action>
+		<name>au_param</name>
+		<alias>Parámetros</alias>
+		<description>Los parámetros son los datos necesarios para poder realizar una llamada. Cada llamada puede tenera asociados cero, uno o más parámetros</description>
+		<table>au_param</table>
+		<formrecord>au_param</formrecord>
+	</action>
+
+	<action>
+		<name>au_result</name>
+		<alias>Resultados</alias>
+		<description>Los resultados son los datos producidos por la ejecución de una llamada. Cada llamada puede tenera asociados cero, uno o más resultados</description>
+		<table>au_result</table>
+		<formrecord>au_result</formrecord>
+	</action>
+
+</ACTIONS>

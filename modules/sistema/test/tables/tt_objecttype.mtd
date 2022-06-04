@@ -1,0 +1,41 @@
+<!DOCTYPE TMD>
+<TMD>
+	<name>tt_objecttype</name>
+	<alias>QT_TRANSLATE_NOOP("MetaData","Tipo de objeto")</alias>
+	<!--Tipos de objeto utilizados para realizar los pasos de las pruebas-->
+
+	<field>
+		<name>idobjecttype</name>
+		<!--Identificador del tipo de objeto-->
+		<alias>QT_TRANSLATE_NOOP("MetaData","Identificador")</alias>
+		<null>false</null>
+		<pk>true</pk>
+		<type>string</type>
+		<length>50</length>
+
+		<relation>
+			<table>tt_stepcat</table>
+			<field>idobjecttype</field>
+			<card>1M</card>
+		</relation>
+
+		<relation>
+			<table>tt_action</table>
+			<field>idobjecttype</field>
+			<card>1M</card>
+		</relation>
+
+	</field>
+
+	<field>
+		<name>description</name>
+		<!--Descripción del tipo de objeto-->
+		<alias>QT_TRANSLATE_NOOP("MetaData","Descripción")</alias>
+		<null>false</null>
+		<pk>false</pk>
+		<type>string</type>
+		<length>200</length>
+	</field>
+
+</TMD>
+

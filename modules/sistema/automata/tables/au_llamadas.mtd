@@ -1,0 +1,90 @@
+<!DOCTYPE TMD>
+<TMD>
+	<name>au_llamadas</name>
+	<alias>QT_TRANSLATE_NOOP("MetaData","Llamadas")</alias>
+	<!--Solicitudes de acciones de FacturaLUX desde otras aplicaciones-->
+
+	<field>
+		<name>idllamada</name>
+		<alias>QT_TRANSLATE_NOOP("MetaData","Id")</alias>
+		<!--Identificador de la llamada-->
+		<null>false</null>
+		<pk>true</pk>
+		<type>serial</type>
+		
+		<relation>
+			<table>au_param</table>
+			<field>idllamada</field>
+			<card>1M</card>
+		</relation>
+		
+		<relation>
+			<table>au_result</table>
+			<field>idllamada</field>
+			<card>1M</card>
+		</relation>
+	</field>
+	
+	<field>
+		<name>funcion</name>
+		<alias>QT_TRANSLATE_NOOP("MetaData","Función")</alias>
+		<!--Función a la que se llama-->
+		<null>true</null>
+		<pk>false</pk>
+		<type>string</type>
+		<length>100</length>
+	</field>
+	
+	<field>
+		<name>fecha</name>
+		<alias>QT_TRANSLATE_NOOP("MetaData","Fecha")</alias>
+		<!--Timestamp de la llamada-->
+		<null>true</null>
+		<pk>false</pk>
+		<type>date</type>
+	</field>
+	
+	<field>
+		<name>hora</name>
+		<alias>QT_TRANSLATE_NOOP("MetaData","Hora")</alias>
+		<!--Timestamp de la llamada-->
+		<null>true</null>
+		<pk>false</pk>
+		<type>time</type>
+	</field>
+	
+	<field>
+		<name>procesada</name>
+		<alias>QT_TRANSLATE_NOOP("MetaData","Procesada")</alias>
+		<!--Indica si la llamada ha sido ya procesada-->
+		<null>true</null>
+		<pk>false</pk>
+		<type>bool</type>
+		<default>false</default>
+	</field>
+	
+	<field>
+		<name>resultado</name>
+		<alias>QT_TRANSLATE_NOOP("MetaData","Resultado")</alias>
+		<!--Indica si la llamada se realizó correctamente (resultado 0 o positivo) o no (resultado negativo).-->
+		<null>true</null>
+		<pk>false</pk>
+		<type>int</type>
+	</field>
+	
+	<field>
+		<name>param</name>
+		<alias>QT_TRANSLATE_NOOP("MetaData","Parámetros")</alias>
+		<null>true</null>
+		<pk>false</pk>
+		<type>stringlist</type>
+	</field>
+	
+	<field>
+		<name>result</name>
+		<alias>QT_TRANSLATE_NOOP("MetaData","Resultados")</alias>
+		<null>true</null>
+		<pk>false</pk>
+		<type>stringlist</type>
+	</field>
+</TMD>

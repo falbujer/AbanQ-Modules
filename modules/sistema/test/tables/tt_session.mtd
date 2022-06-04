@@ -1,0 +1,77 @@
+<!DOCTYPE TMD>
+<TMD>
+	<name>tt_session</name>
+	<alias>QT_TRANSLATE_NOOP("MetaData","Sesión")</alias>
+	<!--Sesiones ejecutadas por el módulo de pruebas-->
+
+	<field>
+		<name>idsession</name>
+		<alias>QT_TRANSLATE_NOOP("MetaData","Identificador")</alias>
+		<!--Identificador interno-->
+		<null>false</null>
+		<pk>true</pk>
+		<type>serial</type>
+
+		<relation>
+			<table>tt_test</table>
+			<field>idsession</field>
+			<card>1M</card>
+		</relation>
+	</field>
+
+	<field>
+		<name>idsessioncat</name>
+		<alias>QT_TRANSLATE_NOOP("MetaData","Pertenece a")</alias>
+		<!--Identificador de la sesión en el catálogo de sesiones-->
+		<null>false</null>
+		<pk>false</pk>
+		<type>string</type>
+		<length>6</length>
+
+		<relation>
+			<table>tt_sessioncat</table>
+			<field>idsessioncat</field>
+			<card>M1</card>
+			<delC>true</delC>
+		</relation>
+	</field>
+
+	<field>
+		<name>status</name>
+		<alias>QT_TRANSLATE_NOOP("MetaData","Estado")</alias>
+		<!--Estado en el que ha terminado la sesión-->
+		<null>false</null>
+		<pk>false</pk>
+		<type>string</type>
+		<length>15</length>
+	</field>
+
+	<field>
+		<name>sessiondate</name>
+		<alias>QT_TRANSLATE_NOOP("MetaData","Fecha")</alias>
+		<!--Fecha en la que se realizó la sesión-->
+		<null>true</null>
+		<pk>false</pk>
+		<type>date</type>
+	</field>
+
+	<field>
+		<name>sessionstart</name>
+		<!--Hora de inicio-->
+		<alias>QT_TRANSLATE_NOOP("MetaData","Inicio")</alias>
+		<null>true</null>
+		<pk>false</pk>
+		<type>time</type>
+	</field>
+
+	<field>
+		<name>sessionend</name>
+		<!--Hora de finalización-->
+		<alias>QT_TRANSLATE_NOOP("MetaData","Fin")</alias>
+		<null>true</null>
+		<pk>false</pk>
+		<type>time</type>
+	</field>
+
+</TMD>
+

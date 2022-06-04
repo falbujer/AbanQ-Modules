@@ -1,0 +1,156 @@
+<!DOCTYPE UI><UI version="3.3" stdsetdef="1">
+<class>formMantenimiento</class>
+<comment>Ventana principal MDI de la aplicacion</comment>
+<widget class="QMainWindow">
+    <property name="name">
+        <cstring>formMantenimiento</cstring>
+    </property>
+    <property name="geometry">
+        <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>595</width>
+            <height>540</height>
+        </rect>
+    </property>
+    <property name="caption">
+        <string>formDatos</string>
+    </property>
+    <property name="icon">
+        <pixmap>image50404</pixmap>
+    </property>
+    <property name="toolTip" stdset="0">
+        <string></string>
+    </property>
+    <property name="whatsThis" stdset="0">
+        <string>FacturaLUX software ERP</string>
+    </property>
+</widget>
+<menubar>
+    <property name="name">
+        <cstring>menubar</cstring>
+    </property>
+    <property name="geometry">
+        <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>595</width>
+            <height>25</height>
+        </rect>
+    </property>
+    <property name="acceptDrops">
+        <bool>false</bool>
+    </property>
+    <property name="frameShape">
+        <enum>MenuBarPanel</enum>
+    </property>
+    <property name="defaultUp">
+        <bool>false</bool>
+    </property>
+    <item text="Principal" name="Principal">
+        <separator/>
+        <action name="mt_procesos"/>
+        <action name="wg_widget"/>
+    </item>
+</menubar>
+<toolbars>
+    <toolbar dock="2">
+        <property name="name">
+            <cstring>toolBar</cstring>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>0</x>
+                <y>0</y>
+                <width>43</width>
+                <height>29</height>
+            </rect>
+        </property>
+        <property name="acceptDrops">
+            <bool>true</bool>
+        </property>
+        <property name="frameShape">
+            <enum>ToolBarPanel</enum>
+        </property>
+        <property name="label">
+            <string>Herramientas</string>
+        </property>
+        <action name="mt_procesos"/>
+    </toolbar>
+</toolbars>
+<actions>
+    <action>
+        <property name="name">
+            <cstring>mt_procesos</cstring>
+        </property>
+        <property name="iconSet">
+            <iconset>image49158</iconset>
+        </property>
+        <property name="text">
+            <string>&amp;Procesos</string>
+        </property>
+        <property name="menuText">
+            <string>&amp;Procesos</string>
+        </property>
+        <property name="toolTip">
+            <string>Procesos (Ctrl+P)</string>
+        </property>
+        <property name="whatsThis">
+            <string>Procesos (Ctrl+P)</string>
+        </property>
+        <property name="accel">
+            <string>Ctrl+P</string>
+        </property>
+    </action>
+    <action>
+        <property name="name">
+            <cstring>wg_widget</cstring>
+        </property>
+        <property name="text">
+            <string>Widgets</string>
+        </property>
+        <property name="menuText">
+            <string>Widgets</string>
+        </property>
+        <property name="accel">
+            <string>Ctrl+W</string>
+        </property>
+    </action>
+</actions>
+<images>
+    <image name="image50404">
+        <data format="PNG" length="1000">89504e470d0a1a0a0000000d4948445200000020000000200806000000737a7af4000003af49444154789c95573d6b1b41101d02f9012ef30f52a472275771aa90d29dd5399d0d2e8c5165bb3042853fd2c98104296088d244b8920918ac22e12e60b00ac339e0c0c9d8e1641490c0c5156a5e8addd9bb9ddbb51c35a3d3cd9ce6bd7d6f768f000023c01583302000841064ddbf47fec3f749e77bf3c4f3280803a2d148658f86764cef53ab881f2ef3c57de27fe3bc24499c791c55c1505771e4ce6d648454e4b99922532f9990cf0b9163208e8143203e69e71164b40a641cd3f461a6349326ba19d09d9ebfdb505f748c9a7bea7a695e45dd1c0eebea6107d57c6f728d8bda524cb83510ecac03cb6f10b51a40a58cced23c5029039314585b40d2ed00004ed7cac0f20292ab48e52d969cc80a9af13066779a68263e68e4b51575bdad228e1aaa89d50575cd0c8c8ac800102682018e932cffc9f8ef986886e8787793e81951f8a549b3d7bfa8fbe980e8fa8ebabb9b347b7747e1c77da21f5dea7d6dd1abe725ea7d3b26fad3a7eefb7da219a2feef3ea84418dc0e30579ac3e076007a4ad4eff7896688c6e371169f12853f43a21269066e54638da642880b30adea4ba83bd779ed23a585e8320200ac2f2b4d542baabedd82755d7043ce3d9906f49f05dfcf558efe3d62e1a90f056791951f5fc65859049238c1ca2250df515a29bfdc43b562b451d4827685a581ea56c746de53213a334c10006cec9c5a48ea355557dfee64485f0038d34db39599811c138681f39e42de685a7300c189698a0050741159f97b5b6dac2f01d5d5cfc02af0f6751da8e9666ab921a50529e782ed8258c744743ab19090f1b39e88eda68a9d966a0a5dcd5ca8f378423ae602c935917bc294595ec8cb69ca992ff3dcbb979ce5431b89dc784cbebd9714f3e5841c02c41dc9ce0c2323ce560f95c8e49a72f4e5f30d5b03dcb9f67941033abaf673ab7ef4a8fc6c42de3f80c0303274cf70894832e9394f98686b80914b0dc8b575af69764ef068c1cb5c7e0e9813cc8d8d5cfa77daae67984c1fcc3775aa131f8244c4dc2ee64096cd11c9a88f390024114b041ca7f83b9b74a93d4fb426bc5ab019f0b941ece38f76436ad7b9cf84435b0306b9700333a53fde35955ae2f87fa762f709264334cd0d13113da7e7200c88e49a73916f4f98e2ef0263c24d1e06985d5e7bf97e205ce29d70ec8689a8e7e739346418907ee7cee338b618d0bf7b55cdf55c2726a9e7bd40aa9d3b966b6a33e27783d48c7497ebbda0e063f16e27d774da848baf62abceb74bda6735a9059f0b7ce703768374813c5f20ab27b946c605c2cf520b5319d0f9052d883de51f010dc18061407ba40000000049454e44ae426082</data>
+    </image>
+    <image name="image49158">
+        <data format="PNG" length="1074">89504e470d0a1a0a0000000d4948445200000016000000160806000000c4b46c3b000003f949444154789cb55561681b65187eba45bcb28e655324c3e24e985ba345885a681564c13f528a1b437f34f5cf2afbb1487e94b44a3c8bc46b60e152247a458aa950c80daca148e94a89266047faa37001abd9b01b376ce50a5d779d5b494b57f7f8e3eeb6b676ce3f7bff3c77dcf7bdf7bccffbbcdf5743128f236adc07399181207c006c6ae8f674a06f5d7b55103a2a58d7d6bb3d1d4879b46cb7b7e38dd42d4def5eefd0531eed62cfc7efcf4a3d0afa9eeec6a7ab03c0e61a46bfff1657ae5d017c3e11a1f63058249464169ce211a53ffb0d4daea9e9dc248b7c468e678ed16095b74992accc92d6288b00608d114a32836a9e90620aac314701a957859224e444064cf26466687c9924b96127c90ce61638c83f2a974d6e8d68977c0d00a23d32e4040f4bbdea7e2b46447b6488f52250cd13723c0316e955d3398355d265763f367679b7f877f89c34c222b5ec305738c54b524ca9b5c60839aeda8cab71428eabcf738877c7c7749264b5fa90a43bc25ab217ea6583722f3529a678ac185dc6ea4916995292d9655a24e79d5d6e725705e3bf7f921b25f5b4d1198e4880d4ab3ccb346fea33f62e63cece62590e931983b4c8f1099dac92a5e9caae9594a60d9a116b0e4053382201d53ccf6735e7ebd276d467486b8c666b5b68a4d4a65f8846a4df394f727a17bab3a4d7eb3de5f389084724408eab3fd374989134e7ad07da2d91be7af1c32dbe3fe06f0c481ce03dbdbc5d97d25485a1f6f064f85cf41d3362ed0367f85761a2623b21bf43d33c19686cf9c87fd40f51cc4010040040e799708a16ffed1ecbae36d4de39b4f7d71b578fac56579f5b5c5ed9f772f018cabf5dc7e1e307b1b8b082fd815a2cfcb9d2803db81868c2cdc04b1a5e38be088f70707df9d69d33afbcfee2f639ae05ca73d7716178b00200f0d58b3e3d5df9c1b5dafdee3bccd5feec92a9597de1b3d1778d61ab4b8eab57b735d0c5db366351f47f02000847ac4352af62d8aeb035360c1b4db3ea74dd96ab3465bbc2f5b98b6e8fa498b2e6adf3be05672cbfa04172c25e54b9ec3070d1f5b5b585d916cc8d14c8296ec809f5aebf21701ec05e0040ebdba7cfaae92c699185a2cda890b77deb76df758b693aae712a7119b7b69dfe45a813de0470689bee2dcdc15476789c34492591b9c7596728b66aeee2cc8e4aca6465c85c047060d7b3b9a539f865a031f095b7ce1bf4370664a61f68e74e644e2b90265928ea8eb62699247d3e5f17803d8fbc014aa74a4fc909759324f5b24d4c4966e86ff07f1d3cd13ac939727c943486ad1ba2287e06a0ee91490120d41eaa0dbdd7f9931493ef7080cc0ce5183cd1fa2380270178028d81fe96d75abe03d0f4bf12baa1a72b00502b788480d7eb6df71ff57f2e0842f38e654f3c6c7f0d1fd365fa0f92af4caf6c09747b0000000049454e44ae426082</data>
+    </image>
+</images>
+<connections>
+    <connection>
+        <sender>mt_procesos</sender>
+        <signal>activated()</signal>
+        <receiver>formMantenimiento</receiver>
+        <slot>openDefaultForm()</slot>
+    </connection>
+    <connection>
+        <sender>wg_widget</sender>
+        <signal>activated()</signal>
+        <receiver>formMantenimiento</receiver>
+        <slot>execDefaultScript()</slot>
+    </connection>
+</connections>
+<slots>
+    <slot>chooseFont()</slot>
+    <slot access="protected">destroy()</slot>
+    <slot>generalExit()</slot>
+    <slot>helpAbout()</slot>
+    <slot>helpIndex()</slot>
+    <slot access="protected">init()</slot>
+    <slot>openDefaultForm()</slot>
+    <slot>toggleStatusBar(bool)</slot>
+    <slot>toggleToolBar(bool)</slot>
+    <slot>windowClose()</slot>
+    <slot>execDefaultScript()</slot>
+</slots>
+<layoutdefaults spacing="6" margin="11"/>
+</UI>

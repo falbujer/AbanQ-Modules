@@ -1,0 +1,35 @@
+<!DOCTYPE QRY>
+<QRY>
+	<name>co_i_amortizaciones</name>
+
+	<group>
+		<level>0</level>
+		<field>co_subcuentas.codcuenta</field>
+	</group>
+	
+	<tables>co_amortizaciones</tables>
+
+	<select>
+		co_amortizaciones.codamortizacion, co_amortizaciones.elemento,
+		co_amortizaciones.fechacierre, co_amortizaciones.valoramortizable, co_amortizaciones.fecha,
+		co_gruposcontablesamo.codsubcuentaamo, co_gruposcontablesamo.codgrupo, co_gruposcontablesamo.descripcion,
+		co_subcuentas.codcuenta, co_subcuentas.codsubcuenta,
+		co_cuentas.descripcion,
+		empresa.nombre, empresa.direccion, empresa.ciudad, empresa.codpostal, empresa.provincia, empresa.codpais
+	</select>
+
+	<from>
+		empresa,
+		co_amortizaciones
+		INNER JOIN co_gruposcontablesamo ON co_amortizaciones.codgrupocontableamo = co_gruposcontablesamo.codgrupo
+		INNER JOIN co_subcuentas ON co_gruposcontablesamo.codsubcuentaele = co_subcuentas.codsubcuenta
+		INNER JOIN co_cuentas ON co_subcuentas.idcuenta = co_cuentas.idcuenta
+	</from>
+
+	<where>
+	</where>
+
+	<order>
+		co_subcuentas.codcuenta, co_amortizaciones.codamortizacion
+	</order>
+</QRY>

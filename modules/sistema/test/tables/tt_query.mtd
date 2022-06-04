@@ -1,0 +1,66 @@
+<!DOCTYPE TMD>
+<TMD>
+	<name>tt_query</name>
+	<alias>QT_TRANSLATE_NOOP("MetaData","Consulta SQL")</alias>
+	<!--Tabla de soporte para el formulario de consulta SQL-->
+
+	<field>
+		<name>idquery</name>
+		<!--Identificador interno-->
+		<alias>QT_TRANSLATE_NOOP("MetaData","Identificador")</alias>
+		<null>false</null>
+		<pk>true</pk>
+		<type>serial</type>
+	</field>
+
+	<field>
+		<name>testselect</name>
+		<!--Cláusula SELECT-->
+		<alias>QT_TRANSLATE_NOOP("MetaData","Select")</alias>
+		<null>false</null>
+		<pk>false</pk>
+		<type>string</type>
+		<length>50</length>
+	</field>
+
+	<field>
+		<name>testfrom</name>
+		<!--Cláusula FROM-->
+		<alias>QT_TRANSLATE_NOOP("MetaData","From")</alias>
+		<null>false</null>
+		<pk>false</pk>
+		<type>string</type>
+		<length>200</length>
+	</field>
+	
+	<field>
+		<name>testwhere</name>
+		<!--Cláusula WHERE-->
+		<alias>QT_TRANSLATE_NOOP("MetaData","Where")</alias>
+		<null>false</null>
+		<pk>false</pk>
+		<type>string</type>
+		<length>400</length>
+	</field>
+	
+	<field>
+		<name>variable</name>
+		<!--Nombre de la variable en la que se guardará el resultado de la consulta-->
+		<alias>QT_TRANSLATE_NOOP("MetaData","Guardar resultado en")</alias>
+		<null>false</null>
+		<pk>false</pk>
+		<type>string</type>
+		<length>50</length>
+	</field>
+	
+	<field>
+		<name>xml</name>
+		<!--Nodo XML que almacena la información de la consulta SQL-->
+		<alias>QT_TRANSLATE_NOOP("MetaData","xml")</alias>
+		<null>false</null>
+		<pk>false</pk>
+		<type>stringlist</type>
+	</field>
+
+</TMD>
+

@@ -1,0 +1,153 @@
+/***************************************************************************
+                 masterclientes.qs  -  description
+                             -------------------
+    begin                : vie ene 28 2005
+    copyright            : (C) 2004-2005 by InfoSiAL S.L.
+    email                : mail@infosial.com
+ ***************************************************************************/
+/***************************************************************************
+*   This program is free software; you can redistribute it and/or modify  *
+*   it under the terms of the GNU General Public License as published by  *
+*   the Free Software Foundation; version 2 of the License.               *
+***************************************************************************/
+/***************************************************************************
+   Este  programa es software libre. Puede redistribuirlo y/o modificarlo
+   bajo  los  términos  de  la  Licencia  Pública General de GNU   en  su
+   versión 2, publicada  por  la  Free  Software Foundation.
+ ***************************************************************************/
+
+/** @file */
+
+/** @class_declaration interna */
+////////////////////////////////////////////////////////////////////////////
+//// DECLARACION ///////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////
+
+//////////////////////////////////////////////////////////////////
+//// INTERNA /////////////////////////////////////////////////////
+class interna
+{
+  var ctx: Object;
+  function interna(context)
+  {
+    this.ctx = context;
+  }
+  function init()
+  {
+    this.ctx.interna_init();
+  }
+  function preloadOrder()
+  {
+    return this.ctx.interna_preloadOrder();
+  }
+}
+//// INTERNA /////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////
+
+/** @class_declaration oficial */
+//////////////////////////////////////////////////////////////////
+//// OFICIAL /////////////////////////////////////////////////////
+class oficial extends interna
+{
+  function oficial(context)
+  {
+    interna(context);
+  }
+  function tbnVentas_clicked()
+  {
+    return this.ctx.oficial_tbnVentas_clicked();
+  }
+  function ordenColumnas()
+  {
+    return this.ctx.oficial_ordenColumnas();
+  }
+}
+//// OFICIAL /////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////
+
+/** @class_declaration head */
+/////////////////////////////////////////////////////////////////
+//// DESARROLLO /////////////////////////////////////////////////
+class head extends oficial
+{
+  function head(context)
+  {
+    oficial(context);
+  }
+}
+//// DESARROLLO /////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////
+
+/** @class_declaration ifaceCtx */
+/////////////////////////////////////////////////////////////////
+//// INTERFACE  /////////////////////////////////////////////////
+class ifaceCtx extends head
+{
+  function ifaceCtx(context)
+  {
+    head(context);
+  }
+}
+
+const iface = new ifaceCtx(this);
+//// INTERFACE  /////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////
+
+/** @class_definition interna */
+////////////////////////////////////////////////////////////////////////////
+//// DEFINICION ////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////
+
+//////////////////////////////////////////////////////////////////
+//// INTERNA /////////////////////////////////////////////////////
+function interna_init()
+{
+  var _i = this.iface;
+  
+  // Si existe el metodo setOrder se ha usado preloadOrder
+  if (!("setOrder" in this.cursor())) { 
+    this.child("tableDBRecords").setOrderCols(_i.ordenColumnas());
+  }
+
+  //  connect(this.child("tbnVentas"), "clicked()", _i, "tbnVentas_clicked");
+}
+
+function interna_preloadOrder()
+{
+  var _i = this.iface;
+  return _i.ordenColumnas().join(',');
+}
+
+//// INTERNA /////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////
+
+/** @class_definition oficial */
+//////////////////////////////////////////////////////////////////
+//// OFICIAL /////////////////////////////////////////////////////
+function oficial_ordenColumnas()
+{
+  return ["nombre"];
+}
+
+function oficial_tbnVentas_clicked()
+{
+  var _i = this.iface;
+  var cursor = this.cursor();
+  var f = new FLFormSearchDB("ventas");
+  var curVentas = f.cursor();
+
+  var codCliente = cursor.valueBuffer("codcliente");
+  var mF = "facturascli.codcliente = '" + codCliente + "'";
+  curVentas.setMainFilter(mF);
+  f.setMainWidget();
+  f.exec();
+}
+//// OFICIAL /////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////
+
+/** @class_definition head */
+/////////////////////////////////////////////////////////////////
+//// DESARROLLO /////////////////////////////////////////////////
+
+//// DESARROLLO /////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////

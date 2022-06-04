@@ -1,0 +1,88 @@
+<!DOCTYPE TMD>
+<TMD>
+	<name>tt_step</name>
+	<alias>QT_TRANSLATE_NOOP("MetaData","Paso")</alias>
+	<!--Pasos realizados en las sesiones de pruebas ya ejecutadas-->
+
+	<field>
+		<name>idstep</name>
+		<alias>QT_TRANSLATE_NOOP("MetaData","Identificador")</alias>
+		<!--Identificador interno-->
+		<null>false</null>
+		<pk>true</pk>
+		<type>serial</type>
+	</field>
+
+	<field>
+		<name>idtest</name>
+		<alias>QT_TRANSLATE_NOOP("MetaData","Prueba")</alias>
+		<!--Identificador de la prueba a la que pertenece el paso-->
+		<null>false</null>
+		<pk>false</pk>
+		<type>int</type>
+
+		<relation>
+			<table>tt_test</table>
+			<field>idtest</field>
+			<card>M1</card>
+			<delC>true</delC>
+		</relation>
+	</field>
+	
+	<field>
+		<name>idstepcat</name>
+		<alias>QT_TRANSLATE_NOOP("MetaData","Paso")</alias>
+		<!--Identificador del paso relacionado en el catálogo de pasos-->
+		<null>false</null>
+		<pk>false</pk>
+		<type>int</type>
+
+		<relation>
+			<table>tt_stepcat</table>
+			<field>idstepcat</field>
+			<card>M1</card>
+			<delC>true</delC>
+		</relation>
+	</field>
+
+	<field>
+		<name>status</name>
+		<alias>QT_TRANSLATE_NOOP("MetaData","Estado")</alias>
+		<!--Estado de la ejecución del paso-->
+		<null>false</null>
+		<pk>false</pk>
+		<type>string</type>
+		<length>15</length>
+	</field>
+
+	<field>
+		<name>errordescription</name>
+		<alias>QT_TRANSLATE_NOOP("MetaData","Descripción")</alias>
+		<!--Descripción del error, si el paso tiene dicho estado-->
+		<null>true</null>
+		<pk>false</pk>
+		<type>string</type>
+		<length>200</length>
+	</field>
+
+	<field>
+		<name>testlevel</name>
+		<!--Indica el nivel de anidamiento de las pruebas, es decir, si el paso pertenece a una prueba que a su vez forma parte de otra prueba, que a su vez... -->
+		<alias>QT_TRANSLATE_NOOP("MetaData","Nivel de anidamiento")</alias>
+		<null>false</null>
+		<pk>false</pk>
+		<type>uint</type>
+	</field>
+	
+	<field>
+		<name>firststep</name>
+		<!--Indica si el paso es el primero de la prueba anidada-->
+		<alias>QT_TRANSLATE_NOOP("MetaData","Primer paso")</alias>
+		<null>false</null>
+		<pk>false</pk>
+		<type>bool</type>
+		<default>false</default>
+	</field>
+
+</TMD>
+

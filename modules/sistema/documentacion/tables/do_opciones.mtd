@@ -1,0 +1,17 @@
+<!DOCTYPE TMD>
+<TMD>
+	<name>do_opciones</name>
+	<!--Opciones de la documentación-->
+			
+	<alias>QT_TRANSLATE_NOOP("MetaData","Opciones")</alias>
+
+	<field>
+		<name>id</name>
+		<alias>QT_TRANSLATE_NOOP("MetaData","Código")</alias>
+		<null>false</null>
+		<pk>true</pk>
+		<type>serial</type>
+	</field>
+	
+
+</TMD>

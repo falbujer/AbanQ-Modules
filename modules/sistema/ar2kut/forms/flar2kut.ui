@@ -1,0 +1,147 @@
+<!DOCTYPE UI><UI version="3.3" stdsetdef="1">
+<class>formDatos</class>
+<comment>Ventana principal MDI de la aplicacion</comment>
+<widget class="QMainWindow">
+    <property name="name">
+        <cstring>formDatos</cstring>
+    </property>
+    <property name="geometry">
+        <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>595</width>
+            <height>540</height>
+        </rect>
+    </property>
+    <property name="caption">
+        <string>formDatos</string>
+    </property>
+    <property name="icon">
+        <pixmap>image50404</pixmap>
+    </property>
+    <property name="toolTip" stdset="0">
+        <string></string>
+    </property>
+    <property name="whatsThis" stdset="0">
+        <string>FacturaLUX software ERP</string>
+    </property>
+</widget>
+<menubar>
+    <property name="name">
+        <cstring>menubar</cstring>
+    </property>
+    <property name="geometry">
+        <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>595</width>
+            <height>25</height>
+        </rect>
+    </property>
+    <property name="acceptDrops">
+        <bool>false</bool>
+    </property>
+    <property name="frameShape">
+        <enum>MenuBarPanel</enum>
+    </property>
+    <property name="defaultUp">
+        <bool>false</bool>
+    </property>
+    <item text="General" name="General">
+        <action name="ak_opciones"/>
+        <separator/>
+        <action name="wg_widget"/>
+    </item>
+</menubar>
+<toolbars>
+    <toolbar dock="2">
+        <property name="name">
+            <cstring>toolBar</cstring>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>0</x>
+                <y>0</y>
+                <width>43</width>
+                <height>29</height>
+            </rect>
+        </property>
+        <property name="acceptDrops">
+            <bool>true</bool>
+        </property>
+        <property name="frameShape">
+            <enum>ToolBarPanel</enum>
+        </property>
+        <property name="label">
+            <string>Herramientas</string>
+        </property>
+        <action name="ak_opciones"/>
+    </toolbar>
+</toolbars>
+<actions>
+    <action>
+        <property name="name">
+            <cstring>ak_opciones</cstring>
+        </property>
+        <property name="iconSet">
+            <iconset>image53227</iconset>
+        </property>
+        <property name="text">
+            <string>Opciones</string>
+        </property>
+        <property name="menuText">
+            <string>Opciones</string>
+        </property>
+        <property name="toolTip">
+            <string>Opciones</string>
+        </property>
+        <property name="whatsThis">
+            <string>Opciones</string>
+        </property>
+    </action>
+    <action>
+        <property name="name">
+            <cstring>wg_widget</cstring>
+        </property>
+        <property name="text">
+            <string>Widgets</string>
+        </property>
+        <property name="menuText">
+            <string>Widgets</string>
+        </property>
+        <property name="accel">
+            <string>Ctrl+W</string>
+        </property>
+    </action>
+</actions>
+<images>
+    <image name="image50404">
+        <data format="PNG" length="1000">89504e470d0a1a0a0000000d4948445200000020000000200806000000737a7af4000003af49444154789c95573d6b1b41101d02f9012ef30f52a472275771aa90d29dd5399d0d2e8c5165bb3042853fd2c98104296088d244b8920918ac22e12e60b00ac339e0c0c9d8e1641490c0c5156a5e8addd9bb9ddbb51c35a3d3cd9ce6bd7d6f768f000023c01583302000841064ddbf47fec3f749e77bf3c4f3280803a2d148658f86764cef53ab881f2ef3c57de27fe3bc24499c791c55c1505771e4ce6d648454e4b99922532f9990cf0b9163208e8143203e69e71164b40a641cd3f461a6349326ba19d09d9ebfdb505f748c9a7bea7a695e45dd1c0eebea6107d57c6f728d8bda524cb83510ecac03cb6f10b51a40a58cced23c5029039314585b40d2ed00004ed7cac0f20292ab48e52d969cc80a9af13066779a68263e68e4b51575bdad228e1aaa89d50575cd0c8c8ac800102682018e932cffc9f8ef986886e8787793e81951f8a549b3d7bfa8fbe980e8fa8ebabb9b347b7747e1c77da21f5dea7d6dd1abe725ea7d3b26fad3a7eefb7da219a2feef3ea84418dc0e30579ac3e076007a4ad4eff7896688c6e371169f12853f43a21269066e54638da642880b30adea4ba83bd779ed23a585e8320200ac2f2b4d542baabedd82755d7043ce3d9906f49f05dfcf558efe3d62e1a90f056791951f5fc65859049238c1ca2250df515a29bfdc43b562b451d4827685a581ea56c746de53213a334c10006cec9c5a48ea355557dfee64485f0038d34db39599811c138681f39e42de685a7300c189698a0050741159f97b5b6dac2f01d5d5cfc02af0f6751da8e9666ab921a50529e782ed8258c744743ab19090f1b39e88eda68a9d966a0a5dcd5ca8f378423ae602c935917bc294595ec8cb69ca992ff3dcbb979ce5431b89dc784cbebd9714f3e5841c02c41dc9ce0c2323ce560f95c8e49a72f4e5f30d5b03dcb9f67941033abaf673ab7ef4a8fc6c42de3f80c0303274cf70894832e9394f98686b80914b0dc8b575af69764ef068c1cb5c7e0e9813cc8d8d5cfa77daae67984c1fcc3775aa131f8244c4dc2ee64096cd11c9a88f390024114b041ca7f83b9b74a93d4fb426bc5ab019f0b941ece38f76436ad7b9cf84435b0306b9700333a53fde35955ae2f87fa762f709264334cd0d13113da7e7200c88e49a73916f4f98e2ef0263c24d1e06985d5e7bf97e205ce29d70ec8689a8e7e739346418907ee7cee338b618d0bf7b55cdf55c2726a9e7bd40aa9d3b966b6a33e27783d48c7497ebbda0e063f16e27d774da848baf62abceb74bda6735a9059f0b7ce703768374813c5f20ab27b946c605c2cf520b5319d0f9052d883de51f010dc18061407ba40000000049454e44ae426082</data>
+    </image>
+    <image name="image53227">
+        <data format="PNG" length="1629">89504e470d0a1a0a0000000d4948445200000020000000200806000000737a7af40000062449444154789cb5965d6c1b551a86df86e9f61826cb1964979952840da1c4de229a0a50bdea05098b54ca4fc15585142e9676a5456da956cbdfc5b6d58a46d90b4829882058a9bde8aebb2c25021199f06b97bfd84b82932a303569b31e370d33d37498994dbd93a3c6c9e1c2a1408913a78457f2c59c73beef7de6cc39df67606ec9b14db1bf263a1347b37dd9b3f963f971b547b5e27f8fa7a26ba20f015852458e8b53b83e7c5ff2bde4a837e6f18ed73bceeddcbdf3bfdb766cfba2bdb5fdebee7437f7c63cdefe7c7b86527add829b37d437dc9b1fc84fa93d6aa96155c33f00dc0da01ec0b5006e2202d9dcbca9f9635bb779fc507c908a74f942fafb3b0e779c547b544efdf449006285755747d7460fd9bacd1fdbf1587cc1dca36ba3db6ddde6ebd7ad3f08e057732c0fb6b4b60caa3dea24a5f437f3f5aa99616c51d32d4d6b73851cd2ff49bf02e0dc1c390aa9f7536f80a0265c17be75210008445c0106b0222b5493843176d227f82051e9ca850098704cc72122811c94975593449195a0e11ad04cedf47c018419c64a994ce693ed5bb73fb0f1ce8d0fed7d616f0ac065e195e135a160e8062ad0c9dc50eeeba63b9a6e6b6c6c5ca3f8952544202b4ccb9cd40adae07c012ae99a96a75abecaa6b37ccbe62d2f273a135f7a9ec77f286fcc3bfffb4ec9f792fdd44feb168440f6cb1be307e25e369de5ea80ca3ddbe3fa319de707f2bc3bddcdf939cef918e7c9ce244f7425b8addbdf416451f9dafe4497549a102f15af7cf88f0f6f1188b0c8322d9c183a01566238659f4221578071c6c08aba15a0cb28ac82056d5443400c20725344e9cdf69e3e71fcc467d500cc74080100b1fb639b1b5635d4acbe65359ad63461f5cad58000f8e0030d50448211a48fa621491228a5900409da88060058dfb87e5db53b30d3210400a2049555e7672540111528b202c332400402a3688080001380b25c41fa681a617f189800642a2f05b018c0c4c5eec062894802d88f07c74be3a02205630c922001a5b20d0181222af0093e6031a059daff01f06a76a01280d7f765df49c6d8f9771867e3000097b98080f20e88a43c5674c1c040fd14e367c771e4c891cf50c6bb6880c9cc2799cefea17e80019840f9ed18400402c6188840100a8600008665205c1786442598236629f569aab31a7360965b60d99656f24a2b433784aea72245b154842008b08a1628a108c801f82ef7a1afb70f81a50188bf16a10d6b082c0bd43896f3bfdecf7bdfad166236add8f9e79dbd7a5ee79eed714ff7381fe3e76b40f6e32c57fb54ee8d7adf3ff7a8dc1bf5a6a2aba277576350f11a4eebb8c39cd38410b84517fd43fd704a0edaf6b50d446e8dbcf4f89ec75fdbbd67f707b9a1dca4c31c84ea42d02c0d2e7317b53ddbf61c807937a70b55bbffc5fd83f6b0cdf5619d27bb929c8f711ebd39fae8f4fca500ae6aded4fc969ed7b937ea713daff3445782738ff396a75afef9b3dca948231d873b3c7bd8e6ea80cab3e92cd7f33a9765f98e0b96dedcd2da722a7f3ccfd50195ab7d2a4fa6cab08dbf6bfcfd6c1e150f2100b0738cdc587fe33d816b0281da9a5af86a7c385b3cfbcdd3fb9ede0bc0fec1523d379033fab3fdb5812b024b23d747960853028ac52236dcb5e1b7075f3df826f3983d93c75c67e04cae90cb114c573e3f41e68bcc2900c6850b4dcbfc77d7075d7f60602611094000a7e88050b2b4bdb5fdf94a5e1501a89f5efdccde67de69dbdd16f3093e1081944b70c1380ea038638c484948092d33460ca0041091c0311dc436c5ee8cad8b35cf0b8008e45a4554a2866b0002cac5871064fa33c72ac5b84597edfadbae7fb5ee6bedcd0de54a3ec10710c0b55c18ae21cee45711c034cd8f0ebc72603f73d9f73da0c8a00d69150100e8994f33dbbbdeee7a2224874a002011099aa54d4dff5b9aba30a0523744e36d8d0fec7a72d706e227f0093e382507aeeb8e6b056d6816000ea0a4c80a315ca3dc2808c02c6699a6599829a01280f4e0fd0feea132bd4a22e5ae170e8691fa3035c2181b9905000090fb2a37f8c8a38ffc45f12be1867043bd5b740b0046e78afb918275c13f250e25b8daa7727bd8e6f183f133c1bae056008baa4c5183e9420540c6dc37ee27aa8ddd173bdc9deae6dbb66efb9008e476ccf2c97e111181ac9497cb3b00047f298f6f01d18f01faad127e250000000049454e44ae426082</data>
+    </image>
+</images>
+<connections>
+    <connection>
+        <sender>ak_opciones</sender>
+        <signal>activated()</signal>
+        <receiver>formDatos</receiver>
+        <slot>execDefaultScript()</slot>
+    </connection>
+</connections>
+<slots>
+    <slot>chooseFont()</slot>
+    <slot access="protected">destroy()</slot>
+    <slot>generalExit()</slot>
+    <slot>helpAbout()</slot>
+    <slot>helpIndex()</slot>
+    <slot access="protected">init()</slot>
+    <slot>openDefaultForm()</slot>
+    <slot>toggleStatusBar(bool)</slot>
+    <slot>toggleToolBar(bool)</slot>
+    <slot>windowClose()</slot>
+    <slot>execDefaultScript()</slot>
+</slots>
+<layoutdefaults spacing="6" margin="11"/>
+</UI>

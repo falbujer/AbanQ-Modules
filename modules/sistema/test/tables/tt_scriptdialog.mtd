@@ -1,0 +1,369 @@
+<!DOCTYPE TMD>
+<TMD>
+	<name>tt_scriptdialog</name>
+	<alias>QT_TRANSLATE_NOOP("MetaData","Diálogo de scripts")</alias>
+	<!--Tabla de soporte para el formulario de copletar cuadros de diálogo generados por scripts-->
+
+	<field>
+		<name>id</name>
+		<!--Identificador interno de la tabla-->
+		<alias>QT_TRANSLATE_NOOP("MetaData","Identificador")</alias>
+		<null>false</null>
+		<pk>true</pk>
+		<type>serial</type>
+	</field>
+
+	<field>
+		<name>type1</name>
+		<!--Tipo del objeto 1-->
+		<alias>QT_TRANSLATE_NOOP("MetaData","Tipo")</alias>
+		<null>true</null>
+		<pk>false</pk>
+		<type>string</type>
+		<length>50</length>
+		<optionslist>QSLabeled,QPushButton,QCheckBox,QRadioButton,QTextEdit</optionslist>
+
+	</field>
+	
+	<field>
+		<name>name1</name>
+		<!--Nombre del objeto 1-->
+		<alias>QT_TRANSLATE_NOOP("MetaData","Nombre")</alias>
+		<null>true</null>
+		<pk>false</pk>
+		<type>string</type>
+		<length>50</length>
+	</field>
+
+	<field>
+		<name>value1</name>
+		<!--Valor asignado al objeto 1-->
+		<alias>QT_TRANSLATE_NOOP("MetaData","Valor")</alias>
+		<null>true</null>
+		<pk>false</pk>
+		<type>string</type>
+		<length>50</length>
+	</field>
+	
+	<field>
+		<name>type2</name>
+		<!--Tipo del objeto 2-->
+		<alias>QT_TRANSLATE_NOOP("MetaData","Tipo")</alias>
+		<null>true</null>
+		<pk>false</pk>
+		<type>string</type>
+		<length>50</length>
+		<optionslist>QSLabeled,QPushButton,QCheckBox,QRadioButton,QTextEdit</optionslist>
+
+	</field>
+	
+	<field>
+		<name>name2</name>
+		<!--Nombre del objeto 2-->
+		<alias>QT_TRANSLATE_NOOP("MetaData","Nombre")</alias>
+		<null>true</null>
+		<pk>false</pk>
+		<type>string</type>
+		<length>50</length>
+	</field>
+
+	<field>
+		<name>value2</name>
+		<!--Valor asignado al objeto 2-->
+		<alias>QT_TRANSLATE_NOOP("MetaData","Valor")</alias>
+		<null>true</null>
+		<pk>false</pk>
+		<type>string</type>
+		<length>50</length>
+	</field>
+	
+	<field>
+		<name>type3</name>
+		<!--Tipo del objeto 3-->
+		<alias>QT_TRANSLATE_NOOP("MetaData","Tipo")</alias>
+		<null>true</null>
+		<pk>false</pk>
+		<type>string</type>
+		<length>50</length>
+		<optionslist>QSLabeled,QPushButton,QCheckBox,QRadioButton,QTextEdit</optionslist>
+
+	</field>
+	
+	<field>
+		<name>name3</name>
+		<!--Nombre del objeto 3-->
+		<alias>QT_TRANSLATE_NOOP("MetaData","Nombre")</alias>
+		<null>true</null>
+		<pk>false</pk>
+		<type>string</type>
+		<length>50</length>
+	</field>
+
+	<field>
+		<name>value3</name>
+		<!--Valor asignado al objeto 3-->
+		<alias>QT_TRANSLATE_NOOP("MetaData","Valor")</alias>
+		<null>true</null>
+		<pk>false</pk>
+		<type>string</type>
+		<length>50</length>
+	</field>
+	
+	<field>
+		<name>type4</name>
+		<!--Tipo del objeto 4-->
+		<alias>QT_TRANSLATE_NOOP("MetaData","Tipo")</alias>
+		<null>true</null>
+		<pk>false</pk>
+		<type>string</type>
+		<length>50</length>
+		<optionslist>QSLabeled,QPushButton,QCheckBox,QRadioButton,QTextEdit</optionslist>
+
+	</field>
+	
+	<field>
+		<name>name4</name>
+		<!--Nombre del objeto 4-->
+		<alias>QT_TRANSLATE_NOOP("MetaData","Nombre")</alias>
+		<null>true</null>
+		<pk>false</pk>
+		<type>string</type>
+		<length>50</length>
+	</field>
+
+	<field>
+		<name>value4</name>
+		<!--Valor asignado al objeto 4-->
+		<alias>QT_TRANSLATE_NOOP("MetaData","Valor")</alias>
+		<null>true</null>
+		<pk>false</pk>
+		<type>string</type>
+		<length>50</length>
+	</field>
+	
+	<field>
+		<name>type5</name>
+		<!--Tipo del objeto 5-->
+		<alias>QT_TRANSLATE_NOOP("MetaData","Tipo")</alias>
+		<null>true</null>
+		<pk>false</pk>
+		<type>string</type>
+		<length>50</length>
+		<optionslist>QSLabeled,QPushButton,QCheckBox,QRadioButton,QTextEdit</optionslist>
+
+	</field>
+	
+	<field>
+		<name>name5</name>
+		<!--Nombre del objeto 5-->
+		<alias>QT_TRANSLATE_NOOP("MetaData","Nombre")</alias>
+		<null>true</null>
+		<pk>false</pk>
+		<type>string</type>
+		<length>50</length>
+	</field>
+
+	<field>
+		<name>value5</name>
+		<!--Valor asignado al objeto 5-->
+		<alias>QT_TRANSLATE_NOOP("MetaData","Valor")</alias>
+		<null>true</null>
+		<pk>false</pk>
+		<type>string</type>
+		<length>50</length>
+	</field>
+	
+	<field>
+		<name>type6</name>
+		<!--Tipo del objeto 6-->
+		<alias>QT_TRANSLATE_NOOP("MetaData","Tipo")</alias>
+		<null>true</null>
+		<pk>false</pk>
+		<type>string</type>
+		<length>50</length>
+		<optionslist>QSLabeled,QPushButton,QCheckBox,QRadioButton,QTextEdit</optionslist>
+
+	</field>
+	
+	<field>
+		<name>name6</name>
+		<!--Nombre del objeto 6-->
+		<alias>QT_TRANSLATE_NOOP("MetaData","Nombre")</alias>
+		<null>true</null>
+		<pk>false</pk>
+		<type>string</type>
+		<length>50</length>
+	</field>
+
+	<field>
+		<name>value6</name>
+		<!--Valor asignado al objeto 6-->
+		<alias>QT_TRANSLATE_NOOP("MetaData","Valor")</alias>
+		<null>true</null>
+		<pk>false</pk>
+		<type>string</type>
+		<length>50</length>
+	</field>
+	
+	<field>
+		<name>type7</name>
+		<!--Tipo del objeto 7-->
+		<alias>QT_TRANSLATE_NOOP("MetaData","Tipo")</alias>
+		<null>true</null>
+		<pk>false</pk>
+		<type>string</type>
+		<length>50</length>
+		<optionslist>QSLabeled,QPushButton,QCheckBox,QRadioButton,QTextEdit</optionslist>
+
+	</field>
+	
+	<field>
+		<name>name7</name>
+		<!--Nombre del objeto 7-->
+		<alias>QT_TRANSLATE_NOOP("MetaData","Nombre")</alias>
+		<null>true</null>
+		<pk>false</pk>
+		<type>string</type>
+		<length>50</length>
+	</field>
+
+	<field>
+		<name>value7</name>
+		<!--Valor asignado al objeto 7-->
+		<alias>QT_TRANSLATE_NOOP("MetaData","Valor")</alias>
+		<null>true</null>
+		<pk>false</pk>
+		<type>string</type>
+		<length>50</length>
+	</field>
+	
+	<field>
+		<name>type8</name>
+		<!--Tipo del objeto 8-->
+		<alias>QT_TRANSLATE_NOOP("MetaData","Tipo")</alias>
+		<null>true</null>
+		<pk>false</pk>
+		<type>string</type>
+		<length>50</length>
+		<optionslist>QSLabeled,QPushButton,QCheckBox,QRadioButton,QTextEdit</optionslist>
+
+	</field>
+	
+	<field>
+		<name>name8</name>
+		<!--Nombre del objeto 8-->
+		<alias>QT_TRANSLATE_NOOP("MetaData","Nombre")</alias>
+		<null>true</null>
+		<pk>false</pk>
+		<type>string</type>
+		<length>50</length>
+	</field>
+
+	<field>
+		<name>value8</name>
+		<!--Valor asignado al objeto 8-->
+		<alias>QT_TRANSLATE_NOOP("MetaData","Valor")</alias>
+		<null>true</null>
+		<pk>false</pk>
+		<type>string</type>
+		<length>50</length>
+	</field>
+	
+	<field>
+		<name>type9</name>
+		<!--Tipo del objeto 9-->
+		<alias>QT_TRANSLATE_NOOP("MetaData","Tipo")</alias>
+		<null>true</null>
+		<pk>false</pk>
+		<type>string</type>
+		<length>50</length>
+		<optionslist>QSLabeled,QPushButton,QCheckBox,QRadioButton,QTextEdit</optionslist>
+
+	</field>
+	
+	<field>
+		<name>name9</name>
+		<!--Nombre del objeto 9-->
+		<alias>QT_TRANSLATE_NOOP("MetaData","Nombre")</alias>
+		<null>true</null>
+		<pk>false</pk>
+		<type>string</type>
+		<length>50</length>
+	</field>
+
+	<field>
+		<name>value9</name>
+		<!--Valor asignado al objeto 9-->
+		<alias>QT_TRANSLATE_NOOP("MetaData","Valor")</alias>
+		<null>true</null>
+		<pk>false</pk>
+		<type>string</type>
+		<length>50</length>
+	</field>
+	
+	<field>
+		<name>type10</name>
+		<!--Tipo del objeto 10-->
+		<alias>QT_TRANSLATE_NOOP("MetaData","Tipo")</alias>
+		<null>true</null>
+		<pk>false</pk>
+		<type>string</type>
+		<length>50</length>
+		<length>50</length>
+		<optionslist>QSLabeled,QPushButton,QCheckBox,QRadioButton,QTextEdit</optionslist>
+	</field>
+	
+	<field>
+		<name>name10</name>
+		<!--Nombre del objeto 10-->
+		<alias>QT_TRANSLATE_NOOP("MetaData","Nombre")</alias>
+		<null>true</null>
+		<pk>false</pk>
+		<type>string</type>
+		<length>50</length>
+		
+	</field>
+
+	<field>
+		<name>value10</name>
+		<!--Valor asignado al objeto 10-->
+		<alias>QT_TRANSLATE_NOOP("MetaData","Valor")</alias>
+		<null>true</null>
+		<pk>false</pk>
+		<type>string</type>
+		<length>50</length>
+	</field>
+	
+	<field>
+		<name>xml</name>
+		<!--Nodo xml que contiene la información de las asignaciones a realizar-->
+		<alias>QT_TRANSLATE_NOOP("MetaData","xml")</alias>
+		<null>false</null>
+		<pk>false</pk>
+		<type>stringlist</type>
+	</field>
+	
+	<field>
+		<name>event</name>
+		<!--Evento-->
+		<alias>QT_TRANSLATE_NOOP("MetaData","Evento")</alias>
+		<null>true</null>
+		<pk>false</pk>
+		<type>string</type>
+		<length>15</length>
+		<optionslist>NO_CONDITION,FORM_READY,FORM_CLOSED,FORM_RECORD_READY,FORM_SEARCH_READY,FIELD_READY,MESSAGE_BOX_READY,MESSAGE_BOX_CLOSED,RECORD_DELETED,SCRIPT_FINISHED</optionslist>
+		<default>SCRIPT_FINISHED</default>
+	</field>
+	
+	<field>
+		<name>object</name>
+		<!--Object-->
+		<alias>QT_TRANSLATE_NOOP("MetaData","Object")</alias>
+		<null>true</null>
+		<pk>false</pk>
+		<type>string</type>
+		<length>50</length>
+	</field>
+
+</TMD>
+

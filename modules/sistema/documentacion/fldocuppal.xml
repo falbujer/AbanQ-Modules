@@ -1,0 +1,52 @@
+<ACTIONS>
+
+	<action>
+		<name>do_generardoc</name>
+		<alias>QT_TRANSLATE_NOOP("MetaData","Generar Documentación")</alias>
+		<scriptform>do_mastergenerardoc</scriptform>
+		<scriptformrecord>do_generardoc</scriptformrecord>
+		<table>do_generardoc</table>
+		<form>do_mastergenerardoc</form>
+		<formrecord>do_generardoc</formrecord>
+		<description>QT_TRANSLATE_NOOP("MetaData","Desde esta acción de produce la generación de 
+		documentación de los módulos.
+		<p/>Los módulos deben estar previamente cargados para que puedan ser 
+		documentados")</description>
+	</action>
+	
+	<action>
+		<name>do_contenidos</name>
+		<alias>QT_TRANSLATE_NOOP("MetaData","Tabla de Contenidos")</alias>
+		<scriptform>do_mastercontenidos</scriptform>
+		<table>do_contenidos</table>
+		<form>do_mastercontenidos</form>
+		<description>QT_TRANSLATE_NOOP("MetaData","La tabla de contenidos se utiliza para almacenar el 
+		índice de los contenidos de la documentación. Este índice corresponde con la página índice de 
+		contenidos de la documentación. Esto permite regenerar el índice con nuevos módulos 
+		conservando los módulos previamente generados.
+		")</description>
+	</action> 
+
+	<action>
+		<name>do_modulos</name>
+		<alias>QT_TRANSLATE_NOOP("MetaData","Módulos")</alias>
+		<table>do_modulos</table>
+		<form>master</form>
+		<description>QT_TRANSLATE_NOOP("MetaData","Tabla interna para almacenar las caracterñisticas de los módulos documentados. No es importante para el usuario")</description>
+	</action>
+
+	<action>
+		<name>do_opciones</name>
+		<alias>QT_TRANSLATE_NOOP("MetaData","Opciones generales")</alias>
+		<scriptform>do_opciones</scriptform>
+		<table>do_opciones</table>
+		<form>do_opciones</form>
+		<formrecord>do_opciones</formrecord>
+		<description>QT_TRANSLATE_NOOP("MetaData","Estas opciones son globales para todos los procesos 
+		de documentación y se establecen independientemente para cada usuario, no se guardan en la 
+		base de datos
+		<p/>En general se refieren a los directorios en disco sobre los que trabaja el módulo de documentación
+		")</description>
+	</action>
+
+</ACTIONS>

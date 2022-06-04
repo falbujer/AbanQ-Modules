@@ -1,0 +1,24 @@
+<!DOCTYPE QRY>
+<QRY>
+	<name>i_acufacturasprov</name>
+
+	<tables>facturasprov,empresa</tables>
+
+	<select>
+		SUM(facturasprov.neto*facturasprov.tasaconv),
+		facturasprov.codproveedor, proveedores.nombre,
+		empresa.nombre, empresa.cifnif,
+		empresa.direccion,
+		empresa.codpostal, empresa.ciudad,
+		empresa.provincia, empresa.apartado,
+		empresa.codpais, empresa.coddivisa
+	</select>
+
+	<from>
+		empresa,facturasprov
+		LEFT OUTER JOIN proveedores ON facturasprov.codproveedor = proveedores.codproveedor
+	</from>
+
+	<where>
+	</where>
+</QRY>

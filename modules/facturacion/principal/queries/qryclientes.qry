@@ -1,0 +1,15 @@
+<!DOCTYPE QRY>
+<QRY>
+	<name>qryclientes</name>
+
+	<tables>clientes,dirclientes</tables>
+	
+	<select>
+		clientes.*, dirclientes.direccion, dirclientes.ciudad, dirclientes.codpostal, dirclientes.provincia, dirclientes.codpais
+	</select>
+
+	<from>
+		clientes LEFT OUTER JOIN dirclientes ON (clientes.codcliente = dirclientes.codcliente AND dirclientes.domfacturacion)
+	</from>
+
+</QRY> 

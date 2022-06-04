@@ -1,0 +1,64 @@
+<!DOCTYPE TMD>
+<TMD>
+	<name>ex_examples</name>
+	<alias>QT_TRANSLATE_NOOP("MetaData","Ejemplos")</alias>
+
+	<field>
+		<name>idexample</name>
+		<alias>QT_TRANSLATE_NOOP("MetaData","Identificador")</alias>
+		<null>false</null>
+		<pk>true</pk>
+		<type>string</type>
+		<length>30</length>
+
+		<relation>
+			<table>ex_scripts</table>
+			<field>idexample</field>
+			<card>1M</card>
+		</relation>
+	</field>
+	
+	<field>
+		<name>description</name>
+		<alias>QT_TRANSLATE_NOOP("MetaData","Descripción")</alias>
+		<null>true</null>
+		<pk>false</pk>
+		<type>string</type>
+		<length>255</length>
+	</field>
+	
+	<field>
+		<name>icon</name>
+		<alias>QT_TRANSLATE_NOOP("MetaData","Icono")</alias>
+		<null>true</null>
+		<pk>false</pk>
+		<type>bytearray</type>
+	</field>
+		
+	<field>
+		<name>doc</name>
+		<alias>QT_TRANSLATE_NOOP("MetaData","Documentación")</alias>
+		<null>true</null>
+		<pk>false</pk>
+		<type>stringlist</type>
+	</field>
+	
+  <field>
+		<name>actionsxml</name>
+		<alias>QT_TRANSLATE_NOOP("MetaData","Acciones XML")</alias>
+		<null>true</null>
+		<pk>false</pk>
+		<type>stringlist</type>
+	</field>
+	
+	<field>
+    <name>runoninit</name>
+    <alias>QT_TRANSLATE_NOOP("MetaData","Ejecutar al inicio")</alias>
+    <null>false</null>
+    <pk>false</pk>
+    <type>bool</type>
+    <default>false</default>  
+    <visiblegrid>false</visiblegrid>
+  </field>
+</TMD>
+

@@ -1,0 +1,121 @@
+<!DOCTYPE TMD>
+<TMD>
+
+	<name>tpv_cantidadpago</name>
+	<!-- Pagos al contado -->
+	<alias>QT_TRANSLATE_NOOP("MetaData","Cantidad pagada")</alias>
+
+	<field>
+		<name>id</name>
+		<!-- Identificador -->
+		<alias>QT_TRANSLATE_NOOP("MetaData","Id")</alias>
+		<null>false</null>
+		<pk>true</pk>
+		<type>serial</type>
+	</field>
+
+	<field>
+		<name>idusuario</name>
+		<!-- Usuario -->
+		<alias>QT_TRANSLATE_NOOP("MetaData","Usuario")</alias>
+		<null>false</null>
+		<pk>false</pk>
+		<type>string</type>
+		<length>50</length>
+	</field>
+	
+	<field>
+		<name>importe</name>
+		<!-- Importe -->
+		<alias>QT_TRANSLATE_NOOP("MetaData","Importe")</alias>
+		<null>false</null>
+		<pk>false</pk>
+		<editable>false</editable>
+		<type>double</type>
+		<partI>8</partI>
+		<partD>2</partD>
+	</field>
+	
+	<field>
+		<name>importetarjeta</name>
+		<!-- Importe -->
+		<alias>QT_TRANSLATE_NOOP("MetaData","Importe tarjeta")</alias>
+		<null>true</null>
+		<pk>false</pk>
+		<type>double</type>
+		<partI>8</partI>
+		<partD>2</partD>
+	</field>
+	
+	<field>
+		<name>importeefectivo</name>
+		<!-- Importe -->
+		<alias>QT_TRANSLATE_NOOP("MetaData","Importe efectivo")</alias>
+		<null>true</null>
+		<pk>false</pk>
+		<type>double</type>
+		<partI>8</partI>
+		<partD>2</partD>
+	</field>
+	
+	<field>
+		<name>cambioefectivo</name>
+		<alias>QT_TRANSLATE_NOOP("MetaData","Cambio efectivo")</alias>
+		<null>true</null>
+		<pk>false</pk>
+		<type>double</type>
+		<partI>8</partI>
+		<partD>2</partD>
+		<editable>false</editable>
+	</field>
+	
+	<field>
+		<name>importevales</name>
+		<!-- Importe vales-->
+		<alias>QT_TRANSLATE_NOOP("MetaData","Importe vales")</alias>
+		<null>true</null>
+		<pk>false</pk>
+		<editable>false</editable>
+		<type>double</type>
+		<partI>8</partI>
+		<partD>2</partD>
+	</field>
+	
+	<field>
+		<name>datosvales</name>
+		<!-- Datos vales-->
+		<alias>QT_TRANSLATE_NOOP("MetaData","Datos vales")</alias>
+		<null>true</null>
+		<pk>false</pk>
+		<editable>false</editable>
+		<type>stringlist</type>
+	</field>
+	
+	<field>
+		<name>codtarjetapago</name>
+		<alias>QT_TRANSLATE_NOOP("MetaData","Tarjeta")</alias>
+		<null>true</null>
+		<pk>false</pk>
+		<type>string</type>
+		<length>20</length>
+		
+		<relation>
+			<table>tpv_tarjetaspago</table>
+			<field>codtarjetapago</field>
+			<card>M1</card>
+		</relation>
+	</field>
+
+	<field>
+		<name>pendiente</name>
+		<!-- Importe pendiente por pagar. Conforme se meten cantidades en los diferentes tipos de pagos se calcula el importe restante que falta para abonar la venta al completo-->
+		<alias>QT_TRANSLATE_NOOP("MetaData","Pendiente")</alias>
+		<null>false</null>
+		<pk>false</pk>
+		<editable>false</editable>
+		<type>double</type>
+		<partI>8</partI>
+		<partD>2</partD>
+		<visiblegrid>false</visiblegrid>
+	</field>
+</TMD>

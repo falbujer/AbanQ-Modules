@@ -1,0 +1,71 @@
+<html><head>
+<title>Documentación FacturaLUX</title>
+<link rel="StyleSheet" href="estilos.css" type="text/css">
+<link rel="StyleSheet" href="estilosU.css" type="text/css">
+</head>
+<body>
+<table width="100%"><tr><td width="20"></td><td><br>
+<h3>Documentación FacturaLUX - Términos</h3><hr size=1>
+Documentación FacturaLUX&nbsp;&nbsp;<font color="#555555">|</font>&nbsp;&nbsp;Términos
+<br>&nbsp;<br>
+<div class="contenidos_doc">
+
+<b>Terminos</b>
+<div class="menu_doc"><ul>
+	<li><a href= "#pk"> Clave primaria</a>
+	<li><a href= "#ck"> Clave compuesta</a>
+	<li><a href= "#type"> Tipo de dato</a>
+	<li><a href= "#optionsList"> Lista de opciones</a>
+	<li><a href= "#default"> Valor por defecto</a>
+	<li><a href= "#delC"> Borrado en cascada</a>
+	<li><a href= "#tipos_relacion"> Tipo de relación</a>
+	</ul></div>
+	
+	
+	<br><p><a name = "pk"></a><span class="resaltar_medio_doc"><b>Clave primaria</b></span>
+	<br> Si su valor es sí, indica que el valor de este campo no se puede repetir <br>en nigún otro registro de la tabla.
+</p>
+	<br><p><a name = "ck"></a><span class="resaltar_medio_doc"><b>Clave compuesta</b></span>
+	<br> Si su valor es sí en dos o más campos de la tabla, indica que no se puede repertir la combinación de los valores de estos campos en nigún otro registro de la tabla. 
+</p>
+
+<br><p>
+	<a name = "type"></a><span class="resaltar_medio_doc"><b>Tipo de dato</b></span>
+	<br>Indica el tipo de valor que se puede almacenar en un campo
+	<div class="menu_doc"><ul>
+	<li><b>bool: </b>tipo de dato lógico: sólo puede tomar los valores <i>verdadero</i> o <i>falso</i>.
+	<li><b>date: </b>fecha
+	<li><b>double: </b>número real (compuestos por parte entera y decimal)
+	<li><b>int: </b>número entero.
+	<li><b>pixmap: </b>imagen, codificación de mapas de píxeles
+	<li><b>serial: </b>número entero que genera su valor de forma automática y secuencial cada vez que se inserta un nuevo registro
+	<li><b>string: </b>cadena de carácteres
+	<li><b>stringlist: </b>cadena larga de carácteres
+	<li><b>time: </b>hora
+	<li><b>uint: </b>número entero sin signo.
+	<li><b>unlock: </b>tipo de dato lógico que indica si el campo se encuentra bloqueado o no.
+	</ul></div>
+</p>
+	
+	<br><p><a name = "optionsList"></a><span class="resaltar_medio_doc"><b>Lista de opciones</b></span>
+	<br> Establece una lista de valores posibles para el campo. 
+</p>
+
+	<br><p><a name = "default"></a><span class="resaltar_medio_doc"><b>Valor por defecto</b></span>
+	<br> Establece el valor por defecto de un campo, pero es posible modificarlo. 
+</p>
+
+	<br><p><a name = "delC"></a><span class="resaltar_medio_doc"><b>Borrado en cascada</b></span>
+	<br>Esta propiedad se da en algunos campos relacionados de tipo 1M. Si se borra un registro de la tabla padre (1) se borrarán también los registros de la tabla hijo relacionados (M).
+</p>
+
+<br><p>
+	<a name = "tipos_relacion"></a><span class="resaltar_medio_doc"><b>Tipo de relación</b></span>
+	<br>Indica el tipo de combinación entre los contenidos del campo de una tabla (A) y el campo una tabla relacionada (B)
+	<div class="menu_doc"><ul>
+	<li><b>1M: </b>Por cada registro de la tabla A puede haber uno o más registros en la tabla B
+	<li><b>M1: </b>Puede haber más de un registro de la tabla A por cada registro de la tabla B
+	</ul></div>
+</p>
+	
+</div></td></tr></table></body></html>

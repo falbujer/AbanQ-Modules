@@ -1,0 +1,172 @@
+<!DOCTYPE UI><UI version="3.3" stdsetdef="1">
+<class>au_general</class>
+<widget class="QWidget">
+    <property name="name">
+        <cstring>au_general</cstring>
+    </property>
+    <property name="geometry">
+        <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>818</width>
+            <height>120</height>
+        </rect>
+    </property>
+    <property name="caption">
+        <string>au_general</string>
+    </property>
+    <vbox>
+        <property name="name">
+            <cstring>unnamed</cstring>
+        </property>
+        <widget class="QTabWidget">
+            <property name="name">
+                <cstring>tbwDatosGenerales</cstring>
+            </property>
+            <property name="font">
+                <font>
+                    <bold>1</bold>
+                </font>
+            </property>
+            <widget class="QWidget">
+                <property name="name">
+                    <cstring>datosgenerales</cstring>
+                </property>
+                <attribute name="title">
+                    <string>Datos &amp;generales</string>
+                </attribute>
+                <vbox>
+                    <property name="name">
+                        <cstring>unnamed</cstring>
+                    </property>
+                    <widget class="QGroupBox">
+                        <property name="name">
+                            <cstring>gbxDatosGenerales</cstring>
+                        </property>
+                        <property name="title">
+                            <string></string>
+                        </property>
+                        <vbox>
+                            <property name="name">
+                                <cstring>unnamed</cstring>
+                            </property>
+                            <widget class="QLayoutWidget">
+                                <property name="name">
+                                    <cstring>layout24</cstring>
+                                </property>
+                                <hbox>
+                                    <property name="name">
+                                        <cstring>unnamed</cstring>
+                                    </property>
+                                    <widget class="FLFieldDB">
+                                        <property name="name">
+                                            <cstring>fdbDirectorioLog</cstring>
+                                        </property>
+                                        <property name="sizePolicy">
+                                            <sizepolicy>
+                                                <hsizetype>1</hsizetype>
+                                                <vsizetype>0</vsizetype>
+                                                <horstretch>0</horstretch>
+                                                <verstretch>0</verstretch>
+                                            </sizepolicy>
+                                        </property>
+                                        <property name="minimumSize">
+                                            <size>
+                                                <width>38</width>
+                                                <height>24</height>
+                                            </size>
+                                        </property>
+                                        <property name="font">
+                                            <font>
+                                                <bold>0</bold>
+                                            </font>
+                                        </property>
+                                        <property name="fieldName">
+                                            <string>directoriolog</string>
+                                        </property>
+                                    </widget>
+                                    <widget class="QPushButton">
+                                        <property name="name">
+                                            <cstring>pbnDirectorio</cstring>
+                                        </property>
+                                        <property name="sizePolicy">
+                                            <sizepolicy>
+                                                <hsizetype>1</hsizetype>
+                                                <vsizetype>1</vsizetype>
+                                                <horstretch>0</horstretch>
+                                                <verstretch>0</verstretch>
+                                            </sizepolicy>
+                                        </property>
+                                        <property name="minimumSize">
+                                            <size>
+                                                <width>32</width>
+                                                <height>32</height>
+                                            </size>
+                                        </property>
+                                        <property name="maximumSize">
+                                            <size>
+                                                <width>32</width>
+                                                <height>32</height>
+                                            </size>
+                                        </property>
+                                        <property name="focusPolicy">
+                                            <enum>NoFocus</enum>
+                                        </property>
+                                        <property name="text">
+                                            <string></string>
+                                        </property>
+                                        <property name="accel">
+                                            <string>I</string>
+                                        </property>
+                                        <property name="iconSet">
+                                            <iconset>image39551</iconset>
+                                        </property>
+                                        <property name="toolTip" stdset="0">
+                                            <string>Seleccionar Directorio</string>
+                                        </property>
+                                        <property name="whatsThis" stdset="0">
+                                            <string>Selecciona un directorio para el log</string>
+                                        </property>
+                                    </widget>
+                                    <spacer>
+                                        <property name="name">
+                                            <cstring>spacer16</cstring>
+                                        </property>
+                                        <property name="orientation">
+                                            <enum>Horizontal</enum>
+                                        </property>
+                                        <property name="sizeType">
+                                            <enum>Expanding</enum>
+                                        </property>
+                                        <property name="sizeHint">
+                                            <size>
+                                                <width>190</width>
+                                                <height>20</height>
+                                            </size>
+                                        </property>
+                                    </spacer>
+                                </hbox>
+                            </widget>
+                        </vbox>
+                    </widget>
+                </vbox>
+            </widget>
+        </widget>
+    </vbox>
+</widget>
+<images>
+    <image name="image39551">
+        <data format="PNG" length="1032">89504e470d0a1a0a0000000d4948445200000020000000200806000000737a7af4000003cf49444154789ce5564d681d5514febe73cf9d372fefbdd694b4b6d558a20429dd045a5404ddb875e54ac11f107425b81029e2be28b850a93b77ee5c0882b8e9d28d2d56a8b482d86a1ba52da579a321796fdebc7bef71312f69aa60d224e3c60f06e6727fbeef7c73cf9903fcdfc1174f2f8293414c2000db384fc242ac07378a8023fb159fbdf1d0ae091021c1c9a38ea68e208198809860e308a8ab351e9c56142b092f9dfe6dd704f0f98f6a0748642b65ea2583ad396200a7320e176f87c1dc012f224866ff76dc1608090aefb8acab658290dcdb912ff7ef714f91180090b5f555c070ee807f7d14ec6b27604ab0d919c587af3c704fc42f7fb2eeda5d21f0d9f7afc209a7677a72f989475bfb5a9e6606c2001158b19af8fd956a3818d90bc3b19d71c4940189ffe4d814064008765a1c24c3d000e8063d890008586d3e900c98e9495a98f3f9c5c5f1e75de33281ed70af6b30200f11972cd9d330542a4248cd2ae538c18c4c06a266b2b232e9e6b4e38f788d0933f5d27b173189deaa00fe70753cbf525a3725f45558e71a0ca88201306cb8689ca826b96ecadf53f55e44d89dfd34c0a0c275075085049bacda102327bbb99dc83790830442acd9852084504a3d610046c190d236c3db020820a4c93beb54d34eab85c1a8240ca8c68628cd0a88093003cd8c9d3c878618e0d5196988a9a66e5a0049cb542cc400fdeadc85fcc88183fb8ece4ef3d75b6583f4776498e5f2e3b562dfc5ef7e1e70e1edb3577b6db75745f68418c5b699665b8411a0739260582ec7e94fede67effabcfccfafb3a7e1482b51ba3be1bc9093a672edccad4287f7c7b25e4ddb6a41063fbbf6017915056e3c14fd747a5aab8e53248c7471f4364e30618006762ab5574217159555d91676e76cf9456d518cd7dfd0d0a549d85187ca6ae50efb4c814ae3725361cd58d4993896866c83cb13a8453a785aaba7ea674ddb68024843baab89b2219907b41a174aaaeafeab4af4ad79baa8b63ed40733033e419a94a5773abde5627ecb68529ad39d01c9211ed16a14ea8aab7d53bb72442b43cd9f20291cd0fd99900a0e52942c23b5dd2ccfb2598584a260660a74de7a6b0bafd370832af4baacef5cd24263327002695a0391934583231a379754bfae4d16ee13d637f35f86a1cd72e6163ff02d4ff039d3f9cc7f9432cd46e7ed33f347f6c79a5929994a5aa6e151a8591f03d6fc5e2e54b0501640f1e79f8b99677c7538a3b6c7ab7c40f1167a3713cfffbb55fbe2000b4db6d0e87c32e006d987d0d21cff395b22c8dc7164ee0ad93efe0ecb9f3c85a19ee3f7818efbef9daae172433c3a98f3fc5cd1bd731ae4678fcb113f8e0bd53f80b04d7add6b025a4090000000049454e44ae426082</data>
+    </image>
+</images>
+<includes>
+    <include location="local" impldecl="in implementation">au_general.ui.h</include>
+</includes>
+<slots>
+    <slot>pbnDirectorio_clicked()</slot>
+</slots>
+<layoutdefaults spacing="6" margin="11"/>
+<includehints>
+    <includehint>flfielddb.h</includehint>
+</includehints>
+</UI>

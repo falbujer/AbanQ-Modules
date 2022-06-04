@@ -1,0 +1,11 @@
+<ACTIONS>
+	<action>
+		<name>mt_procesos</name>
+		<alias>QT_TRANSLATE_NOOP("MetaData","Procesos")</alias>
+		<table>mt_procesos</table>
+		<form>mt_masterprocesos</form>
+		<scriptform>mt_masterprocesos</scriptform>
+		<formrecord>mt_procesos</formrecord>
+		<description>QT_TRANSLATE_NOOP("MetaData","Procesos de mantenimiento")</description>
+	</action>
+</ACTIONS>

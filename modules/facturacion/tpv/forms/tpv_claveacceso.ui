@@ -1,0 +1,113 @@
+<!DOCTYPE UI><UI version="3.3" stdsetdef="1">
+<class>tpv_claveacceso</class>
+<widget class="QWidget">
+    <property name="name">
+        <cstring>tpv_claveacceso</cstring>
+    </property>
+    <property name="geometry">
+        <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>284</width>
+            <height>141</height>
+        </rect>
+    </property>
+    <property name="caption">
+        <string>tpv_claveacceso</string>
+    </property>
+    <vbox>
+        <property name="name">
+            <cstring>unnamed</cstring>
+        </property>
+        <property name="margin">
+            <number>6</number>
+        </property>
+        <property name="spacing">
+            <number>6</number>
+        </property>
+        <widget class="FLFieldDB">
+            <property name="name">
+                <cstring>fdbCodTpvAgente</cstring>
+            </property>
+            <property name="font">
+                <font>
+                    <family>Sans Serif</family>
+                    <pointsize>16</pointsize>
+                </font>
+            </property>
+            <property name="fieldName">
+                <string>codtpv_agente</string>
+            </property>
+        </widget>
+        <widget class="FLFieldDB">
+            <property name="name">
+                <cstring>fdbNombreAgente</cstring>
+            </property>
+            <property name="fieldName">
+                <string>descripcion</string>
+            </property>
+            <property name="tableName">
+                <string>tpv_agentes</string>
+            </property>
+            <property name="foreignField">
+                <string>codtpv_agente</string>
+            </property>
+            <property name="fieldRelation">
+                <string>codtpv_agente</string>
+            </property>
+            <property name="showAlias">
+                <bool>false</bool>
+            </property>
+        </widget>
+        <widget class="QGroupBox">
+            <property name="name">
+                <cstring>gbxContra</cstring>
+            </property>
+            <property name="font">
+                <font>
+                    <bold>1</bold>
+                    <italic>1</italic>
+                </font>
+            </property>
+            <property name="title">
+                <string>&amp;Indique la clave de acceso</string>
+            </property>
+            <vbox>
+                <property name="name">
+                    <cstring>unnamed</cstring>
+                </property>
+                <widget class="QLineEdit">
+                    <property name="name">
+                        <cstring>ledContra</cstring>
+                    </property>
+                    <property name="minimumSize">
+                        <size>
+                            <width>250</width>
+                            <height>0</height>
+                        </size>
+                    </property>
+                    <property name="font">
+                        <font>
+                            <pointsize>16</pointsize>
+                        </font>
+                    </property>
+                    <property name="text">
+                        <string></string>
+                    </property>
+                    <property name="echoMode">
+                        <enum>Password</enum>
+                    </property>
+                    <property name="alignment">
+                        <set>AlignHCenter</set>
+                    </property>
+                </widget>
+            </vbox>
+        </widget>
+    </vbox>
+</widget>
+<layoutdefaults spacing="6" margin="11"/>
+<includehints>
+    <includehint>flfielddb.h</includehint>
+    <includehint>flfielddb.h</includehint>
+</includehints>
+</UI>

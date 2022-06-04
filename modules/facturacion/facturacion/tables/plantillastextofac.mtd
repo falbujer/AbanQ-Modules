@@ -1,0 +1,23 @@
+<!DOCTYPE TMD>
+<TMD>
+	<name>plantillastextofac</name>
+	<alias>QT_TRANSLATE_NOOP("MetaData","Plantillas de texto")</alias>
+
+	<field>
+		<name>codplantilla</name>
+		<alias>QT_TRANSLATE_NOOP("MetaData","Código")</alias>
+		<null>false</null>
+		<pk>true</pk>
+		<type>string</type>
+		<length>25</length>
+	</field>
+
+	<field>
+		<name>texto</name>
+		<alias>QT_TRANSLATE_NOOP("MetaData","Texto")</alias>
+		<null>false</null>
+		<pk>false</pk>
+		<type>stringlist</type>
+	</field>
+
+</TMD>

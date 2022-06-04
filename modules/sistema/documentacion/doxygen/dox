@@ -1,0 +1,1 @@
+cd /home/laura/modulos/sistema/documentacion/doxygen/;for i in $(ls codigo/*.qs); do grep -v @class_declaration $i | grep -v @class_definition > tmp;cat tmp > $i;cp -f $i .;doxygen doxyfile;done;

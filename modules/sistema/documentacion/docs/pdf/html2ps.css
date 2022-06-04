@@ -1,0 +1,34 @@
+BODY {
+	font-family: Helvetica;
+	font-size: 11pt;
+	text-align: justify;
+}
+
+H1 {
+	font-family: Helvetica;
+	font-style: bold;
+	font-size: 15pt;
+	text-align: left;
+}
+
+H2 {
+	font-family: Helvetica;
+	font-style: bold;
+	font-size: 14pt;
+	text-align: left;
+}
+
+H3 {
+	font-family: Helvetica;
+	font-style: bold;
+	font-size: 12pt;
+	text-align: left;
+}
+
+H6 {
+	font-family: Avantgarde;
+	font-style: bold;
+	font-size: 20pt;
+	text-align: center;
+}
+

@@ -1,0 +1,32 @@
+<!DOCTYPE TMD>
+<TMD>
+  <name>dat_procesos_lotes</name>
+  <alias>QT_TRANSLATE_NOOP("MetaData","Procesos por Lotes")</alias>
+
+  <field>
+    <name>codlote</name>
+    <alias>QT_TRANSLATE_NOOP("MetaData","Lote")</alias>
+    <null>false</null>
+    <pk>true</pk>
+    <type>string</type>
+    <length>10</length>
+  </field>
+
+  <field>
+    <name>descripcion</name>
+    <alias>QT_TRANSLATE_NOOP("MetaData","Descripción")</alias>
+    <null>false</null>
+    <pk>false</pk>
+    <type>string</type>
+    <length>255</length>
+  </field>
+  
+  <field>
+    <name>procesos</name>
+    <alias>QT_TRANSLATE_NOOP("MetaData","Procesos")</alias>
+    <null>false</null>
+    <pk>false</pk>
+    <type>stringlist</type>
+    <editable>false</editable>
+  </field>
+</TMD>

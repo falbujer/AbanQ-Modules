@@ -1,0 +1,80 @@
+<!DOCTYPE TMD>
+<TMD>
+	<name>tt_testcat</name>
+	<alias>QT_TRANSLATE_NOOP("MetaData","Catálogo de pruebas")</alias>
+	<!--Listado de las pruebas que pueden ser incluidas en las sesiones de pruebas-->
+
+	<field>
+		<name>id</name>
+		<!-- Identificador interno -->
+		<alias>QT_TRANSLATE_NOOP("MetaData","Id")</alias>
+		<null>false</null>
+		<pk>true</pk>
+		<type>serial</type>
+		<visiblegrid>false</visiblegrid>
+		
+		<relation>
+			<table>tt_stepcat</table>
+			<field>idtestcat</field>
+			<card>1M</card>
+		</relation>
+		
+		<relation>
+			<table>tt_tcatscat</table>
+			<field>idtestcat</field>
+			<card>1M</card>
+		</relation>
+	</field>
+	
+	<field>
+		<name>description</name>
+		<alias>QT_TRANSLATE_NOOP("MetaData","Descripción")</alias>
+		<!--Descripción de la prueba-->
+		<null>false</null>
+		<pk>false</pk>
+		<type>string</type>
+		<length>200</length>
+	</field>
+	
+	<field>
+		<name>codtestcat</name>
+		<alias>QT_TRANSLATE_NOOP("MetaData","Identificador")</alias>
+		<!--Identificador de la prueba-->
+		<null>false</null>
+		<pk>false</pk>
+		<ck>true</ck>
+		<type>string</type>
+		<length>6</length>
+		<counter>true</counter>
+	</field>
+	
+	<field>
+		<name>idfuncional</name>
+		<alias>QT_TRANSLATE_NOOP("MetaData","Funcionalidad")</alias>
+		<!--Funcionalidad asociada a la prueba-->
+		<null>true</null>
+		<pk>false</pk>
+		<ck>true</ck>
+		<type>string</type>
+		<length>15</length>
+	</field>
+	
+	<field>
+		<name>parameters</name>
+		<alias>QT_TRANSLATE_NOOP("MetaData","Parámetros")</alias>
+		<!--Parámetros necesarios para realizar la prueba-->
+		<null>true</null>
+		<pk>false</pk>
+		<type>stringlist</type>
+	</field>
+	
+	<field>
+		<name>longdesc</name>
+		<alias>QT_TRANSLATE_NOOP("MetaData","Prueba")</alias>
+		<!--Descripción larga de la prueba-->
+		<null>true</null>
+		<pk>false</pk>
+		<type>stringlist</type>
+	</field>
+</TMD>
+

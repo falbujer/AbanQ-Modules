@@ -1,0 +1,28 @@
+<!DOCTYPE QRY>
+<QRY>
+	<name>tpv_i_cierrearqueo</name>
+
+	<tables>empresa,tpv_arqueos,tpv_agentes</tables>
+
+	<group>
+		<level>0</level>
+		<field>tpv_arqueos.idtpv_arqueo</field>
+	</group>
+
+	<select>
+		empresa.nombre, empresa.cifnif, empresa.direccion,
+		empresa.ciudad, empresa.telefono,
+		tpv_agentes.descripcion
+	</select>
+
+	<from>
+		empresa, tpv_arqueos
+		INNER JOIN tpv_agentes ON tpv_arqueos.codtpv_agentecierre = tpv_agentes.codtpv_agente
+	</from>
+
+	<where>
+	</where>
+	
+	<order>
+	</order>
+</QRY>
