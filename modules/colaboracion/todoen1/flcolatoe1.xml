@@ -1,0 +1,41 @@
+<ACTIONS>
+
+	<action>
+		<name>t1_principal</name>
+		<description>QT_TRANSLATE_NOOP("MetaData","")</description>
+		<alias>QT_TRANSLATE_NOOP("MetaData","Principal")</alias>
+		<table>t1_principal</table>
+		<form>t1_principal</form>
+		<scriptform>t1_principal</scriptform>
+	</action>
+	
+	<action>
+		<name>t1_elementos</name>
+		<description>QT_TRANSLATE_NOOP("MetaData","Elementos")</description>
+		<alias>QT_TRANSLATE_NOOP("MetaData","Elementos")</alias>
+		<table>t1_elementos</table>
+		<form>master</form>
+		<formrecord>t1_elementos</formrecord>
+		<scriptformrecord>t1_elementos</scriptformrecord>
+	</action>
+	
+	<action>
+		<name>t1_accioneselemento</name>
+		<description>QT_TRANSLATE_NOOP("MetaData","Acciones")</description>
+		<alias>QT_TRANSLATE_NOOP("MetaData","Acciones")</alias>
+		<table>t1_accioneselemento</table>
+		<form>master</form>
+		<formrecord>t1_accioneselemento</formrecord>
+		<scriptformrecord>t1_accioneselemento</scriptformrecord>
+	</action>
+
+	<action>
+		<name>t1_relacioneselemento</name>
+		<description>QT_TRANSLATE_NOOP("MetaData","Relaciones")</description>
+		<alias>QT_TRANSLATE_NOOP("MetaData","Relaciones")</alias>
+		<table>t1_relacioneselemento</table>
+		<form>master</form>
+		<formrecord>t1_relacioneselemento</formrecord>
+		<scriptformrecord>t1_relacioneselemento</scriptformrecord>
+	</action>
+</ACTIONS>

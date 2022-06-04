@@ -1,0 +1,113 @@
+<!DOCTYPE TMD>
+<TMD>
+	<name>fo_sesiones</name>
+	<!--Sesiones-->
+	<alias>QT_TRANSLATE_NOOP("MetaData","Sesiones")</alias>
+
+	<field>
+		<name>codsesion</name>
+		<!--Código-->
+		<alias>QT_TRANSLATE_NOOP("MetaData","Código")</alias>
+		<null>false</null>
+		<pk>true</pk>
+		<type>string</type>
+		<length>8</length>
+		<counter>true</counter>
+		
+		<relation>
+			<table>fo_sesionesalumno</table>
+			<field>codsesion</field>
+			<card>1M</card>
+		</relation>
+	</field>
+
+	<field>
+		<name>codaula</name>
+		<alias>QT_TRANSLATE_NOOP("MetaData","Aula")</alias>
+		<null>false</null>
+		<pk>false</pk>
+		<type>string</type>
+		<length>25</length>
+		
+		<relation>
+			<table>fo_aulas</table>
+			<field>codaula</field>
+			<card>M1</card>
+		</relation>
+	</field>
+	
+	<field>
+		<name>fecha</name>
+		<alias>QT_TRANSLATE_NOOP("MetaData","Fecha")</alias>
+		<null>false</null>
+		<pk>false</pk>
+		<type>date</type>
+	</field>
+
+	<field>
+		<name>estado</name>
+		<alias>QT_TRANSLATE_NOOP("MetaData","Estado")</alias>
+		<null>false</null>
+		<pk>false</pk>
+		<type>string</type>
+		<length>25</length>
+		<optionslist>Pendiente,Realizada,Cancelada,Pospuesta</optionslist>
+		<default>Pendiente</default>
+	</field>
+	
+	<field>
+		<name>codhorario</name>
+		<alias>QT_TRANSLATE_NOOP("MetaData","Horario")</alias>
+		<null>true</null>
+		<pk>false</pk>
+		<type>string</type>
+		<length>25</length>
+		
+		<relation>
+			<table>fo_horarios</table>
+			<field>codhorario</field>
+			<card>M1</card>
+		</relation>
+	</field>
+	
+	<field>
+		<name>horadesde</name>
+		<alias>QT_TRANSLATE_NOOP("MetaData","H.Desde")</alias>
+		<null>false</null>
+		<pk>false</pk>
+		<type>time</type>
+	</field>
+
+	<field>
+		<name>horahasta</name>
+		<alias>QT_TRANSLATE_NOOP("MetaData","H.Hasta")</alias>
+		<null>false</null>
+		<pk>false</pk>
+		<type>time</type>
+	</field>
+	
+	<field>
+		<name>codformador</name>
+		<alias>QT_TRANSLATE_NOOP("MetaData","Formador")</alias>
+		<null>true</null>
+		<pk>false</pk>
+		<type>string</type>
+		<length>10</length>
+		
+		<relation>
+			<table>fo_formadores</table>
+			<field>codformador</field>
+			<card>M1</card>
+		</relation>
+	</field>
+	
+	<field>
+		<name>canalumnos</name>
+		<alias>QT_TRANSLATE_NOOP("MetaData","Alumnos")</alias>
+		<null>false</null>
+		<pk>false</pk>
+		<type>uint</type>
+		<default>0</default>
+		<editable>false</editable>
+	</field>
+</TMD>

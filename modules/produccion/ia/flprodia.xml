@@ -1,0 +1,62 @@
+<ACTIONS>
+	<action>
+		<name>pr_ia_objetivos</name>
+		<alias>QT_TRANSLATE_NOOP("MetaData","Objetivos")</alias>
+		<description>QT_TRANSLATE_NOOP("MetaData","Objetivos a conseguir")</description>
+		<table>pr_ia_objetivos</table>
+		<form>master_copy</form>
+		<formrecord>pr_ia_objetivos</formrecord>
+		<scriptformrecord>pr_ia_objetivos</scriptformrecord>
+	</action>
+
+  <action>
+    <name>pr_ia_procesos</name>
+    <alias>QT_TRANSLATE_NOOP("MetaData","Procesos")</alias>
+    <description>QT_TRANSLATE_NOOP("MetaData","Un proceso es el equivalente a un flujo de trabajo, y es la secuencia de tareas que se realizan para conseguir un cierto objetivo")</description>
+    <table>pr_ia_procesos</table>
+    <form>master_copy</form>
+    <formrecord>pr_ia_procesos</formrecord>
+    <scriptformrecord>pr_ia_procesos</scriptformrecord>
+  </action>
+  
+  <action>
+    <name>pr_ia_actores</name>
+    <alias>QT_TRANSLATE_NOOP("MetaData","Actores")</alias>
+    <description>QT_TRANSLATE_NOOP("MetaData","Un actor es todo aquello que es capaz de ejecutar procesos")</description>
+    <table>pr_ia_actores</table>
+    <form>master_copy</form>
+    <formrecord>pr_ia_actores</formrecord>
+  </action>
+  
+  <action>
+    <name>pr_ia_genetico</name>
+    <alias>QT_TRANSLATE_NOOP("MetaData","Genético")</alias>
+    <description>QT_TRANSLATE_NOOP("MetaData","Algoritmo Genético")</description>
+    <table>pr_ia_genetico</table>
+    <form>master_copy</form>
+    <formrecord>pr_ia_genetico</formrecord>
+    <scriptformrecord>pr_ia_genetico</scriptformrecord>
+  </action>
+  
+  <action>
+    <name>pr_ia_gantt</name>
+    <alias>QT_TRANSLATE_NOOP("MetaData","Gráfica Gantt")</alias>
+    <description>QT_TRANSLATE_NOOP("MetaData","Gráfica Gantt")</description>
+    <table>pr_ia_gantt</table>
+    <form>pr_ia_gantt</form>
+    <formrecord>pr_ia_gantt</formrecord>
+    <scriptform>pr_ia_gantt</scriptform>
+    <scriptformrecord>pr_ia_gantt</scriptformrecord>
+  </action>
+  
+  <action>
+    <name>pr_ia_bom</name>
+    <alias>QT_TRANSLATE_NOOP("MetaData","Lista de Materiales")</alias>
+    <description>QT_TRANSLATE_NOOP("MetaData","Lista de Materiales")</description>
+    <table>pr_ia_bom</table>
+    <form>pr_ia_bom</form>
+    <formrecord>pr_ia_bom</formrecord>
+    <scriptform>pr_ia_bom</scriptform>
+    <scriptformrecord>pr_ia_bom</scriptformrecord>
+  </action>
+</ACTIONS>

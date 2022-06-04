@@ -1,0 +1,22 @@
+<!DOCTYPE TMD>
+<TMD>
+    <name>in_dimsemana</name>
+<!--Dimensión de meses-->    <alias>QT_TRANSLATE_NOOP("MetaData","Dimensión de semanas")</alias>
+    <in_Dimension foreignKey="time_id" name="Cliente" >
+        <in_Hierarchy primaryKey="dateid" hasAll="true" allMemberName="All Periods" >
+            <Level name="Week" column="week_in_month" uniqueMembers="false" levelType="TimeWeeks" />
+        </in_Hierarchy>
+    </in_Dimension>
+    <field>
+        <name>semana</name>
+        <alias>QT_TRANSLATE_NOOP("MetaData","Semana")</alias>
+        <null>false</null>
+        <pk>true</pk>
+        <type>int</type>
+        <relation>
+            <table>in_h_ventas_eg</table>
+            <field>d_mes</field>
+            <card>1M</card>
+        </relation>
+    </field>
+</TMD>

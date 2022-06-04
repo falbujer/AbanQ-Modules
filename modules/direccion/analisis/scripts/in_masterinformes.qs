@@ -1,0 +1,128 @@
+/***************************************************************************
+                 in_masterinformes.qs  -  description
+                             -------------------
+    begin                : jue dic 2 2010
+    copyright            : (C) 2010 by InfoSiAL S.L.
+    email                : mail@infosial.com
+ ***************************************************************************/
+/***************************************************************************
+ *                                                                         *
+ *   This program is free software; you can redistribute it and/or modify  *
+ *   it under the terms of the GNU General Public License as published by  *
+ *   the Free Software Foundation; either version 2 of the License, or     *
+ *   (at your option) any later version.                                   *
+ *                                                                         *
+ ***************************************************************************/
+
+/** @file */
+
+/** @class_declaration interna */
+////////////////////////////////////////////////////////////////////////////
+//// DECLARACION ///////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////
+
+//////////////////////////////////////////////////////////////////
+//// INTERNA /////////////////////////////////////////////////////
+class interna {
+	var ctx:Object;
+	function interna( context ) { this.ctx = context; }
+	function init() { this.ctx.interna_init(); }
+}
+//// INTERNA /////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////
+
+/** @class_declaration oficial */
+//////////////////////////////////////////////////////////////////
+//// OFICIAL /////////////////////////////////////////////////////
+class oficial extends interna {
+	function oficial( context ) { interna( context );}
+	function toolButtonPrint_clicked() {
+		return this.ctx.oficial_toolButtonPrint_clicked();
+	}
+}
+//// OFICIAL /////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////
+
+/** @class_declaration head */
+/////////////////////////////////////////////////////////////////
+//// DESARROLLO /////////////////////////////////////////////////
+class head extends oficial {
+	function head( context ) { oficial ( context ); }
+}
+//// DESARROLLO /////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////
+
+/** @class_declaration ifaceCtx*/
+/////////////////////////////////////////////////////////////////
+//// INTERFACE  /////////////////////////////////////////////////
+class ifaceCtx extends head {
+	function ifaceCtx( context ) { head( context ); }
+}
+const iface = new ifaceCtx( this );
+//// INTERFACE  /////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////
+
+/** @class_definition interna */
+////////////////////////////////////////////////////////////////////////////
+//// DEFINICION ////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////
+
+//////////////////////////////////////////////////////////////////
+//// INTERNA /////////////////////////////////////////////////////
+function interna_init()
+{
+	var cursor:FLSqlCursor = this.cursor();
+	
+	connect (this.child("toolButtonPrint"), "clicked()", this, "iface.toolButtonPrint_clicked");
+}
+//// INTERNA /////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////
+
+/** @class_definition oficial */
+//////////////////////////////////////////////////////////////////
+//// OFICIAL /////////////////////////////////////////////////////
+function oficial_toolButtonPrint_clicked()
+{
+	var util:FLUtil;
+	var cursor:FLSqlCursor = this.cursor();
+	var idInforme:String = cursor.valueBuffer("idinforme");
+	
+	var curPos:FLSqlCursor = new FLSqlCursor("in_posinforme");
+	curPos.select("idinforme = " + idInforme +" ORDER BY orden");
+	var primero:Boolean;
+	var ultimo:Boolean;
+	var indice:Number = 0;
+	var aPosicion:Array;
+	while (curPos.next()) {
+		indice++;
+		primero = indice == 1;
+		ultimo = indice == curPos.size();
+debug(11);
+		aPosicion = formin_navegador.iface.pub_datosPosicion(curPos.valueBuffer("idposicion"));
+		if (!formin_navegador.iface.pub_establecerPosicionArray(aPosicion)) {
+			return false;
+		}
+debug(12);
+		if (!formin_navegador.iface.pub_cargarDatos()) {
+			return false;
+		}
+debug(13);
+		formin_navegador.iface.tipoGrafico_ = "2d_tabla";
+		if (!formin_navegador.iface.cargarDatosTabla()) {
+			return false;
+		}
+debug(14);
+		formin_navegador.iface.generarInforme(true, !primero, ultimo);
+	}
+}
+
+//// OFICIAL /////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////
+
+/** @class_definition head */
+/////////////////////////////////////////////////////////////////
+//// DESARROLLO /////////////////////////////////////////////////
+
+//// DESARROLLO /////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////
+

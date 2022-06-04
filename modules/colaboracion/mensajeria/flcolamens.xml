@@ -1,0 +1,44 @@
+<ACTIONS>
+
+	<action>
+		<name>ms_config</name>
+		<alias>Configuración</alias>
+		<description>QT_TRANSLATE_NOOP("MetaData","Valores generales de configuración")</description>
+		<table>ms_config</table>
+		<form>ms_config</form>
+		<scriptform>ms_config</scriptform>
+	</action>
+	
+	<action>
+		<name>ms_mensajes</name>
+		<alias>Mensajes</alias>
+		<description>QT_TRANSLATE_NOOP("MetaData","Mensajes")</description>
+		<table>ms_mensajes</table>
+		<form>ms_mastermensajes</form>
+		<formrecord>ms_mensajes</formrecord>
+		<scriptformrecord>ms_mensajes</scriptformrecord>
+		<scriptform>ms_mastermensajes</scriptform>
+	</action>
+	
+	<action>
+		<name>ms_respondermensaje</name>
+		<alias>Mensajes</alias>
+		<description>QT_TRANSLATE_NOOP("MetaData","Mensajes")</description>
+		<table>ms_mensajes</table>
+		<form>ms_mensajes</form>
+		<formrecord>ms_mensajes</formrecord>
+		<scriptformrecord>ms_mensajes</scriptformrecord>
+		<scriptform>ms_mensajes</scriptform>
+	</action>
+	
+	<action>
+		<name>ms_avisomensajes</name>
+		<alias>Mensajes Nuevos</alias>
+		<description>QT_TRANSLA0TE_NOOP("MetaData","Mensajes Nuevos")</description>
+		<table>ms_mensajes</table>
+		<form>ms_avisomensajes</form>
+		<formrecord>ms_avisomensajes</formrecord>
+		<scriptformrecord>ms_avisomensajes</scriptformrecord>
+		<scriptform>ms_avisomensajes</scriptform>
+	</action>
+</ACTIONS>

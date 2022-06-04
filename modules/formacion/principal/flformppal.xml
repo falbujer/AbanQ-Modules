@@ -1,0 +1,125 @@
+<ACTIONS>
+
+	<action>
+		<name>fo_aulas</name>
+		<alias>QT_TRANSLATE_NOOP("MetaData","Aulas")</alias>
+		<description>QT_TRANSLATE_NOOP("MetaData","Aulas")</description>
+		<table>fo_aulas</table>
+		<form>master</form>
+		<formrecord>fo_aulas</formrecord>
+		<scriptformrecord>fo_aulas</scriptformrecord>
+	</action>
+	
+	<action>
+		<name>fo_horarios</name>
+		<alias>QT_TRANSLATE_NOOP("MetaData","Horarios")</alias>
+		<description>QT_TRANSLATE_NOOP("MetaData","Horarios")</description>
+		<table>fo_horarios</table>
+		<form>master</form>
+		<formrecord>fo_horarios</formrecord>
+		<scriptformrecord>fo_horarios</scriptformrecord>
+	</action>
+	
+	<action>
+		<name>fo_sesiones</name>
+		<alias>QT_TRANSLATE_NOOP("MetaData","Sesiones")</alias>
+		<description>QT_TRANSLATE_NOOP("MetaData","Sesiones")</description>
+		<table>fo_sesiones</table>
+		<form>master</form>
+		<formrecord>fo_sesiones</formrecord>
+		<scriptformrecord>fo_sesiones</scriptformrecord>
+	</action>
+	
+	<action>
+		<name>fo_alumnos</name>
+		<alias>QT_TRANSLATE_NOOP("MetaData","Alumnos")</alias>
+		<description>QT_TRANSLATE_NOOP("MetaData","Alumnos")</description>
+		<table>fo_alumnos</table>
+		<form>master</form>
+		<formrecord>fo_alumnos</formrecord>
+		<scriptform>fo_masteralumnos</scriptform>
+		<scriptformrecord>fo_alumnos</scriptformrecord>
+	</action>
+	
+	<action>
+		<name>fo_formadores</name>
+		<alias>QT_TRANSLATE_NOOP("MetaData","Formadores")</alias>
+		<description>QT_TRANSLATE_NOOP("MetaData","Formadores")</description>
+		<table>fo_formadores</table>
+		<form>master</form>
+		<formrecord>fo_formadores</formrecord>
+		<scriptformrecord>fo_formadores</scriptformrecord>
+	</action>
+	
+	<action>
+		<name>fo_sesionesalumno</name>
+		<alias>QT_TRANSLATE_NOOP("MetaData","Sesiones por alumno")</alias>
+		<description>QT_TRANSLATE_NOOP("MetaData","Sesiones por alumno")</description>
+		<table>fo_sesionesalumno</table>
+		<form>master</form>
+		<formrecord>fo_sesionesalumno</formrecord>
+		<scriptformrecord>fo_sesionesalumno</scriptformrecord>
+	</action>
+	
+	<action>
+		<name>fo_cursos</name>
+		<alias>QT_TRANSLATE_NOOP("MetaData","Cursos")</alias>
+		<description>QT_TRANSLATE_NOOP("MetaData","Cursos")</description>
+		<table>fo_cursos</table>
+		<form>master</form>
+		<formrecord>fo_cursos</formrecord>
+		<scriptformrecord>fo_cursos</scriptformrecord>
+	</action>
+
+	<action>
+		<name>fo_centros</name>
+		<alias>QT_TRANSLATE_NOOP("MetaData","Centros")</alias>
+		<description>QT_TRANSLATE_NOOP("MetaData","Centros")</description>
+		<table>fo_centros</table>
+		<form>master</form>
+		<formrecord>fo_centros</formrecord>
+		<scriptform>fo_mastercentros</scriptform>
+		<scriptformrecord>fo_centros</scriptformrecord>
+	</action>
+
+	<action>
+		<name>fo_niveles</name>
+		<alias>QT_TRANSLATE_NOOP("MetaData","Niveles")</alias>
+		<description>QT_TRANSLATE_NOOP("MetaData","Niveles")</description>
+		<table>fo_niveles</table>
+		<form>master</form>
+		<formrecord>fo_niveles</formrecord>
+		<scriptformrecord>fo_niveles</scriptformrecord>
+	</action>
+
+	<action>
+		<name>fo_gruposcurso</name>
+		<alias>QT_TRANSLATE_NOOP("MetaData","Grupos curso")</alias>
+		<description>QT_TRANSLATE_NOOP("MetaData","Grupos curso")</description>
+		<table>fo_gruposcurso</table>
+		<form>master</form>
+		<scriptform>fo_mastergruposcurso</scriptform>
+		<formrecord>fo_gruposcurso</formrecord>
+		<scriptformrecord>fo_gruposcurso</scriptformrecord>
+	</action>
+
+	<action>
+		<name>fo_alumnosgrupocurso</name>
+		<alias>QT_TRANSLATE_NOOP("MetaData","Alumnos grupo curso")</alias>
+		<description>QT_TRANSLATE_NOOP("MetaData","Alumnos grupo curso")</description>
+		<table>fo_alumnosgrupocurso</table>
+		<form>master</form>
+		<formrecord>fo_alumnosgrupocurso</formrecord>
+		<scriptformrecord>fo_alumnosgrupocurso</scriptformrecord>
+	</action>
+
+    <action>
+        <name>fo_selecciongruposcurso</name>
+        <description>QT_TRANSLATE_NOOP("MetaData","Esta acción proporciona un formulario para seleccionar múltiples alumnos de un curso que incluir en grupos")</description>
+        <alias>QT_TRANSLATE_NOOP("MetaData","Selección de alumnos por grupo")</alias>
+        <table>fo_selecciongruposcurso</table>
+        <form>fo_selecciongruposcurso</form>
+        <scriptform>fo_selecciongruposcurso</scriptform>
+    </action>
+
+</ACTIONS>

@@ -1,0 +1,94 @@
+<!DOCTYPE TMD>
+<TMD>
+	<name>fo_centros</name>
+	<!--Centros-->
+	<alias>QT_TRANSLATE_NOOP("MetaData","Centros")</alias>
+
+	<field>
+		<name>codcentro</name>
+		<!--Código-->
+		<alias>QT_TRANSLATE_NOOP("MetaData","Código")</alias>
+		<null>false</null>
+		<pk>true</pk>
+		<type>string</type>
+		<length>25</length>
+		<relation>
+			<table>fo_gruposcurso</table>
+			<field>codcentro</field>
+			<card>1M</card>
+		</relation>
+		<relation>
+			<table>fo_alumnos</table>
+			<field>codcentro</field>
+			<card>1M</card>
+		</relation>
+		<relation>
+			<table>fo_formadores</table>
+			<field>codcentro</field>
+			<card>1M</card>
+		</relation>
+		
+		<relation>
+			<table>calendariolab</table>
+			<field>codcentro</field>
+			<card>1M</card>
+		</relation>
+	</field>
+
+	<field>
+		<name>nombre</name>
+		<alias>QT_TRANSLATE_NOOP("MetaData","Nombre")</alias>
+		<null>true</null>
+		<pk>false</pk>
+		<type>string</type>
+		<length>100</length>
+	</field>
+	
+	<field>
+			<name>codhorariodl</name>
+			<alias>QT_TRANSLATE_NOOP("MetaData","H.Día Lectivo")</alias>
+			<null>true</null>
+			<pk>false</pk>
+			<type>string</type>
+			<length>25</length>
+			<relation>
+					<table>horarioslab</table>
+					<field>codhorario</field>
+					<card>M1</card>
+			</relation>
+	</field>
+	<field>
+			<name>codhorariosab</name>
+			<alias>QT_TRANSLATE_NOOP("MetaData","H.Sábado")</alias>
+			<null>true</null>
+			<pk>false</pk>
+			<type>string</type>
+			<length>25</length>
+			<relation>
+					<table>horarioslab</table>
+					<field>codhorario</field>
+					<card>M1</card>
+			</relation>
+	</field>
+	<field>
+			<name>codhorariodom</name>
+			<alias>QT_TRANSLATE_NOOP("MetaData","H.Domingo")</alias>
+			<null>true</null>
+			<pk>false</pk>
+			<type>string</type>
+			<length>25</length>
+			<relation>
+					<table>horarioslab</table>
+					<field>codhorario</field>
+					<card>M1</card>
+			</relation>
+	</field>
+	
+	<field>
+			<name>diasdesde</name>
+			<alias>QT_TRANSLATE_NOOP("MetaData","Mostrar días desde")</alias>
+			<null>true</null>
+			<pk>false</pk>
+			<type>date</type>
+	</field>
+</TMD>

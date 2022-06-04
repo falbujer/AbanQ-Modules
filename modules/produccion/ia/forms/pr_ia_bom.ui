@@ -1,0 +1,284 @@
+<!DOCTYPE UI><UI version="3.3" stdsetdef="1">
+<class>pr_ia_bom</class>
+<widget class="QWidget">
+    <property name="name">
+        <cstring>pr_ia_bom</cstring>
+    </property>
+    <property name="geometry">
+        <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>753</width>
+            <height>632</height>
+        </rect>
+    </property>
+    <property name="caption">
+        <string>pr_ia_bom</string>
+    </property>
+    <vbox>
+        <property name="name">
+            <cstring>unnamed</cstring>
+        </property>
+        <property name="margin">
+            <number>4</number>
+        </property>
+        <property name="spacing">
+            <number>4</number>
+        </property>
+        <widget class="QGroupBox">
+            <property name="name">
+                <cstring>GroupBox1_2_3</cstring>
+            </property>
+            <property name="sizePolicy">
+                <sizepolicy>
+                    <hsizetype>1</hsizetype>
+                    <vsizetype>1</vsizetype>
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                </sizepolicy>
+            </property>
+            <property name="font">
+                <font>
+                    <bold>1</bold>
+                    <italic>1</italic>
+                </font>
+            </property>
+            <property name="title">
+                <string></string>
+            </property>
+            <vbox>
+                <property name="name">
+                    <cstring>unnamed</cstring>
+                </property>
+                <property name="margin">
+                    <number>6</number>
+                </property>
+                <property name="spacing">
+                    <number>6</number>
+                </property>
+                <widget class="QLayoutWidget">
+                    <property name="name">
+                        <cstring>layout18</cstring>
+                    </property>
+                    <hbox>
+                        <property name="name">
+                            <cstring>unnamed</cstring>
+                        </property>
+                        <widget class="QPushButton">
+                            <property name="name">
+                                <cstring>pbBom</cstring>
+                            </property>
+                            <property name="font">
+                                <font>
+                                    <bold>0</bold>
+                                    <italic>0</italic>
+                                </font>
+                            </property>
+                            <property name="text">
+                                <string>&amp;Regenerar Bom</string>
+                            </property>
+                            <property name="accel">
+                                <string>Alt+R</string>
+                            </property>
+                            <property name="iconSet">
+                                <iconset>image0</iconset>
+                            </property>
+                        </widget>
+                        <spacer>
+                            <property name="name">
+                                <cstring>spacer11</cstring>
+                            </property>
+                            <property name="orientation">
+                                <enum>Horizontal</enum>
+                            </property>
+                            <property name="sizeType">
+                                <enum>Expanding</enum>
+                            </property>
+                            <property name="sizeHint">
+                                <size>
+                                    <width>241</width>
+                                    <height>20</height>
+                                </size>
+                            </property>
+                        </spacer>
+                        <widget class="QPushButton">
+                            <property name="name">
+                                <cstring>pbXml</cstring>
+                            </property>
+                            <property name="font">
+                                <font>
+                                    <bold>0</bold>
+                                    <italic>0</italic>
+                                </font>
+                            </property>
+                            <property name="text">
+                                <string>&amp;Cargar  XML</string>
+                            </property>
+                            <property name="accel">
+                                <string>Alt+C</string>
+                            </property>
+                            <property name="iconSet">
+                                <iconset>image1</iconset>
+                            </property>
+                        </widget>
+                    </hbox>
+                </widget>
+            </vbox>
+        </widget>
+        <widget class="QTabWidget">
+            <property name="name">
+                <cstring>tbwRepres</cstring>
+            </property>
+            <property name="sizePolicy">
+                <sizepolicy>
+                    <hsizetype>1</hsizetype>
+                    <vsizetype>7</vsizetype>
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                </sizepolicy>
+            </property>
+            <property name="font">
+                <font>
+                    <bold>1</bold>
+                    <italic>1</italic>
+                </font>
+            </property>
+            <widget class="QWidget">
+                <property name="name">
+                    <cstring>buscar</cstring>
+                </property>
+                <attribute name="title">
+                    <string>&amp;BOM</string>
+                </attribute>
+                <vbox>
+                    <property name="name">
+                        <cstring>unnamed</cstring>
+                    </property>
+                    <property name="margin">
+                        <number>4</number>
+                    </property>
+                    <property name="spacing">
+                        <number>4</number>
+                    </property>
+                    <widget class="QLabel">
+                        <property name="name">
+                            <cstring>lblBom</cstring>
+                        </property>
+                        <property name="pixmap">
+                            <pixmap>image2</pixmap>
+                        </property>
+                        <property name="scaledContents">
+                            <bool>false</bool>
+                        </property>
+                        <property name="alignment">
+                            <set>AlignCenter</set>
+                        </property>
+                    </widget>
+                </vbox>
+            </widget>
+            <widget class="QWidget">
+                <property name="name">
+                    <cstring>planificacion</cstring>
+                </property>
+                <attribute name="title">
+                    <string>&amp;XML</string>
+                </attribute>
+                <vbox>
+                    <property name="name">
+                        <cstring>unnamed</cstring>
+                    </property>
+                    <property name="margin">
+                        <number>4</number>
+                    </property>
+                    <property name="spacing">
+                        <number>4</number>
+                    </property>
+                    <widget class="FLFieldDB">
+                        <property name="name">
+                            <cstring>fdbXml</cstring>
+                        </property>
+                        <property name="sizePolicy">
+                            <sizepolicy>
+                                <hsizetype>1</hsizetype>
+                                <vsizetype>7</vsizetype>
+                                <horstretch>0</horstretch>
+                                <verstretch>0</verstretch>
+                            </sizepolicy>
+                        </property>
+                        <property name="font">
+                            <font>
+                                <bold>0</bold>
+                                <italic>0</italic>
+                            </font>
+                        </property>
+                        <property name="fieldName">
+                            <string>xml</string>
+                        </property>
+                        <property name="showAlias">
+                            <bool>false</bool>
+                        </property>
+                    </widget>
+                </vbox>
+            </widget>
+            <widget class="QWidget">
+                <property name="name">
+                    <cstring>TabPage</cstring>
+                </property>
+                <attribute name="title">
+                    <string>&amp;Objetivos</string>
+                </attribute>
+                <vbox>
+                    <property name="name">
+                        <cstring>unnamed</cstring>
+                    </property>
+                    <property name="margin">
+                        <number>4</number>
+                    </property>
+                    <property name="spacing">
+                        <number>4</number>
+                    </property>
+                    <widget class="FLTableDB">
+                        <property name="name">
+                            <cstring>tdbObjetivos</cstring>
+                        </property>
+                        <property name="font">
+                            <font>
+                                <bold>0</bold>
+                                <italic>0</italic>
+                            </font>
+                        </property>
+                        <property name="tableName">
+                            <string>pr_ia_objetivos</string>
+                        </property>
+                        <property name="checkColumnEnabled">
+                            <bool>true</bool>
+                        </property>
+                        <property name="findHidden">
+                            <bool>true</bool>
+                        </property>
+                        <property name="filterHidden">
+                            <bool>true</bool>
+                        </property>
+                    </widget>
+                </vbox>
+            </widget>
+        </widget>
+    </vbox>
+</widget>
+<images>
+    <image name="image0">
+        <data format="PNG" length="1249">89504e470d0a1a0a0000000d4948445200000018000000180806000000e0773df8000004a849444154789ce5945f681c451cc7bf9b4c9ad9a491bd72a57798e21ea4a573b4d8dd17b9f42539ab86348aa62ab1ed832842a5fae09f13c4161faa0f252d82d68a522b42eb83da28f648f3a017957a576cd94d116f822ddda539bda539dcd59cd9696e93f32197925c12f1c5277ff06576777ef3fd0cf3fbcd02ff9f78fe7ae3bf49537bd26aa4e7f8ba8577b27ae2e1cd20da2b004f0288e2ead926f4a5cb00bf09202302f159ac94fc3e777947e5f69a87d31b8430bfa1842601fc0e00d272ebaaa4f61d3d09b00159b6d7686a82708f83b66b4089435318cc426ed6a3b1b26f194427fa115ecebe85b5acc1877509609b017e979d4edd5811a0f60c7e2453fd31babed80a302030416902201c21aa033040890e903c28e2e076c677dd480501ff2dbe2919b326321508c6f8485f61d911a93d83f7c8943d4adbacd6d8646cce08320d32d1e106c35580051e199e8eb0440b25f9262dac235730b0a7ab57e68e2147496f1bc251c99ad0039718730b9e0d4bb64fd87e3fe0adaeeb568beb8b526cd36e41d7173fb5d3a90611f00d7ea0de6ffd9419324c3e9d19cf54d5888ed16b5938e5385cea481aa1f0614814580500fe00c0a43863eedeae7e5308c3d522da2000382329d74ef7fd68a7530308b0c39a502e8d5e1cfaabb7a3136a98c22c45c0c1a14397205605a039d466ffdadf917cdff2f86910f68be970b7be4ef6486a4c04e6aba8f824ef71389e80704cd08d0c46604832d56f03eadb745ad9d2fdb645ad735a482f65c7ce7eac6c4ffeb942236cd309fb4a49e8cd49a6804f721ce8de0bee010093dc80df062ce9a2eeaecfc968379fc3eb87e6ea4d1722b2f37094527a1901a23261333ef8fc440080302030d780629dfde5216f1940ed1b9c04d85a800360a81ba7007e9f8ece718364e415e6e7c78035dbe9dd3701a9bad21129079e88123dba0b46c9801e4e223bc1313422df2abac68bce48ea8a3d9f770b00b4677f6842506c39b0fda028d27c2837c63af357873f00a4f082e1d2220790f48d3adef8e22c2c4e6114015180ef4e19c79d91d4e9fae3a281b5416967a739cdef8b85e24f164bb96332d56717e7d4df0370c78008180471c0000c8de500609bbaf3f0c6650521da1d9e6326fc726cdfbbe7cfbcec4e45543f30ae2f4959ba824b5afb2e585b5d502163a890c3e0334fc927ce0ddd9bb79471b56ff01d1decb2017e23b4a99308cf3caa453465f4c2a92e545815302a08f493ff00004c270f0d5158e122a242c327b90cfab7f436aaaad962177a5f2a96737ec8d31bdcabd9569900b9b207ba3601c094fc490888ec99d501012405d1eac1f31ffea18335800d933dddfd2d199e435c61100224d1d1dbc64b0658782f72b6015f89c3b3b38815636537705fb0bf3d24165b2e6ed346b52f5d01785914cc079d6bc34e64eb9e87a812dd1f8b25ef8c2ac526aa7436007cbe466503ae88c17146e7fc297f4678ce11e7c2b11300444d33f500aaf60cbac2931f772e3ef73300b926aa7474dfada84f0f80583a88d62c83577cb046041c086217bcc2a9f7bcf1e12b00fc9aa66b5a0290d49daf3d627ffde677002880e6456aaaa911446952dad93aaf64b9283b6e6da7b76af2014cd59eabf580c5d1b8c87441a4f6bd0a60b6a64a4d3398ff59ccae64f69fc6df65b613f8d61a193a0000000049454e44ae426082</data>
+    </image>
+    <image name="image1">
+        <data format="PNG" length="687">89504e470d0a1a0a0000000d49484452000000100000001008060000001ff3ff610000027649444154789ca5913d6814511485bf8d6ff10d449941033390c20716ae289890c268652a511034d86825daf8838d2208a96c4d1bb148b4315d5c0b652da21b2410c19f8da0640a212f95b36870460c99878eb9163341c1d2db1c5e71bef3ee3d3511a1561b07a23e4880482ae55fcd36cef42f0d9d3addba4be6c5cd97faaa02d07ee346b88f13916ee00a2b9a115c61411d822241ab433852dcaa5f8c9c6cef1fbd756c473edf34b8603b22c2c0b9b7df9e2f8bc82729e7ab88fc1059ff5caa7c1559ff24b2dcbc26f2e381c8fa2511d92533371bcb3d00fecec6afd455bf04082007bc3ec8ebe5db7e18c31c1d0016c16bd2bee37d6e3fd6171400ce6d04daab5cc04ff0ea9502f6d9387b870ca818ea0fb1b30daedc3e3b93773bed1e00942659abcc00f53fda793681190aa02f81fa149dd980b1d7d3c42a2c569ca10460317e99f8f7a4f3d30c1ed0e027f07d0a9e6ab2b549923022d4c116c836011136ab922bc8d2fc4382fe0c7a1358992079d425d553b07b100fca963028004f010a26e6c1d7603fc27903280b1fa6c9e7ba34d5136c3042a88002b43640ab0468058b5d482d189d639c43f71b58bd47fab48bf52769b9e32ccd41b4070280c2026cae90e06b30018c9df48874135633d29523b8e119062f9ee7da30786ba0ab8ab5327f03ca1b44bdb0f0a6c3c4fd059a7331fae07538380a1ed82c210cc17d295780f206558da5394ec02f0c891e6760f8325e01be833cce317e44e043a44b80a74c0d6c09d08aad8983bc804c254cded2a096488b9cb86b711a5212c2fd10af011a726c4f950d8bb3ed17c7c2d1c36937dd70db3c62620215d17a9f11059a56ba08aa815b8561e889df757e662bfa15686a22c2ffcc6f1740226632acc8c90000000049454e44ae426082</data>
+    </image>
+    <image name="image2">
+        <data format="PNG" length="1225">89504e470d0a1a0a0000000d4948445200000018000000180806000000e0773df80000049049444154789ce5535d685c45183d37993473f323774b42ef62c53bd094ced2a2d917e9da82a6554388a2b14a6d05511f6cf1c99f1544fb147d286911545a94aa086d1f3446d1b00d6813b565536ce96dc1ee145b9c4b13dd4bbb385773cdbde94eb33e7453936d223ef9e20787f93b73cef07ddf00ff9fd879aefedfd09cee41c7ee7e77f9dc9a2c4dec5f0dc25f016417802464ae01bd8321202f03188d75fc292b65be1f3fb5a97ce3cec3832be2581ca5847601f80d008c9ba52b86d3bbe700c0b69aa6bf8cafec243294a036070209dec2207cf75a40ec309a102445f86e19ba6fa185d545289e04d86a40deee0d672f2d6ae0740f7c6452fe186d0f9a010668014a3b012291a01c8000251c2012140cc21b8f94b2cad0f2d7544786c9897c1931e36264cbe44d2972ba07ee3229db425bfde6e4157bb6a0f37526e1507ab402301d90b169bba3b38912d9c0ad145cbf80be0d5da62c15cc04ba5aa99d34e484d28a88d939cdba05cf276c47a465b352aaa2da038375f4c4b43df8c41bced6c55aae88b47dbf14f9a1d3ae98ce5fcc571c3b8571ef34fc90216a090c4e28220883024b18403e003023c5b9eadbd0e3c6b150bc8d0f00803f9255def0961fbce1ec5668dc2d27e8c9b113b93fef75d270da4cb8be05098914b88178490334265afd5f7a5665def343791084fd244a52d5d6c91bc99e89b57815e588c850c20f22c425019a642868619894df30a86dd3696bd5fab78bb4f8156f4d97f2673efbd85a9bf9639146589722ec4b7b7dba31d361412a896736f6c10b0180194a7b8b1bb030c9c6486e76eca95db3b5a273616fee4f8260a4a065933c8699d163f2fa811e050803b45846e9df295ad0a64eefc01580b500120043cd3805c8fb52489f2f90bcb9c8f9f551b3466f78fb65c0a82c9622ebf92718e1ed3d108100b7bae016258646e84c518917fd91ec59ef3a6f06003a771e6d80564dcfdef97aac6821317e86670a1746df078cb6c56ba061f024c7decf73601603d6008117476a4aecf347b2076bd345757105b5f97e490b5ff056d65e2c1d7ecea4fcda7c4eed3f80571288350368000620f7a30b00eb9ccdfdb7dd5410c26f094a627d14269ffce0eba197d594e5445afcbc80b2f08634b8dd83ccda00082972932efa9fde667e7824b7a920e979a777e09d14d8a902e4a5044b9338147b781bb7c68e1fbe0765a7028832343ff00f06802849702450b403d09863e8641e3d6bbaea1d47347993ec2515ba5122e0754a9e6e3609e08601684b27006144571023760f2d6da061509da8bc71e4d0ef29b03aca25e9dbd8d394bfe082b530c46d209d4e57ab0c0a60d6a370270b885a18824917c9a21d2aad5ef0bedd15cf979cdfa6f54eef601990613ce93ee85fccf9f6da6d0f512bb983b1ccad494b35502b5d0748c49a210e0b507112be3f3e1b4d4557e3c0dfed1fdfbb0f405cc5d55a03ea740fa838c0e3fe89ec39006615d45a75ef1d96b37d2b48310dc21b4dc87204560f2d019d3c1e4c1ede1f9ccf9d051055315dc50203c3d9fcda23de376f7e078002689c87862aea41ac066b255f1e94a442e8abea4b67aa88004c55e7955a83f9513f4f740ea4ba5f0170ad8a72155701e8eade7f1b7f01e58a13cd08b464020000000049454e44ae426082</data>
+    </image>
+</images>
+<layoutdefaults spacing="6" margin="11"/>
+<includehints>
+    <includehint>flfielddb.h</includehint>
+    <includehint>fltabledb.h</includehint>
+</includehints>
+</UI>

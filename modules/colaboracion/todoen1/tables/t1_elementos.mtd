@@ -1,0 +1,38 @@
+<!DOCTYPE TMD>
+<TMD>
+	<name>t1_elementos</name>
+	<alias>QT_TRANSLATE_NOOP("MetaData","Elementos")</alias>
+
+	<field>
+		<name>elemento</name>
+		<alias>QT_TRANSLATE_NOOP("MetaData","Elemento")</alias>
+		<null>false</null>
+		<pk>true</pk>
+		<type>string</type>
+		<length>50</length>
+
+		<relation>
+			<table>t1_accioneselemento</table>
+			<field>elemento</field>
+			<card>1M</card>
+		</relation>
+
+	</field>
+	
+	<field>
+		<name>icono</name>
+		<alias>QT_TRANSLATE_NOOP("MetaData","Icono")</alias>
+		<null>true</null>
+		<pk>false</pk>
+		<type>pixmap</type>
+	</field>
+	
+	<field>
+		<name>xmlpic</name>
+		<alias>QT_TRANSLATE_NOOP("MetaData","XML Pic")</alias>
+		<null>true</null>
+		<pk>false</pk>
+		<type>stringlist</type>
+	</field>
+	
+</TMD>

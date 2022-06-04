@@ -1,0 +1,83 @@
+<!DOCTYPE TMD>
+<TMD>
+	<name>fo_alumnos</name>
+	<!--Alumnos-->
+	<alias>QT_TRANSLATE_NOOP("MetaData","Alumnos")</alias>
+
+	<field>
+		<name>nombre</name>
+		<alias>QT_TRANSLATE_NOOP("MetaData","Nombre")</alias>
+		<null>true</null>
+		<pk>false</pk>
+		<type>string</type>
+		<length>100</length>
+		<editable>false</editable>
+	</field>
+	<field>
+		<name>apellidos</name>
+		<alias>QT_TRANSLATE_NOOP("MetaData","Apellidos")</alias>
+		<null>true</null>
+		<pk>false</pk>
+		<type>string</type>
+		<length>50</length>
+	</field>
+	<field>
+		<name>nombrepila</name>
+		<alias>QT_TRANSLATE_NOOP("MetaData","Nombre de pila")</alias>
+		<null>true</null>
+		<pk>false</pk>
+		<type>string</type>
+		<length>50</length>
+	</field>
+	
+	<field>
+		<name>codcentro</name>
+		<alias>QT_TRANSLATE_NOOP("MetaData","Centro")</alias>
+		<null>true</null>
+		<pk>false</pk>
+		<type>string</type>
+		<length>25</length>
+		<relation>
+			<table>fo_centros</table>
+			<field>codcentro</field>
+			<card>M1</card>
+		</relation>
+	</field>
+
+	<field>
+		<name>codalumno</name>
+		<!--Código-->
+		<alias>QT_TRANSLATE_NOOP("MetaData","Código")</alias>
+		<null>false</null>
+		<pk>true</pk>
+		<type>string</type>
+		<length>10</length>
+		<counter>true</counter>
+		
+		<relation>
+			<table>fo_seionesalumno</table>
+			<field>codalumno</field>
+			<card>1M</card>
+		</relation>
+		<relation>
+			<table>fo_alumnosgrupocurso</table>
+			<field>codalumno</field>
+			<card>1M</card>
+		</relation>
+	</field>
+
+	<field>
+		<name>codcliente</name>
+		<alias>QT_TRANSLATE_NOOP("MetaData","Cliente")</alias>
+		<null>true</null>
+		<pk>false</pk>
+		<type>string</type>
+		<length>6</length>
+		
+		<relation>
+			<table>clientes</table>
+			<field>codcliente</field>
+			<card>M1</card>
+		</relation>
+	</field>
+</TMD>

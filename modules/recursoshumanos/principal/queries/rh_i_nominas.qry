@@ -1,0 +1,25 @@
+<!DOCTYPE QRY>
+<QRY>
+	<name>rh_i_nominas</name>
+
+	<tables>empresa,rh_nominas</tables>
+
+	<select>
+		empresa.nombre, empresa.cifnif,
+		empresa.direccion,
+		empresa.codpostal, empresa.ciudad,
+		empresa.provincia, empresa.apartado,
+		empresa.codpais,
+		rh_nominas.codnomina, rh_nominas.descripcion, rh_nominas.codempleado, rh_nominas.fecha,
+		rh_nominas.sueldobruto, rh_nominas.segsocial, rh_nominas.cuotapatronalss, rh_nominas.irpf,
+		rh_nominas.dietas, rh_nominas.sueldoneto, rh_nominas.totalhe,
+		rh_empleados.nombre || ' ' || rh_empleados.apellidos
+	</select>
+
+	<from>
+		empresa,rh_nominas INNER JOIN rh_empleados ON rh_nominas.codempleado = rh_empleados.codempleado
+	</from>
+
+	<where>
+	</where>
+</QRY>

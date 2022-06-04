@@ -1,0 +1,47 @@
+<!DOCTYPE TMD>
+<TMD>
+	<name>fo_horarios</name>
+	<!--Horarios-->
+	<alias>QT_TRANSLATE_NOOP("MetaData","Horarios")</alias>
+
+	<field>
+		<name>codhorario</name>
+		<!--Código-->
+		<alias>QT_TRANSLATE_NOOP("MetaData","Código")</alias>
+		<null>false</null>
+		<pk>true</pk>
+		<type>string</type>
+		<length>25</length>
+		
+		<relation>
+			<table>fo_sesiones</table>
+			<field>codhorario</field>
+			<card>1M</card>
+		</relation>
+	</field>
+
+	<field>
+		<name>descripcion</name>
+		<alias>QT_TRANSLATE_NOOP("MetaData","Descripción")</alias>
+		<null>true</null>
+		<pk>false</pk>
+		<type>string</type>
+		<length>100</length>
+	</field>
+	
+	<field>
+		<name>horadesde</name>
+		<alias>QT_TRANSLATE_NOOP("MetaData","H.Desde")</alias>
+		<null>false</null>
+		<pk>false</pk>
+		<type>time</type>
+	</field>
+
+	<field>
+		<name>horahasta</name>
+		<alias>QT_TRANSLATE_NOOP("MetaData","H.Hasta")</alias>
+		<null>false</null>
+		<pk>false</pk>
+		<type>time</type>
+	</field>
+</TMD>

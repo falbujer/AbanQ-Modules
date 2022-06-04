@@ -1,0 +1,46 @@
+<!DOCTYPE TMD>
+<TMD>
+	<name>fo_cursos</name>
+	<!--Cursos-->
+	<alias>QT_TRANSLATE_NOOP("MetaData","Cursos")</alias>
+
+	<field>
+		<name>codcurso</name>
+		<!--Código-->
+		<alias>QT_TRANSLATE_NOOP("MetaData","Código")</alias>
+		<null>false</null>
+		<pk>true</pk>
+		<type>string</type>
+		<length>10</length>
+		<relation>
+			<table>fo_gruposcurso</table>
+			<field>codcurso</field>
+			<card>1M</card>
+		</relation>
+	</field>
+
+	<field>
+		<name>descripcion</name>
+		<alias>QT_TRANSLATE_NOOP("MetaData","Descripción")</alias>
+		<null>true</null>
+		<pk>false</pk>
+		<type>string</type>
+		<length>100</length>
+	</field>
+
+	<field>
+		<name>fechadesde</name>
+		<alias>QT_TRANSLATE_NOOP("MetaData","Fecha inicio")</alias>
+		<null>false</null>
+		<pk>false</pk>
+		<type>date</type>
+	</field>
+
+	<field>
+		<name>fechahasta</name>
+		<alias>QT_TRANSLATE_NOOP("MetaData","Fecha fin")</alias>
+		<null>false</null>
+		<pk>false</pk>
+		<type>date</type>
+	</field>
+</TMD>

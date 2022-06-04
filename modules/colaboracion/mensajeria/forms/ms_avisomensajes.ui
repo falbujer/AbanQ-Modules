@@ -1,0 +1,286 @@
+<!DOCTYPE UI><UI version="3.3" stdsetdef="1">
+<class>ms_avisomensajes</class>
+<comment>Acceso general a una tabla.</comment>
+<author>InfoSiAL, S.L.</author>
+<widget class="QWidget">
+    <property name="name">
+        <cstring>ms_avisomensajes</cstring>
+    </property>
+    <property name="geometry">
+        <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>673</width>
+            <height>458</height>
+        </rect>
+    </property>
+    <property name="sizePolicy">
+        <sizepolicy>
+            <hsizetype>5</hsizetype>
+            <vsizetype>5</vsizetype>
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+        </sizepolicy>
+    </property>
+    <property name="minimumSize">
+        <size>
+            <width>0</width>
+            <height>0</height>
+        </size>
+    </property>
+    <property name="caption">
+        <string>ms_avisomensajes</string>
+    </property>
+    <property name="focusPolicy">
+        <enum>StrongFocus</enum>
+    </property>
+    <property name="layoutMargin" stdset="0">
+    </property>
+    <property name="layoutSpacing" stdset="0">
+    </property>
+    <property name="toolTip" stdset="0">
+        <string>Comprobar mensajes</string>
+    </property>
+    <property name="whatsThis" stdset="0">
+        <string>Comprobar mensajes</string>
+    </property>
+    <vbox>
+        <property name="name">
+            <cstring>unnamed</cstring>
+        </property>
+        <property name="margin">
+            <number>0</number>
+        </property>
+        <property name="spacing">
+            <number>0</number>
+        </property>
+        <widget class="FLTableDB">
+            <property name="name">
+                <cstring>tdbMensajes</cstring>
+            </property>
+            <property name="tableName">
+                <string>ms_mensajes</string>
+            </property>
+            <property name="checkColumnEnabled">
+                <bool>false</bool>
+            </property>
+        </widget>
+        <widget class="QGroupBox">
+            <property name="name">
+                <cstring>gbxBotones</cstring>
+            </property>
+            <property name="title">
+                <string></string>
+            </property>
+            <hbox>
+                <property name="name">
+                    <cstring>unnamed</cstring>
+                </property>
+                <property name="margin">
+                    <number>5</number>
+                </property>
+                <spacer>
+                    <property name="name">
+                        <cstring>spacer6</cstring>
+                    </property>
+                    <property name="orientation">
+                        <enum>Horizontal</enum>
+                    </property>
+                    <property name="sizeType">
+                        <enum>Expanding</enum>
+                    </property>
+                    <property name="sizeHint">
+                        <size>
+                            <width>561</width>
+                            <height>20</height>
+                        </size>
+                    </property>
+                </spacer>
+                <widget class="QToolButton">
+                    <property name="name">
+                        <cstring>tbnMensajes</cstring>
+                    </property>
+                    <property name="sizePolicy">
+                        <sizepolicy>
+                            <hsizetype>1</hsizetype>
+                            <vsizetype>1</vsizetype>
+                            <horstretch>0</horstretch>
+                            <verstretch>0</verstretch>
+                        </sizepolicy>
+                    </property>
+                    <property name="minimumSize">
+                        <size>
+                            <width>32</width>
+                            <height>32</height>
+                        </size>
+                    </property>
+                    <property name="focusPolicy">
+                        <enum>NoFocus</enum>
+                    </property>
+                    <property name="text">
+                        <string></string>
+                    </property>
+                    <property name="iconSet">
+                        <iconset>image37756</iconset>
+                    </property>
+                    <property name="toolTip" stdset="0">
+                        <string>Ir al formulario de mensajes</string>
+                    </property>
+                    <property name="whatsThis" stdset="0">
+                        <string>Ir al formulario de mensajes</string>
+                    </property>
+                </widget>
+            </hbox>
+        </widget>
+        <widget class="QGroupBox">
+            <property name="name">
+                <cstring>gbxContenido</cstring>
+            </property>
+            <property name="font">
+                <font>
+                    <bold>1</bold>
+                    <italic>1</italic>
+                </font>
+            </property>
+            <property name="title">
+                <string>Mensaje</string>
+            </property>
+            <vbox>
+                <property name="name">
+                    <cstring>unnamed</cstring>
+                </property>
+                <widget class="QLabel">
+                    <property name="name">
+                        <cstring>tlbDetallesMensaje</cstring>
+                    </property>
+                    <property name="sizePolicy">
+                        <sizepolicy>
+                            <hsizetype>1</hsizetype>
+                            <vsizetype>5</vsizetype>
+                            <horstretch>0</horstretch>
+                            <verstretch>0</verstretch>
+                        </sizepolicy>
+                    </property>
+                    <property name="minimumSize">
+                        <size>
+                            <width>0</width>
+                            <height>50</height>
+                        </size>
+                    </property>
+                    <property name="maximumSize">
+                        <size>
+                            <width>32767</width>
+                            <height>50</height>
+                        </size>
+                    </property>
+                    <property name="font">
+                        <font>
+                            <bold>0</bold>
+                            <italic>0</italic>
+                        </font>
+                    </property>
+                    <property name="frameShape">
+                        <enum>StyledPanel</enum>
+                    </property>
+                    <property name="frameShadow">
+                        <enum>Sunken</enum>
+                    </property>
+                    <property name="lineWidth">
+                        <number>1</number>
+                    </property>
+                    <property name="margin">
+                        <number>7</number>
+                    </property>
+                    <property name="textFormat">
+                        <enum>RichText</enum>
+                    </property>
+                    <property name="scaledContents">
+                        <bool>false</bool>
+                    </property>
+                    <property name="alignment">
+                        <set>WordBreak|AlignTop|AlignLeft</set>
+                    </property>
+                </widget>
+                <widget class="QLabel">
+                    <property name="name">
+                        <cstring>tlbMensaje</cstring>
+                    </property>
+                    <property name="sizePolicy">
+                        <sizepolicy>
+                            <hsizetype>1</hsizetype>
+                            <vsizetype>5</vsizetype>
+                            <horstretch>0</horstretch>
+                            <verstretch>0</verstretch>
+                        </sizepolicy>
+                    </property>
+                    <property name="minimumSize">
+                        <size>
+                            <width>0</width>
+                            <height>120</height>
+                        </size>
+                    </property>
+                    <property name="paletteBackgroundColor">
+                        <color>
+                            <red>255</red>
+                            <green>255</green>
+                            <blue>255</blue>
+                        </color>
+                    </property>
+                    <property name="font">
+                        <font>
+                            <bold>0</bold>
+                            <italic>0</italic>
+                        </font>
+                    </property>
+                    <property name="mouseTracking">
+                        <bool>false</bool>
+                    </property>
+                    <property name="frameShape">
+                        <enum>StyledPanel</enum>
+                    </property>
+                    <property name="frameShadow">
+                        <enum>Sunken</enum>
+                    </property>
+                    <property name="lineWidth">
+                        <number>1</number>
+                    </property>
+                    <property name="margin">
+                        <number>10</number>
+                    </property>
+                    <property name="textFormat">
+                        <enum>PlainText</enum>
+                    </property>
+                    <property name="scaledContents">
+                        <bool>false</bool>
+                    </property>
+                    <property name="alignment">
+                        <set>WordBreak|AlignTop|AlignLeft</set>
+                    </property>
+                </widget>
+            </vbox>
+        </widget>
+    </vbox>
+</widget>
+<images>
+    <image name="image37756">
+        <data format="PNG" length="2065">89504e470d0a1a0a0000000d4948445200000020000000200806000000737a7af4000007d849444154789ccd97516c1c5715863fefced877dcd96486aed14e49ab8c6aa3ac892336c2a86e4444dca605b795884b915a40404b1e80be45aa54853ca511aa44551e48f29026554b923e2476a14db750aa58d4d42ea4cd5a24ddb59ac05a8d61b6f19219ec61e7663df6f230b3f526d408554865a5d1b967b4e7ce7ffe73ee3de7b4351a0d3ec95fe213fdfaff0380b68f69d3d6b26ec6b0d1b2fe9f01687e2c0924c5ba6153e8b99cc46913986d3274db846235bce93de3c012b01ccbe67af9e302680392a2fb87dd28dad78492b957e2f50945ac110ad87616162ba06628974bc8d04486ceac80a20cdd57a9165e96d5c9cbc062fc2cb30a3bd703883ebc61d71d42d87b08dd2d430339ec0d1ac35fca61a74dcc3420011df001016e150a171d4626cf3279c6a33c53028c51e98d3d2967f3efc5168b3133ab024888f50fa7d1ad23862eee19de9ee3470f0c6265c034348210342dde465d914110bd0f164013e07801ee2cec3934cae9490f298b3f97d307f6c570af02e147b1913036eefda2b171b737fcbd938d77dea8351af38d46e34aa3d1a837a275235eb7fe9a7a2d9657e2f5e5c8e664feddc6b67b8f368c8dbba78591eb030ca0bdd5f124d0666cd8db2f13f2b5bb0606d6fe74f7567a6f49e1d403529d2a6e2d40eb5409eaa076c49e2757ac8300d49801b513dcf9004da8387e40dffa9be8edeba27259495f986fbb53a97baf87b25a6b652109a82273fb2bdfd83e78cb138fdc4d26a3114a303b55a883a6ab2041bd01088056108b31a800d4f68864ad5325a845f6e13c58e914f6ad3733fbbebcd199d7b2b23af99b967c584e880dbb1eb6d246df37776431d250f15d10e0f8419460b10c16002df2b8197bd4f8bdb2f23fc70fa25c88f58aef62191a0fedc8228cec56b16ee82e201567525b4208fbd1e1fb06c918068e848c304182a56be0832922a90960214ec438f158002d15e5b8a96b919dd0087c3084869490d1a3fd72eb6d06fb0d843eb02306d00124123274360e0fd878be8749cc80b2e2c1f54cb86e1079bc709dee05d7d835996cee57f12b0c7d7e3312af273ec41d4052118a855404966e22fd00236d2225187ae4c9874c5cc7c8bfe92d9ee3838189375d24003c20636428514108db9620e2102414193a58025ce960ea1665cfc1362c2a9e4bc63071fc004368785e80a56b387e8025345c2fc0142b7af37f85df8fe08e1fc19365b23a386100be49399d45e80f2143a716650d4920a108c59acd4f96d70d6debc59560e916d207c330911e1846145b43ac3012c40cb4ea061af9838f6053e19e0786a07f18b0a2e3bae0104ce7c99fd8c7ee9c35b7e73c8926802446b677e1aad8bc75c0c4d253b8d2c5d435bcba8bd035aab500bd53c5930142a8546b01a61e9df3a62e844afed0236445854d3fd80df6edb0e84252896a86a6a07e3a4def96bb987b6fdcd8dac59a7cb1fa3ba0965460ba5ad3bebbe9969e8e1eab2b8a6d18e58022418fef01535751eb905a13dd0f295d459590ea543937318259798d4d3bbf036b4d5828014b1cdbf57d367d2e0b4a193415ea73f4f6e7b83475267bb350ce4fce78e584ac4e7e20a5fbc4a34f1fe7ec8c8323e3ec952ee8e0c9004d075706b08a74c68f90dd6e8190e04e8052e6eca963080988122865dc7379f0245062709bc0e8d27600a90420e5c503cf0ac98fbff5d87ec6c61c0857ceaf1533621ab134a39c30cd5807645846ebb628be7e16140ffc123865eced16e81e544b4cbc709ae2f81198de83c918d98cb105d093f19ddc9057c64b7476155f9baadc315174db4d13367577e1caa816b8f5002da54677ff0d7c28cbef9d435c1cc5ea9be3dc8b1e76df25503cac1e89d51d827701e7cd590ac590bbb757a15e813414cea7da47dfaa1e6b025806c2d02bbdafd4ab2fcf5e914a7efc6acf4b6367da35c520fb992e5237aad19daf5d5b0384949c2b1ee7b3fd0ec5e2125d1d3e9a7e09da3d989f85e559c2bff9e4fa37a3eae3f029a00ed5bff4f1fc1b33479b756d0584acfae195c21fa45f3c559de772feedd92d7d591bfb26332a488b30f1b6cb732f4f72612ae0b9d3e36caa17b0fb2e92eae8e1a5576073ff45a8fb514e8421daad12552fc19ab80eb6433e6fcee5a72a2794969e60296e1822e9cf04c6badbd767d765b9ffcb36a4c0bd044f3d3bc1e1574fd7f0e51b327416846235ec9cd836e81b5dd68612f69961460ec1fd0f964178908e5b9134046f1b681b25ce5b0684bc0b2cb6022066a1de2c95d6fadc3d835fb540c0fee72718f9b543e552e11deffce1a7a55fb90cd48025b92efbe79117adc7ef7fbc44ee8102855f581c3e08761a02ddc552340ab382c12f1864ba0b9c1db3383c5e3e0604ab76c54377eecd6059ceee9dc3ec3f711ae93377f6ccf1fd33e747df02fe115ff1cde6421cddb9ed67b9dbcaf7f53e3c038b3982a91c95590f210c5c4af4de26401963e26096d1714e3e75aa7400f8eb6a0012c33b9f794c08fb27e0e05c2abf30f6cb3dc78079c08d012cc46c2d475165ed33dfce1d30bae5bd430f3a683dde351b96270d8a276cc62eb8279f3a357308f800a8ac0640d9bbefcdb1b2e7a8a5df8e3e3939757c2ef6d68b41d45a42d5202a2e1a60eefdcac0d7852987b3ebd9425a620983c294ac49c91f470aceafc6ce57fe04fc1da802deaa00804e606d2c97807f726d677bfdd0d10491226a3ef5586f9eb445a2a66e3e7e1680abab868088d68e788330f6f8237bfbeb40a844f5be59f39b77cd526c2f699913fed364946065786d8e59ffcdecd7b44bc64f737e6c82688e6d0d807f011538db8daf66c6800000000049454e44ae426082</data>
+    </image>
+</images>
+<includes>
+    <include location="global" impldecl="in declaration">qwidgetfactory.h</include>
+    <include location="local" impldecl="in implementation">FLTableDB.h</include>
+    <include location="local" impldecl="in implementation">ms_avisomensajes.ui.h</include>
+</includes>
+<forwards>
+    <forward>class FLTableDB</forward>
+</forwards>
+<slots>
+    <slot access="protected">destroy()</slot>
+    <slot access="protected">init()</slot>
+    <slot>tdbMensajes_currentChanged()</slot>
+</slots>
+<layoutdefaults spacing="6" margin="11"/>
+<includehints>
+    <includehint>fltabledb.h</includehint>
+</includehints>
+</UI>

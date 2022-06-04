@@ -1,0 +1,119 @@
+<!DOCTYPE TMD>
+<TMD>
+	<name>fo_sesionesalumno</name>
+	<!--Sesiones por alumno-->
+	<alias>QT_TRANSLATE_NOOP("MetaData","Sesiones por alumno")</alias>
+
+	<field>
+		<name>idsesion</name>
+		<!--Id-->
+		<alias>QT_TRANSLATE_NOOP("MetaData","id")</alias>
+		<null>false</null>
+		<pk>true</pk>
+		<type>serial</type>
+		<visiblegrid>false</visiblegrid>
+	</field>
+	
+	<field>
+		<name>codsesion</name>
+		<!--Código-->
+		<alias>QT_TRANSLATE_NOOP("MetaData","Sesión")</alias>
+		<null>false</null>
+		<pk>false</pk>
+		<ck>true</ck>
+		<type>string</type>
+		<length>8</length>
+
+		<relation>
+			<table>fo_sesiones</table>
+			<field>codsesion</field>
+			<card>M1</card>
+		</relation>
+	</field>
+
+	<field>
+		<name>codalumno</name>
+		<alias>QT_TRANSLATE_NOOP("MetaData","Alumno")</alias>
+		<null>false</null>
+		<ck>true</ck>
+		<pk>false</pk>
+		<type>string</type>
+		<length>10</length>
+		
+		<relation>
+			<table>fo_alumnos</table>
+			<field>codalumno</field>
+			<card>M1</card>
+		</relation>
+	</field>
+	
+	<field>
+		<name>nombre</name>
+		<alias>QT_TRANSLATE_NOOP("MetaData","Nombre")</alias>
+		<null>true</null>
+		<pk>false</pk>
+		<type>string</type>
+		<length>100</length>
+	</field>
+	
+	<field>
+		<name>fecha</name>
+		<alias>QT_TRANSLATE_NOOP("MetaData","Fecha")</alias>
+		<null>false</null>
+		<pk>false</pk>
+		<type>date</type>
+		<editable>false</editable>
+	</field>
+
+	<field>
+		<name>estado</name>
+		<alias>QT_TRANSLATE_NOOP("MetaData","Estado")</alias>
+		<null>false</null>
+		<pk>false</pk>
+		<type>string</type>
+		<length>25</length>
+		<editable>false</editable>
+	</field>
+	
+	<field>
+		<name>codhorario</name>
+		<alias>QT_TRANSLATE_NOOP("MetaData","Horario")</alias>
+		<null>true</null>
+		<pk>false</pk>
+		<type>string</type>
+		<length>25</length>
+		<editable>false</editable>
+		
+		<relation>
+			<table>fo_horarios</table>
+			<field>codhorario</field>
+			<card>M1</card>
+		</relation>
+	</field>
+	
+	<field>
+		<name>horadesde</name>
+		<alias>QT_TRANSLATE_NOOP("MetaData","H.Desde")</alias>
+		<null>false</null>
+		<pk>false</pk>
+		<type>time</type>
+		<editable>false</editable>
+	</field>
+
+	<field>
+		<name>horahasta</name>
+		<alias>QT_TRANSLATE_NOOP("MetaData","H.Hasta")</alias>
+		<null>false</null>
+		<pk>false</pk>
+		<type>time</type>
+		<editable>false</editable>
+	</field>
+	
+	<field>
+		<name>asiste</name>
+		<alias>QT_TRANSLATE_NOOP("MetaData","Asiste")</alias>
+		<null>true</null>
+		<pk>false</pk>
+		<type>bool</type>
+	</field>
+</TMD>

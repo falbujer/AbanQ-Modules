@@ -1,0 +1,253 @@
+<!DOCTYPE UI><UI version="3.3" stdsetdef="1">
+<class>FLWidgetApplication</class>
+<widget class="QMainWindow">
+    <property name="name">
+        <cstring>FLWidgetApplication</cstring>
+    </property>
+    <property name="geometry">
+        <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>600</width>
+            <height>480</height>
+        </rect>
+    </property>
+    <property name="caption">
+        <string>FLWidgetApplication</string>
+    </property>
+</widget>
+<menubar>
+    <property name="name">
+        <cstring>MenuBarEditor</cstring>
+    </property>
+    <property name="geometry">
+        <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>600</width>
+            <height>23</height>
+        </rect>
+    </property>
+    <property name="acceptDrops">
+        <bool>true</bool>
+    </property>
+    <property name="frameShape">
+        <enum>MenuBarPanel</enum>
+    </property>
+    <property name="defaultUp">
+        <bool>false</bool>
+    </property>
+    <item text="&amp;General" name="General">
+        <action name="wg_widget"/>
+        <action name="pr_config"/>
+        <separator/>
+        <action name="pr_tiposproceso"/>
+        <action name="pr_procesos"/>
+        <action name="pr_tipostarea"/>
+        <action name="pr_inbox"/>
+        <action name="pr_secuenciastareas"/>
+    </item>
+</menubar>
+<toolbars>
+    <toolbar dock="2">
+        <property name="name">
+            <cstring>toolBar</cstring>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>0</x>
+                <y>0</y>
+                <width>164</width>
+                <height>29</height>
+            </rect>
+        </property>
+        <property name="acceptDrops">
+            <bool>true</bool>
+        </property>
+        <property name="frameShape">
+            <enum>ToolBarPanel</enum>
+        </property>
+        <property name="label">
+            <string>Toolbar</string>
+        </property>
+        <action name="pr_config"/>
+        <separator/>
+        <action name="pr_tiposproceso"/>
+        <action name="pr_procesos"/>
+        <action name="pr_tipostarea"/>
+        <action name="pr_inbox"/>
+    </toolbar>
+</toolbars>
+<actions>
+    <action>
+        <property name="name">
+            <cstring>pr_tiposproceso</cstring>
+        </property>
+        <property name="iconSet">
+            <iconset>image34999</iconset>
+        </property>
+        <property name="text">
+            <string>Tipos de proceso</string>
+        </property>
+        <property name="menuText">
+            <string>Tipos de p&amp;roceso</string>
+        </property>
+    </action>
+    <action>
+        <property name="name">
+            <cstring>pr_procesos</cstring>
+        </property>
+        <property name="iconSet">
+            <iconset>image35440</iconset>
+        </property>
+        <property name="text">
+            <string>Procesos</string>
+        </property>
+        <property name="menuText">
+            <string>&amp;Procesos</string>
+        </property>
+        <property name="toolTip">
+            <string>Procesos</string>
+        </property>
+    </action>
+    <action>
+        <property name="name">
+            <cstring>pr_tipostarea</cstring>
+        </property>
+        <property name="iconSet">
+            <iconset>image42054</iconset>
+        </property>
+        <property name="text">
+            <string>Tipos de tarea</string>
+        </property>
+        <property name="menuText">
+            <string>Tipos de t&amp;area</string>
+        </property>
+    </action>
+    <action>
+        <property name="name">
+            <cstring>pr_inbox</cstring>
+        </property>
+        <property name="iconSet">
+            <iconset>image53615</iconset>
+        </property>
+        <property name="text">
+            <string>Tareas</string>
+        </property>
+        <property name="menuText">
+            <string>&amp;Tareas</string>
+        </property>
+    </action>
+    <action>
+        <property name="name">
+            <cstring>pr_config</cstring>
+        </property>
+        <property name="iconSet">
+            <iconset>image663</iconset>
+        </property>
+        <property name="text">
+            <string>Configuración</string>
+        </property>
+        <property name="menuText">
+            <string>&amp;Configuración</string>
+        </property>
+    </action>
+    <action>
+        <property name="name">
+            <cstring>pr_secuenciastareas</cstring>
+        </property>
+        <property name="text">
+            <string>Secuencias</string>
+        </property>
+        <property name="menuText">
+            <string>&amp;Secuencias</string>
+        </property>
+    </action>
+    <action>
+        <property name="name">
+            <cstring>wg_widget</cstring>
+        </property>
+        <property name="text">
+            <string>Widgets</string>
+        </property>
+        <property name="accel">
+            <string>Ctrl+W</string>
+        </property>
+    </action>
+</actions>
+<images>
+    <image name="image34999">
+        <data format="PNG" length="2339">89504e470d0a1a0a0000000d4948445200000020000000200806000000737a7af4000008ea49444154789cb556616c5bd515fe4a13fadc25dd0ba460ab0d4bb6768a0308cc92412ac688d924706194449b345b45e0001d09159bdc68ab42362237d3c24b8080cdc6f0ebc8b033963a114b5c8352ecb2b476448a1d9610276a2607a5d173a09d639262bb897bce7eb84983a62d4c2a57bababaf73de97ce79ef37ddf0533e32b9a9b1cb2e34dc51b254fb7e5f935e7db7989f357f65f5570444f47efe4282b9cf4102f9853ee6ee9658e72bbe3d5ba00cb757f8a463d1bae3480cd3cc02f2483c9f3ce4ee7c73cc34bbcc4c43c4e1caf23660f71d84cfc691555df890bccbc899991832b3452f33111d328c75e71b3a9d27403524781dc3220d60e68d2983ff50a0ab6a7e0fafd04d2192c00b80000575d2900aa028de22ff29f50a954c0720fa06a47b8bfec62ec98f7c48127fcc7d343dee59ed74660d201621e0a3014342016c9bfb2b59fe1df454f7b88799c42bd4286edba566526703d335febb05b9aabef40da7150a46483488d8f8affb23ca9ebbb72c1e37c888779813949ac98292aab8ff30c6f5df38fcab8a7b89f5d22b99bd5c4dd6a32fe0074c54a70e865d34154cce721f614a049c37e32cd2802af7c9f3f1b41638986fde704d4208d0347e696db2ab4af7cf90c47b95f6a972e285e65d1e3f5989819e39171f01283838ce480ee2db75d38c70b36e2c12ae23ef5b2d454f95b66be8693bc851792bf0e8575291e95c8dd2452dceb7bedffa1e17667a7f37366a6f1d110c53b14ff4af04030008e337c038e7c7619ef91f60b4bdca9259fbd98a427c5256b83eedd7887e19d50589762aea4a8b79238a2254787f98fff0960890566be83937ced9af31b3c7d9e3e66264e32313379fa9cc4e1641307b990993784864379acf0ddee6ef74f920355139ef662e25e35391a44e25e35f9ecc5c4a31271b79658d111472a89078a4779864bb36a0400cb1030074bcf073dfb0c670d93432543efeb6fd567e47e595f6baebd1dcbb81ab940ec4c049aa232f41c9117f5670ceffb8b821f1be60dd7f935fe0a7d6c97e84ddf7371e4c3e9bc89a9040408307c4f8069870661cca3e4c304c982700e39d852526ae8af79d8b5ef72f60bfc78603070819929ab604ce391715abbe7994bfbc8cafe8babb549224779f185ca9b8449f7fd3abb718fd616da232cf2ab6a4a760a094fafe54166062779e34adc5516443e8e7cb26bc7aecf0100b900965328d39621b5388f6ce661a0a80c91b120b003089e380ae40047fb7b801340db7376f88f4de09959847415fa87272aaaebb515c6a7fc37973c1f7e778eec93eaa1dd0fb50d66550b1757e9b3a6d65b1d76876f6dad397e698d86b267031ee2d34c9e5e277194c9ed72120793646bb5d178a742da52036977e824cb2f2c50fa1448add2ba0d7ed90b961137e618e7528bf350e51720351f83aa4083e9b1204ac45d38d07800b1d95826317f18429e9873fcf8341a8b2d689b3d0ca48d38fc811d02008862522c14e11a93512bd4afab1f97852817d777a1ab48955f00cc03aa020d301144495a47f5d6da61cb0f1b7fa42bd7a96d756d1af5d6821aef317fa8e6c86364505723715e86f9d65a684bb5a84ed4dc159b4b6cabadac4797d0b52e808dcf3efb2c00c07fdcffcb9a076b1e02a572f1b55c4c4f8551b0f9bba87de167efbf586e7b2cf8f5c1c023df7f24e59df6a67ea53e3019e6c1e1c9c9a9f2a9c5d96db5c23efc794ec6d66b454c5d3da5492f9f2f4e5c7d2e60de6c3e9fabcbfddf0878891f7177bbdf63be54ef956e5f60b2ecafcbc407e277fabc3e7094e176b9c1c30c9bdd86f8401ce6bd750f38eff650dd93561a97156a6c90283e90245b878d427228617ed4fcd7f57ae0aab617daec353faeb90bcb59402bddee7faf07b17389cffc09ff90be540fd7900b35e91ad84fd9614c1b219f92f14cf181f764bc72a14010d035e942ad508baeb1c3a817eb31921eda323d35f7e0ba3d60d2d66cc25964a977260c4dd16dc018a02fad417a317d512feaa967a807a69d26d8d37618771a216764986e36a147ecb978e8010b698a55a8afac454f5e17cc1566b4cddaa14d5701b86c46ff1580fd947d22f597d8c5f0d051a0e8b62ccf4b81a3ffec81a012c49663eddad5cc33d9cc4d1913e41119c8a0229809aaeac57ab8a6ba509f6746d391768c9caa44cbb1a6d3da9bb5bf590f009879a3bbd77d7b480e059cb223c30b4c81410ff10c93addd46ee3d9eb7adcdd66df18138a456094a9f026bb3151ce16fd8ec361f33935376120799accd36f2ec0924eb1eaffb038ff2260eae6f74ab96eaec74de12da5f17f679ddc4334cee6e27712793657f63daf853f351a945ba51695536da3a6c1b39cab7385dce7798f94260d0472c27c9d9e9a4f106850cf7569f64176f0f040359ab5e0fc08a9f739c616db6b6f16832ab74c124d9da6d141f4892d42251e8d5c0b2b5c9124b0ec63f71bb9c1966a6d07080387c49116798a416897cadbed7d9cb57adbe17d603b0eae77e1fe2edd28b01bf9b38c224b5db486a8e53638344d1830a492d366239491eaf8758b914544e66d72853c0ef218e3019f71affc69f72def8e8fac1b3371067f8bc3ef00c5f676d6ef43333d93a1ca4f466838fcb0a59f65fe6b9d21b27a9d5463ccc5f0cbec4c461a6a86b7cd6ddedbe8b99c1cafa003678bc1eec2edd0d7bbf5d5f355bf5e671f55061f0c404a667a7810c004180766709346a11b542966af57966d81387614854a357906129ac87bfc48fdd77d4c0fec6a18c59a87f22f140fa754d91665d12ac2a9cd2a75c53596e78a958edc8a845dd67a2587c522c2c7e4b2d5affa12eac4c073aa2d9cc8349b23649e4690e2d1beeaffed0d71e78cdbcd7dc1992432352ab752139187f8e4ff3964b6f8cf56fc0e972c294ce8a4c6c3656e07aa3f7b1b29bb4d36a8d1814042191cea068e2d44443416189d9795f1bbad085f04755983bdbe277dee7f879b06428b2bb5cbfc1ff91ff9bfaedfa6f4f63fa64c9ce92cf528b29a8f2555fe206d668fb5a9e2b7d0aa41609f181381a0f36e638ef768f59f65b29ea52c870af31c961fed60acf57bb7da5e65f22f395b971ebad5bb3da3e23c34426c88a0ce400139f8ea056d887ae78179e563f4d2d33adb923a363557da36f4373bdf077cd77342f159517211289a0ecc632c4cec490bf2d1fa9c51472f3d771c035e3dfa48d79f1e8503c0b0000000049454e44ae426082</data>
+    </image>
+    <image name="image35440">
+        <data format="PNG" length="1235">89504e470d0a1a0a0000000d4948445200000020000000200806000000737a7af40000049a49444154789ced973d685b5714c78fcb1b6ea085185ab021830c5d543ac425435432e89514c28b29ee0b19fa36bfcdda8cc81034155785a08662b00b053960b03b18d583513518ac9682540851524c6d170d6ff0f00c1a9e825a5e8209fc3adcab0fbb71623b2585d2b35ceed57de7e37ffee7dc2391ffe58ca22c858860d6d72c96a2b4b60c40696d1979052786cef81dd0b739343474665d6fbcc8c8b19159eac5fbfe39227226740020a49be3ae1294a5282e14600f68023b50c8e79e7b8f50ab39ad130c4a1004c40b05440462885a5aebd1950320d6c658327bfaeb899d50962237e3ebaf621d2191de6e56ca94ae1671aed904df96989db669cc95b0afda94aed96c56cafa6264d089f53637e39fb25a2c4576c6873d88a2089620951e273b6513adbb10bac4eb8e5eab3e7432c4559fec948d33e1c281f92e84ec8c7fb62a5196d291dc073b9d82ad32acb9b0b7d95fd77d686dc286079d06fc9c81adb2be6f907859e4cfaf024b31bff095c89b2237bebc2ed5a95169fffe8dc84591fd070b2297cf4bfbb74591b4c8935fbf17b99c94f683ef442e7e214f1e57a43a352a373ebd2e322ce2de74e4240830d8d9fc294fe7ee7616aa26f26619561c1d792503ad06547ce884502fe888b78a3af1f52cd1a24d69b5048077d3e148e73ce410b460fb614357de5e0081d697bd95255cf520f008565d087ca28a0f775c9c2b09dc749252de8138823d43c0401bad2d3accde312c6cea6a02d8deda86d64055284bf5d8daaddb5a552b9bbf93d30a571cd829c3aa079d6dfcf408e5b42ecd91b7cf53cb9b9c37b5717696a11530fb794eb7eb95a23eefd07368901b7000b1712268f61188ef86844b36345d8255472350f570d3490e2118e5a0651030486c6fccc2a231b832d01738d21794a5485d4e62a75364a63d08203badfb4079a9a0235f7160afa6597f10c3568170b1a49b4e18f59547c6895619a2a887a477d3850032d31ecbe922f695f123d5d12586a570266c9c09bbd7e182550f9a2ed1ba079d1c71977051cdc0aab9c341ad6f1ca8adcd6b2476b619bf94c499b419b4736c39284b31fe7e8278238496896ccdd75550cde9689bcb87731a1be3a6636e6f147b50d7e66a67981b2c4566daefe71008d73c087da26ace90c5102eda3c047f63c078940fc8ddce9eae132a4b415d2bf0261dfdea75e5615173a162b830c87a62fd5b17946a44ee967953ea2fef88bdc81b75ad240c359eeea443980fa999f3b84bb81d93869d128352ab6f12dcce50c86ba4e2489757a35e3b1112066fa3cd70c0b996a276b7ac3b63d8cf754ff6801ddd39edab2972b732fafc044fb275040169efefcbf0e8a8ecefefcba8352a1f7dfca1fcf8d32379f22c2fe794920f3e794fc6c6c6e4e91ffabe3c6b8b7aeb9cecee3e94b144521efff958f25fdf9347bbbbf2c3bdaab4a52dc3ef0c4bfd97aab9fff4c50894d245e6e70a705f477e74d2295e9aef23d445a205890b237f9b88ecf438d423a843ead2f8898712bccf5c9c09fbb89c410722c391388aa173ccc463fa8a9d4e9d7e2c3b8eb5ca52bd4ed945203b7dfcc4f3bcd7ef5505113934138e5c48fce3465eea042d28af2fc30128f59aff1db9930e89c408c97713241223b893cebff0f7ecbf227f0166fdb9af9d411e000000000049454e44ae426082</data>
+    </image>
+    <image name="image42054">
+        <data format="PNG" length="1448">89504e470d0a1a0a0000000d4948445200000020000000200806000000737a7af40000056f49444154789ce5565d485b67187edcd2f2ad38762eec08c342ba594844361d9d33ad504f57c4da3a3ab75eccd295e662744259257821e9186dc940ac176eda4eaaac42cac0a55e74c16dc211912652bbcab0fe8c0a71a4e374766b262255677d9f5d9ca8adb51add0f833d371f39e77cdff3bc6fdee77d3fe0ff8ea7973e5036b5735be6b6f30ffe78609f9e9e1e0230f36f0a482b2c2c0c45ba22afdb6cb61d37076e6e999c9cfc16c0dc3acede0de06d003a0001703b994d69e1baf018631492627418529f5ddf051b7624cbaa6c6a97cbe98a98574c09b404c46c33e7ec69f67349cbd6d2b44f18a3983153484aa83d34e7deeeee4f727bba3bcf3dc2164ae84a487889e2ca70f5007825690100b6ea057a0f49e11085f729de0aaf00285c65df064dd32e329a20efa3b89cae6b00d2967cb705c086950e4a810d1f065a02f31910b65060c379009b56125e5c547c3dd41e129a949aea1ad134cdb7e49b427bbabd0b40ee2ac160a3a6695f941d2e33798bc21885439cd2d2b4d32becc92f3f5e6ed2a4b083c228c595e5ea04f03c801495aa3c9ea39e31f65200bcb39a00c08a365f2fd007484a3c1e9733a7ce4ce2c97fc55e5f95ef9ed161082728e1eeb0f8aa7c533959395d4aa966cf51cf1849696a6c9a05f0563202e691a5efd1af93b40eae0dc76043c943ef5300e41ad5c6183b298c5be42485fd969b06fb07addf26c5f01b030032d7222005c01e5f956f8aa4842361d10bf4012c1657ae5ea0f7199d86d0a404db82c2f82269341a1592629aa67082a252552d808d6b11000050a9ea88afd2778fa4b09be2ca701900de5c883c96203729ecb5226734b10e5118e17d87c3f1d5bac813d8a4a56aa79b1a9b84a4d454d7cce464e7c41f89dcb43244529a9a9b664bf7974e1617158fbbf3dd1195aa8ec12ac8bf0647bae3627d43fd0cef527c553e09d786c557e915b3f586042f0516c895521f6365db02586618ad86f18971198d8eeed3ec9a3a613f8113df1cc396e75a019cc3cb03d368bb3d3d77f2d4c98be3f1f18f00dc5f478c4f440a80dc605170acfc78b9e805bad4f8cb85771dc25e0887207ab612a5543b80ad7f27f13cac6aef3024ee8f8b3b4f13ded22cf209c8601dc4bb1fe23d8c5f5d0e7c87c75bf0baf1a8cf63146fa557d8078b3c0e619b9501b643d80931fc901a07da01bcb0dae14fadf02e0fc00700cee805fae7780d9be1042e7f7f19679d6771e8b4863b1780cb9f01c806ee0c00b80d44ae03bb7f039e29c11bf6349c5c73b8caa676b9325c91686b54022d01cbd791253e8f50788ba217e80b51b31b12ac80f00a84d556569a2a209a820f49b8611ed63c6f4e8c54d3ba9430feb8cfbd15de594dd386437510d641c2d5109e82842a21ac8518a720f443bc0731a66cc90d1fa5695a80b145727624fa7f242c9c58ec700ff9dc1eccc748b83911799db586aa208c5802d809293f8029582338652501ced203a5fda176eb2653f66e99c4fd71313a8d47064ab02d386b4fb75f5848ab0d259e83880db65884371aacd5f043d89cc84403c4edc45500192b09d8e5adf48e31c23997d3d503e045002535ce9a6ba12ba1c5dedecbe5c6e95eb31993371aad5a60a3e588702d84fd894c7443dc4e44b0a41e1e76c1dce84fa37399ef65f60eff387c0c4014c0d7fe9ffd817dbfefc3e8e828b01568e86998c1e357f58e4c2f3e7df517ccf5ddb41ef48d023b1e007d3d00ec40df3050aa230f96bb96c5260047b0a481a85475a8bea17e3c8979be49d950cd08e44663a22fcc67a4cd5a4bf36002487f9280e590e939ea195998e777579de79b73b2d0c9e684882864b0d1aa85e26c8c28db1a6e424aa99df3e46b9ce72fb9b3d0cd21085b216cc38c2b1d57b1e6d66cc3fbc545c5539ec39e593d5fff618df37c7b713ec67c87218e347c8955aaff9fc2b3b09cf4dfc69f584ad6fee73c225c0000000049454e44ae426082</data>
+    </image>
+    <image name="image53615">
+        <data format="PNG" length="1018">89504e470d0a1a0a0000000d4948445200000020000000200806000000737a7af4000003c149444154789ced964f685c5518c57f6f9c369364a22f26b54f1bf189163b354a472c65a44a6317c6741306bab08b8259d9401625582859868186902eaa2095a844326e1c1442146c9928d6091a98880993d458460d3895b68e343663cc24dfd7c57d63d280a5317f10ec81c7bb8f77e19e7beef9ce77e1ff8e7b6ef3cf026a817ddef8fa6613a8044e76f774775655541d9cbc3809f01330b7114456c2e7d6394f38754e520b2a9a55d131956873d38fc0ab40c58613b08381ed4073a83e94c9c7728bd96c567446a5a9b1611a7811f06dc8c2c056c08f390207d80d74e870417454257f2e57c4cf096f9eb51e0b2e1fef044e030d8060cebb0014e33f7ca0842176bec76281728c7fd64ca0040bb3e333aa2aed6dad9781a340c8b6edd31d273b665555929f2624d5935c00624035b737f1aae003ee05e299b18ca8aab41e6b99711ce79bfebede455595cc585a34ae72e495e822300eb47824fceb45a00a70c3f5a16f53c3295155d169155595cc684a745a8b8978ff5faa2ae9919464e39962f8d9f017c061a08635aa6101e5c076a0315c1f1a4f0d25bdc5d352e8ea94c8fe48211fcbfd96194b4b8984aa4a6b5bcb353b18f804780ed8c21aaac30f04814780bdc0fbb66d8f38b54e0a781b23796fba27796d7020710b099d52c9f4a58be13da1f3c021e0fe7f43c4c294960d3c0c3c85a98683c0f3c033400438e1baeef7bd67df145595ec445a74de235350693fde7ad5b6ed416ffeaa4bd5c2c858096c03760075c043984ca8037601113b68bf1b6d6efa550b4b5ed161ef3d9591ccd9f46ce871f763e0058cc1ef58110b63a88047a41213bd1518a33e003c8a6952c742bb4293dd5d9d929bce2e19b6e0299357891e8efe1c08f016f098b7b93b56c4f21edf8af1568fc88398e0da079c1a6c4cfc32389058fcbb7ae69779646850120722571cc73e13080476b2c614f5b114d535808bf1cb6baeeb7ed4ded62aaa2af92b3963d4e1a4e8bc97237d2a0dfb235f07fc1c5dad1aff44640ba672b661240e03c79d3a6744477541b39e2726d2a20515fd5245f32addb10e015ec728b926581835ca31a9b803781278c90eda6f341c68b85cca935c362b859e9c84f7844467546cdb1ef5e6ae0b9613a961a98c5f766aede491e6e875559544bc5f744a4527545cd71d029e5eb76682e99e022c0245ef99bd5198fb6efce2e4a5739f0decaebeafbaea8fb2dfadae77627f7efed5850f112eac5b3b5d8652b5f881328c47829823da8bb9cc5c02de03ae6e0481127c983c2963295302def71c700398d948022b89946e5a3ecc51cd03c5cd2000b7069a0f508c577493d6bf8bbbf80fe326ef91e6b74f373da50000000049454e44ae426082</data>
+    </image>
+    <image name="image663">
+        <data format="PNG" length="1044">89504e470d0a1a0a0000000d4948445200000016000000160806000000c4b46c3b000003db49444154789c9dd46d4c93571407f0ffd3174a19a55d49a4f445055d4c60a51d191933ccd10d664696b904315b36951010976dc8faa2365984c437a2b86503362531a568624c083611b005a2a87c98034d10191a1da06456d61760a5cb789efb3c771fa61931535bcea7fbe1e49773ce3df732883f18bbdd662e2e2eae494a4acae7053e2112f9f35e28143ceb72b94f5f1eb8c22ec3045357b7afc2ffc8cff23ca1f3f3f374726a925ebf314c3bcf750836c7d74d002471abef1459d65cf0f6fc150806e8e2df8b7421ba401b1a0ef37979afdf954aa5df0178038018f1ea8a97923729950a39cff3e0080b8661d0e3f59e1a1a1a76020800204f724571b862d5cbaa372726a6402905c771203c0fad46330ee0d152345e589e959595373efe2b08e1400801e108b66edb5ab46af52ae9d244abbd56298e557d6b43c1ab2525258e6030c4c813e5d06ab5e07982c42479a652a9589f6dcc1aa8a9a95953bdb3fac0ececdcc1582b660a0b0b3fd06ab58c4ea743e7390f0e1f69042104893219f47ac3bb8932f9ed75afac1bd6a66b2bae5eb93a1b2b2c331a8da5f77e9b44a7a70be6dc5c7479bdb8393a0a50c06030203939592e9549999faf5d23bdbd7d67628199fafaba32b3c99c63cccec6ef7e3fc4221132333270b6a303822040a552816118dcb97d873af7387d82209c79d1ba312d2dcd9fe4e7e79f98999981d168c4fb1b8bd1e3f562b55e07b3290709b2040402330887c2dca7f59f75b32ceb0430c33c4bcc3119c536abf51bb13461df2977bb686e7e0e478f1c855eafc383e90742eb89d6a8ffa13f4481e9c1c1c11142c810001f803f00d0ffadb87a679562c3db85ae5ba3b74a7d3e1f52d5a93018564293ae115a5a7efca5a9a9e93ccbb2d7014c0208025800c001a0cfecdd66b7ae75b7bb46367df42135ac345093d9442d160bede9e91676d5eeea009089c7cff6b9335c7a76ecb66dccc8cc38ed6e6b4f9d9aba0f89548214450acacbb74310e865e75e6705808917a1c07f7f85d46aabb5a953d5fb8f1f6f95040321884422f08487e93513d46af5ddaaca1d8ec7adc714128d264df6e5579f37af48d3548e8d8d2145a100bbc8221a8d42afd7e3bda2e290dde6d80de0069e37c3a742647358f7105ed8d2e672ef0d87c39bb77c5c36ad52a9a0d3e9505ebe6df158e3b707c3e1f005007cac2800c0e53e395a50b0be0f800a00d378ace18b1dd555f487e6ef798ba5b01980322ef049c5b2045944939e9e06200d807891e356e4e69ae9c5fe7ecfa54b038700cc2f07964422919fcaca4a5d0683fe242362eea72814a5fdfd17bb3d9ef376000f978302ffae9be8c0a1fddb398ead8c46a3cccd91d1ae5e5f5f1b003fe2b8aca7e31f0d858c2fb71c099c0000000049454e44ae426082</data>
+    </image>
+</images>
+<connections>
+    <connection>
+        <sender>pr_tiposproceso</sender>
+        <signal>activated()</signal>
+        <receiver>FLWidgetApplication</receiver>
+        <slot>openDefaultForm()</slot>
+    </connection>
+    <connection>
+        <sender>pr_procesos</sender>
+        <signal>activated()</signal>
+        <receiver>FLWidgetApplication</receiver>
+        <slot>openDefaultForm()</slot>
+    </connection>
+    <connection>
+        <sender>pr_tipostarea</sender>
+        <signal>activated()</signal>
+        <receiver>FLWidgetApplication</receiver>
+        <slot>openDefaultForm()</slot>
+    </connection>
+    <connection>
+        <sender>pr_inbox</sender>
+        <signal>activated()</signal>
+        <receiver>FLWidgetApplication</receiver>
+        <slot>openDefaultForm()</slot>
+    </connection>
+    <connection>
+        <sender>pr_config</sender>
+        <signal>activated()</signal>
+        <receiver>FLWidgetApplication</receiver>
+        <slot>execDefaultScript()</slot>
+    </connection>
+    <connection>
+        <sender>pr_secuenciastareas</sender>
+        <signal>activated()</signal>
+        <receiver>FLWidgetApplication</receiver>
+        <slot>openDefaultForm()</slot>
+    </connection>
+    <connection>
+        <sender>wg_widget</sender>
+        <signal>activated()</signal>
+        <receiver>FLWidgetApplication</receiver>
+        <slot>execDefaultScript()</slot>
+    </connection>
+</connections>
+<slots>
+    <slot>openDefaultForm()</slot>
+    <slot>execDefaultScript()</slot>
+    <slot>chooseFont()</slot>
+    <slot access="protected">destroy()</slot>
+    <slot>generalExit()</slot>
+    <slot>helpAbout()</slot>
+    <slot>helpIndex()</slot>
+    <slot access="protected">init()</slot>
+    <slot>toggleStatusBar(bool)</slot>
+    <slot>toggleToolBar(bool)</slot>
+    <slot>windowClose()</slot>
+</slots>
+<layoutdefaults spacing="6" margin="11"/>
+</UI>

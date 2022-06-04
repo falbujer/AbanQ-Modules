@@ -1,0 +1,149 @@
+<!DOCTYPE UI><UI version="3.3" stdsetdef="1">
+<class>FLWidgetApplication</class>
+<comment>Ventana principal MDI de la aplicacion</comment>
+<widget class="QMainWindow">
+    <property name="name">
+        <cstring>FLWidgetApplication</cstring>
+    </property>
+    <property name="geometry">
+        <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>532</width>
+            <height>539</height>
+        </rect>
+    </property>
+    <property name="font">
+        <font>
+            <family>Helvetica [Urw]</family>
+        </font>
+    </property>
+    <property name="caption">
+        <string>Gestión documental</string>
+    </property>
+    <property name="icon">
+        <pixmap>image50404</pixmap>
+    </property>
+    <property name="toolTip" stdset="0">
+        <string></string>
+    </property>
+    <property name="whatsThis" stdset="0">
+        <string>FacturaLUX software ERP</string>
+    </property>
+</widget>
+<menubar>
+    <property name="name">
+        <cstring>menubar</cstring>
+    </property>
+    <property name="geometry">
+        <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>532</width>
+            <height>23</height>
+        </rect>
+    </property>
+    <property name="acceptDrops">
+        <bool>false</bool>
+    </property>
+    <property name="frameShape">
+        <enum>MenuBarPanel</enum>
+    </property>
+    <property name="defaultUp">
+        <bool>false</bool>
+    </property>
+    <item text="&amp;Gerenal" name="Gerenal">
+        <action name="t1_principal"/>
+        <action name="t1_elementos"/>
+    </item>
+</menubar>
+<toolbars>
+    <toolbar dock="2">
+        <property name="name">
+            <cstring>toolBar</cstring>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>0</x>
+                <y>0</y>
+                <width>52</width>
+                <height>29</height>
+            </rect>
+        </property>
+        <property name="acceptDrops">
+            <bool>true</bool>
+        </property>
+        <property name="frameShape">
+            <enum>ToolBarPanel</enum>
+        </property>
+        <property name="label">
+            <string>Herramientas</string>
+        </property>
+        <separator/>
+        <action name="t1_principal"/>
+    </toolbar>
+</toolbars>
+<actions>
+    <action>
+        <property name="name">
+            <cstring>t1_principal</cstring>
+        </property>
+        <property name="iconSet">
+            <iconset>image21316</iconset>
+        </property>
+        <property name="text">
+            <string>Todo en 1</string>
+        </property>
+        <property name="menuText">
+            <string>&amp;Todo en 1</string>
+        </property>
+    </action>
+    <action>
+        <property name="name">
+            <cstring>t1_elementos</cstring>
+        </property>
+        <property name="text">
+            <string>Elementos</string>
+        </property>
+        <property name="menuText">
+            <string>&amp;Elementos</string>
+        </property>
+    </action>
+</actions>
+<images>
+    <image name="image50404">
+        <data format="PNG" length="1000">89504e470d0a1a0a0000000d4948445200000020000000200806000000737a7af4000003af49444154789c95573d6b1b41101d02f9012ef30f52a472275771aa90d29dd5399d0d2e8c5165bb3042853fd2c98104296088d244b8920918ac22e12e60b00ac339e0c0c9d8e1641490c0c5156a5e8addd9bb9ddbb51c35a3d3cd9ce6bd7d6f768f000023c01583302000841064ddbf47fec3f749e77bf3c4f3280803a2d148658f86764cef53ab881f2ef3c57de27fe3bc24499c791c55c1505771e4ce6d648454e4b99922532f9990cf0b9163208e8143203e69e71164b40a641cd3f461a6349326ba19d09d9ebfdb505f748c9a7bea7a695e45dd1c0eebea6107d57c6f728d8bda524cb83510ecac03cb6f10b51a40a58cced23c5029039314585b40d2ed00004ed7cac0f20292ab48e52d969cc80a9af13066779a68263e68e4b51575bdad228e1aaa89d50575cd0c8c8ac800102682018e932cffc9f8ef986886e8787793e81951f8a549b3d7bfa8fbe980e8fa8ebabb9b347b7747e1c77da21f5dea7d6dd1abe725ea7d3b26fad3a7eefb7da219a2feef3ea84418dc0e30579ac3e076007a4ad4eff7896688c6e371169f12853f43a21269066e54638da642880b30adea4ba83bd779ed23a585e8320200ac2f2b4d542baabedd82755d7043ce3d9906f49f05dfcf558efe3d62e1a90f056791951f5fc65859049238c1ca2250df515a29bfdc43b562b451d4827685a581ea56c746de53213a334c10006cec9c5a48ea355557dfee64485f0038d34db39599811c138681f39e42de685a7300c189698a0050741159f97b5b6dac2f01d5d5cfc02af0f6751da8e9666ab921a50529e782ed8258c744743ab19090f1b39e88eda68a9d966a0a5dcd5ca8f378423ae602c935917bc294595ec8cb69ca992ff3dcbb979ce5431b89dc784cbebd9714f3e5841c02c41dc9ce0c2323ce560f95c8e49a72f4e5f30d5b03dcb9f67941033abaf673ab7ef4a8fc6c42de3f80c0303274cf70894832e9394f98686b80914b0dc8b575af69764ef068c1cb5c7e0e9813cc8d8d5cfa77daae67984c1fcc3775aa131f8244c4dc2ee64096cd11c9a88f390024114b041ca7f83b9b74a93d4fb426bc5ab019f0b941ece38f76436ad7b9cf84435b0306b9700333a53fde35955ae2f87fa762f709264334cd0d13113da7e7200c88e49a73916f4f98e2ef0263c24d1e06985d5e7bf97e205ce29d70ec8689a8e7e739346418907ee7cee338b618d0bf7b55cdf55c2726a9e7bd40aa9d3b966b6a33e27783d48c7497ebbda0e063f16e27d774da848baf62abceb74bda6735a9059f0b7ce703768374813c5f20ab27b946c605c2cf520b5319d0f9052d883de51f010dc18061407ba40000000049454e44ae426082</data>
+    </image>
+    <image name="image21316">
+        <data format="PNG" length="2352">89504e470d0a1a0a0000000d4948445200000020000000200806000000737a7af4000008f749444154789cad976f7014e51dc73f2497f05cd8c81e5e64b7267aaba4b22758ee006d62cd34d132d388b5c82bffb41d6d5f41ed8b8a63473a53ed605ba7bcc109d3d18e1d1d67a8a525fe69393b58c30835d140efd0647211227b630e76216b6e0b0bf7902cb9bed8e34f81505ff499d979e699f9fdf9eeefdff37de6f0ff5c89cea5e2db9b1e02fd5691301abdd11d5f70c8f980039bfe84ef1cbd92ca9c598d45440dcda9eb8105b8d6117cc79dddb380d59b7f967a70fd2ff4180201251b08c0f2c019b33fe78db53fa138f0d697fb9345ddc9c496d36fa75ead9c4af55602edb98a2d56ffe577a809f38af2dfed79aae760a5323955a9bc77ba5259b7a752d93858a93cf076a5b26e57a592d852a98867274f1237575faa5a7b99b14467eb63afeffafba6fbeaee3075ea3c9f1add4009ae4baef0e7dfffad60e4d53e02397191fcad9dbfdafacaa6e5cc8dd5429f079e808949107170274100ae2feb25c6620e6eff1b70f29c7acd65fe1fedd9b0791989f63ab024a49a410da0db006d89f155966dfc29507f3ef8cb7ebed654b806606719340584847473b8a79a21d60866730cd1124b13efeebad8df7f03106a432cae77f6f9b0d9065470aac6ca405205d112ed0012e7559aca292f80e77290f32157045303cb8798069e04ad1962b28caaa440292f03eaae0c20a01e25d69039005109d281b6aaf3f60468515035732e30ef0266236a17c328d963a02b9077433d15684b84b6527a14011031958b23780900efdff681be8fa502d922e811c817c154c172414e83cced280227cea97885dd05a621e700553d04e49d0b7a4285fc4409a407feee634065b61aa878efec78c9ca51d123902d800e0c8c82f0217fa0efac379a7907b8d092792be3786008f08ae12e8ba00bc815aae70268c4f09c8c876b658133e7d42feb82c0ddf7a95b3c74c2aa31bf21a79aea73874b58635132ff7899e25f9fb30367f40560f4bcfcf181c3c1b5ab56ca052d8ba201b827215060c281b3f570a800c571d833dc87b3f7c53fe38ebd0e946605001038431f79d9de778ba3bb634d8d2423875f266de5c91fde5b1304c11f81c245e233f270e6435f6fef94b42c643e9c3902fa5cb00ec1b80ff94f76e27cf0eebbc1c8b6cdc0a7c0d9ab020060ca3f8a7be85fed5af048c752a3c1aff5183f6ad7fbbebf0fd877896c493ddeb7286ddede961b19c43e1e65dfc11c56a14461606bc9ddf3d26bc158ef6f814f2e0e3f40645600e13a2cc7d825dad407d38bdb19c8e5701ce78ad3d06c369a1f4bd9b40d58ec2ef462593676318f90f2f7d2f37a8023c0cca57aff0b0099b1ccb66eb7fb415bd868718dbc6277b0f881a7103188504b503e89ebb8315d2c496a26bb8301bae32a5b73fda8421c773c6f17303e9bfdab03889b7116ad4f669cecd975dfecaecde7f3a88aba54bdef89dfa45726b1268018d843d015d941b698c7500db2852c6509443840c0c1abb9b86c1403a0688dacee79da7c7664a8f3e9f5cf9755b336e7e4d0740d028f98272100c308dbd414654a58e8659d1177046fc2c3931e68e98552a8375e0dc0e545b864633af178e6cd4d1b6e7f78a981d29180c27183a45f24b220c29ce13ce3e22ca9bb56e19e08c7ae7db0c8c3b744199a1c42910a7bb37bc36cdff58426efef591bf8a53a9ca1fdcc04d35707b0ecb1559dcf6c79abf747181105d4086446c1928d14075f24982c3078304fb4f96172333af66423fbc64ac8d12c1d099709af44ee608ea14f8668d45a69b9f3199ae25111dc7c6fa72f627750ecff2753d2bb720a166fbca3fb972f6feb5bc382325096f087fd90f741444024d6d39b9344576c42b46a74b5ea981a3cd4162319cf633699485fa29774a4e7d1b6722d312d4a572b987148ac597f0f6b7ade44d1165f1e012531df7c6acbf6feefc76eb68142199ecf94291caa03cf46d434226f5449aefd012d4b5b68bd3b4d6c01742d052f80c8d112fa3c9739c53ab667b7e3792eb13b5711bff376dcd3d01883c82448e5b6857e0dcb39bc772733817f3e02e29e0deb7a1e35d200d634640e403a1ec56881eebb740c13d6ae8862a8d0b542271a847f65f9602820649ea46692f5b3945c1b5533685bd98d08a05d0b7941bb01860a6ae7863616773f49950ed620d4a871d7faef9524f44f43ef7e2809b0016d31d87ec86c465c400dafda54f5be4785eca845976a9275f378ae87e37ae88b4c72e532c461c4035195d705a8d20673fd43c06d00119a53370a816115c33fd795900798f1f02a35b59058a6abbbae40ef30680272c3204b1ad63b3fc6442357e8478babd094a2df31906f0002520a74a760e024e89a8ea36635194f2cc72d7c1c2190111930a7370731014e1571dead227721aa417f019c08f48f41340e8e0b461cbc32649bd6b17bf79368228ad9d98d17efc28858083509c108ba910c79018435858184054024826b8d975c8a6a0b37974f82d9048e034633d82e181a64864146205682741364f3508e0116a45ba2a88fde4beaf17bb19c11925a122b805422046f284972c56ac426c0103a793f3385f48e02955aa6fc33417dcb75d1e674873203ae0cabc33b15e67edfa765acb13aea4e5844666278418996a5516e52c0f81a28f5d07103380134ded484771a5ae3305404d9005601020105ab8ce7d6912df4e1e57afb83c2be5700a7162038ba6728b8e53b9dd16b9abe22e643701a92d786614e5f5f47e33ce83063881874dd12c53f1dd688e7408b08e998d100c5a3d0aa8474cc6800bb087a03143f033153c7e0988d93db3b2607b7fc9a99601098bef0325234535db3e3357589b95c5762884899a88886434807bc302254bb021792e7baa37a460d0b1815a40d5242c9b3703c0dbbd03be30d65de6778db0b04bc4f95155d18c553be2b47b6ed9427d4a837d7b875ce75b13a7c689d0fce31301ac1b1c19807ce91f09c1b0ff7e238e87550f80cd41a181a0b53921feea3e87a278aef3dfba11c7cb587c2deadccb09f8b1e26577a1b4650b4afb3a8eb1161fef06e551337092555138d3808610036021d89051848390252a7e4e790529d96130313781c936edfe7b8f9615ceb230299071ce0141731e2d9005c000237a02696a1eacb50da1782d58030e7125835609c25c89f21d04ee10f9490fa71fcfe2304f21881fc02381e268c692098cdc9d5005cbaea081f14112e5c6267abdfd4254e2a7cc9f51f2f4906ffcf2c08500000000049454e44ae426082</data>
+    </image>
+</images>
+<connections>
+    <connection>
+        <sender>t1_principal</sender>
+        <signal>activated()</signal>
+        <receiver>FLWidgetApplication</receiver>
+        <slot>openDefaultForm()</slot>
+    </connection>
+    <connection>
+        <sender>t1_elementos</sender>
+        <signal>activated()</signal>
+        <receiver>FLWidgetApplication</receiver>
+        <slot>openDefaultForm()</slot>
+    </connection>
+</connections>
+<slots>
+    <slot>chooseFont()</slot>
+    <slot access="protected">destroy()</slot>
+    <slot>generalExit()</slot>
+    <slot>helpAbout()</slot>
+    <slot>helpIndex()</slot>
+    <slot access="protected">init()</slot>
+    <slot>openDefaultForm()</slot>
+    <slot>toggleStatusBar(bool)</slot>
+    <slot>toggleToolBar(bool)</slot>
+    <slot>windowClose()</slot>
+    <slot>execDefaultScript()</slot>
+</slots>
+<layoutdefaults spacing="6" margin="11"/>
+</UI>

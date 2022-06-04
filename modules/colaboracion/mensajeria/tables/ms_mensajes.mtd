@@ -1,0 +1,147 @@
+<!DOCTYPE TMD>
+<TMD>
+	<name>ms_mensajes</name>
+	<!--Registran mensajes enviados a usuarios-->
+	<alias>QT_TRANSLATE_NOOP("MetaData","Mensajes")</alias>
+
+	<field>
+		<name>idmensaje</name>
+		<!--Identificador del mensaje-->
+		<alias>QT_TRANSLATE_NOOP("MetaData","Identificador")</alias>
+		<null>false</null>
+		<pk>true</pk>
+		<type>serial</type>
+		<visiblegrid>false</visiblegrid>
+	</field>
+	
+	<field>
+		<name>fecha</name>
+		<alias>QT_TRANSLATE_NOOP("MetaData","Fecha")</alias>
+		<null>false</null>
+		<pk>false</pk>
+		<type>date</type>
+		<editable>false</editable>
+	</field>
+	<field>
+		<name>hora</name>
+		<alias>QT_TRANSLATE_NOOP("MetaData","Hora")</alias>
+		<null>false</null>
+		<pk>false</pk>
+		<type>time</type>
+		<editable>false</editable>
+	</field>
+	<field>
+		<name>asunto</name>
+		<!--Asunto-->
+		<alias>QT_TRANSLATE_NOOP("MetaData","Asunto")</alias>
+		<null>true</null>
+		<pk>false</pk>
+		<type>string</type>
+		<length>200</length>
+	</field>
+		
+	<field>
+		<name>origen</name>
+		<alias>QT_TRANSLATE_NOOP("MetaData","Remite")</alias>
+		<null>false</null>
+		<pk>false</pk>
+		<type>string</type>
+		<length>100</length>
+	</field>
+	
+	<field>
+		<name>estado</name>
+		<!--Estado del mensaje-->
+		<alias>QT_TRANSLATE_NOOP("MetaData","Estado")</alias>
+		<null>true</null>
+		<pk>false</pk>
+		<type>string</type>
+		<length>8</length>
+		<optionslist>QT_TRANSLATE_NOOP("MetaData","Borrador");QT_TRANSLATE_NOOP("MetaData","Enviado");QT_TRANSLATE_NOOP("MetaData","No leido");QT_TRANSLATE_NOOP("MetaData","Recibido");QT_TRANSLATE_NOOP("MetaData","Borrado")</optionslist>
+		<default>QT_TRANSLATE_NOOP("MetaData","Borrador")</default>
+		<editable>false</editable>
+	</field>
+
+	<field>
+		<name>contenido</name>
+		<alias>QT_TRANSLATE_NOOP("MetaData","Mensaje")</alias>
+		<null>true</null>
+		<pk>false</pk>
+		<type>stringlist</type>
+	</field>
+	
+	<field>
+		<name>usuariodestino</name>
+		<alias>QT_TRANSLATE_NOOP("MetaData","Usuario destino")</alias>
+		<null>true</null>
+		<pk>false</pk>
+		<type>string</type>
+		<length>100</length>
+		
+		<relation>
+			<table>flusers</table>
+			<field>iduser</field>
+			<card>M1</card>
+		</relation>
+	</field>
+	
+	<field>
+		<name>grupodestino</name>
+		<alias>QT_TRANSLATE_NOOP("MetaData","Grupo destino")</alias>
+		<null>true</null>
+		<pk>false</pk>
+		<type>string</type>
+		<length>100</length>
+		
+		<relation>
+			<table>flgroups</table>
+			<field>idgroup</field>
+			<card>M1</card>
+		</relation>
+	</field>
+	
+	<field>
+		<name>idobjeto</name>
+		<!--Identificador del objeto asociado al proceso-->
+		<alias>QT_TRANSLATE_NOOP("MetaData","Código")</alias>
+		<null>true</null>
+		<pk>false</pk>
+		<type>string</type>
+		<length>25</length>
+	</field>
+
+	<field>
+		<name>tipoobjeto</name>
+		<!--Identificador del tipo de objeto asociado al proceso-->
+		<alias>QT_TRANSLATE_NOOP("MetaData","Tipo objeto")</alias>
+		<null>true</null>
+		<pk>false</pk>
+		<type>string</type>
+		<length>25</length>
+	</field>
+	
+	<field>
+		<name>propietario</name>
+		<alias>QT_TRANSLATE_NOOP("MetaData","Propietario")</alias>
+		<null>false</null>
+		<pk>false</pk>
+		<type>string</type>
+		<length>100</length>
+		
+		<relation>
+			<table>flusers</table>
+			<field>iduser</field>
+			<card>M1</card>
+		</relation>
+	</field>
+	
+	<field>
+		<name>avisar</name>
+		<alias>QT_TRANSLATE_NOOP("MetaData","Avisar")</alias>
+		<null>false</null>
+		<pk>false</pk>
+		<type>bool</type>
+		<default>false</default>
+		<visiblegrid>false</visiblegrid>
+	</field>
+</TMD>

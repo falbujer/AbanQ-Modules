@@ -1,0 +1,17 @@
+<!DOCTYPE QRY>
+<QRY>
+	<name>fo_grupocursoxalumno.qry</name>
+	
+	<tables>fo_alumnosgrupocurso,fo_gruposcurso</tables>
+	
+	<select>
+		fo_alumnosgrupocurso.idalumnogc, fo_gruposcurso.codcurso, fo_gruposcurso.codnivel, fo_gruposcurso.codigo, fo_alumnosgrupocurso.codalumno
+	</select>
+	
+	<from>
+		fo_alumnosgrupocurso INNER JOIN fo_gruposcurso ON fo_alumnosgrupocurso.idgrupo = fo_gruposcurso.idgrupo
+	</from>
+	
+	<where>
+	</where>
+</QRY>
